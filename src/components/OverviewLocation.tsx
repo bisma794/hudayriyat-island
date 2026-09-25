@@ -1,5 +1,5 @@
 import React from "react";
-import { Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
 import styles from "./OverviewLocation.module.css";
 
 const keyLocations = [
@@ -53,18 +53,17 @@ export default function OverviewLocation() {
             </div>
           </div>
 
-          {/* Right Column: Placeholder Image Box */}
+          {/* Right Column: Full Picture (No Zoom, No Crop) */}
           <div className={styles.rightCol}>
-            <div className={styles.imagePlaceholderCard}>
-              <div className={styles.placeholderInner}>
-                <div className={styles.iconCircle}>
-                  <ImageIcon size={38} strokeWidth={1.4} />
-                </div>
-                <span className={styles.placeholderLabel}>
-                  Hudayriyat Island Location Image
-                </span>
-                <span className={styles.placeholderBadge}>Image Placeholder</span>
-              </div>
+            <div className={styles.imageCard}>
+              <Image
+                src="/images/hudayriyat-overview.jpg"
+                alt="Hudayriyat Island Overview and Luxury Villas"
+                width={800}
+                height={535}
+                className={styles.overviewImage}
+                priority
+              />
             </div>
           </div>
         </div>
