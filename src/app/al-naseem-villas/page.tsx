@@ -10,7 +10,6 @@ import NaseemGallery from '@/components/al-naseem-villas/NaseemGallery';
 import NaseemFloorPlans from '@/components/al-naseem-villas/NaseemFloorPlans';
 import NaseemArticle from '@/components/al-naseem-villas/NaseemArticle';
 import NaseemPaymentPlan from '@/components/al-naseem-villas/NaseemPaymentPlan';
-import NaseemPaymentMethods from '@/components/al-naseem-villas/NaseemPaymentMethods';
 import NaseemMasterPlan from '@/components/al-naseem-villas/NaseemMasterPlan';
 import NaseemLocation from '@/components/al-naseem-villas/NaseemLocation';
 import NaseemFaq from '@/components/al-naseem-villas/NaseemFaq';
@@ -55,9 +54,6 @@ export default function AlNaseemVillasPage() {
 
       {/* Floor Plans Interactive Section (4, 5, 6 BR Villas) */}
       <NaseemFloorPlans onOpenBrochure={() => setBrochureModalOpen(true)} />
-
-      {/* Accepted Payment Methods */}
-      <NaseemPaymentMethods />
 
       {/* Master Plan with Zoom Lightbox */}
       <NaseemMasterPlan />
