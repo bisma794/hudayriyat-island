@@ -227,19 +227,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${ubuntu.variable} ${ubuntu.className}`} suppressHydrationWarning>
       <head>
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="shortcut icon" href="/images/logo.png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
       </head>
-      <body className={ubuntu.variable} suppressHydrationWarning>{children}</body>
+      <body className={`${ubuntu.variable} ${ubuntu.className}`} suppressHydrationWarning>{children}</body>
     </html>
   );
 }
