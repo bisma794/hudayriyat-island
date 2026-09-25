@@ -110,8 +110,8 @@ const highlightsData = [
     ),
   },
   {
-    label: "Hill Height",
-    value: "Up to 60 Metres",
+    label: "Payment Plan",
+    value: "40/60 (10% Down)",
     icon: (
       <svg
         width="30"
@@ -123,11 +123,10 @@ const highlightsData = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M3 3h18v18H3z" />
-        <path d="M3 9h18" />
-        <path d="M3 15h18" />
-        <path d="M9 3v18" />
-        <path d="M15 3v18" />
+        <rect width="20" height="14" x="2" y="5" rx="2" />
+        <line x1="2" x2="22" y1="10" y2="10" />
+        <path d="M6 15h2" />
+        <path d="M12 15h6" />
       </svg>
     ),
   },

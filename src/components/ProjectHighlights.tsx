@@ -7,8 +7,8 @@ const highlightsData = [
     value: "Modon Properties",
     icon: (
       <svg
-        width="32"
-        height="32"
+        width="30"
+        height="30"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -27,12 +27,12 @@ const highlightsData = [
     ),
   },
   {
-    label: "Price From",
-    value: "AED 6,000,000",
+    label: "Launch Price",
+    value: "AED 4,300,000*",
     icon: (
       <svg
-        width="32"
-        height="32"
+        width="30"
+        height="30"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -47,12 +47,12 @@ const highlightsData = [
     ),
   },
   {
-    label: "Project Status",
-    value: "Off-Plan",
+    label: "Handover Date",
+    value: "Q3 2030",
     icon: (
       <svg
-        width="32"
-        height="32"
+        width="30"
+        height="30"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -60,20 +60,21 @@ const highlightsData = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <circle cx="8" cy="16" r="4" />
-        <path d="m11 13 9-9" />
-        <path d="m16 4 4 4" />
-        <path d="m14 6 2 2" />
+        <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+        <line x1="16" x2="16" y1="2" y2="6" />
+        <line x1="8" x2="8" y1="2" y2="6" />
+        <line x1="3" x2="21" y1="10" y2="10" />
+        <path d="m9 16 2 2 4-4" />
       </svg>
     ),
   },
   {
     label: "Property Type",
-    value: "Apartments and Villas",
+    value: "Villas & Apartments",
     icon: (
       <svg
-        width="32"
-        height="32"
+        width="30"
+        height="30"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -88,12 +89,12 @@ const highlightsData = [
     ),
   },
   {
-    label: "Bedrooms",
-    value: "3 to 8 bedrooms",
+    label: "Ownership",
+    value: "Freehold",
     icon: (
       <svg
-        width="32"
-        height="32"
+        width="30"
+        height="30"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -101,20 +102,18 @@ const highlightsData = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M2 4v16" />
-        <path d="M2 8h18a2 2 0 0 1 2 2v10" />
-        <path d="M2 17h20" />
-        <path d="M6 8v9" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="m9 12 2 2 4-4" />
       </svg>
     ),
   },
   {
-    label: "Ownership",
-    value: "For All Nationalities",
+    label: "Payment Plan",
+    value: "5% / 35% / 60%",
     icon: (
       <svg
-        width="32"
-        height="32"
+        width="30"
+        height="30"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
@@ -122,8 +121,10 @@ const highlightsData = [
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-        <path d="m9 12 2 2 4-4" />
+        <rect width="20" height="14" x="2" y="5" rx="2" />
+        <line x1="2" x2="22" y1="10" y2="10" />
+        <path d="M6 15h2" />
+        <path d="M12 15h6" />
       </svg>
     ),
   },
