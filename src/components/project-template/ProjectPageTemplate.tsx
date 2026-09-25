@@ -10,6 +10,7 @@ import ProjectAmenities from './ProjectAmenities';
 import ProjectGallery from './ProjectGallery';
 import ProjectFloorPlans from './ProjectFloorPlans';
 import ProjectArticle from './ProjectArticle';
+import MasyafBlogArticle from '@/components/masyaf-plots/MasyafBlogArticle';
 import ProjectPaymentPlan from './ProjectPaymentPlan';
 import ProjectPaymentMethods from './ProjectPaymentMethods';
 import ProjectMasterPlan from './ProjectMasterPlan';
@@ -75,6 +76,9 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         items={data.gallery}
       />
 
+      {/* Masyaf Blog Article Section (Positioned between Gallery and Floor Plan) */}
+      {data.slug === 'masyaf-plots' && <MasyafBlogArticle />}
+
       {/* 7. Floor & Plot Plans Interactive Section */}
       <ProjectFloorPlans
         name={data.name}
@@ -83,15 +87,17 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         onOpenBrochure={() => setBrochureModalOpen(true)}
       />
 
-      {/* 8. Detailed Project Article, Specs & Vision */}
-      <ProjectArticle
-        name={data.name}
-        leadTitle={`${data.name}, Hudayriyat Island – Prestigious Coastal Living`}
-        leadText={`Discover ${data.name}, an exclusive development offering spacious customized layouts, world-class infrastructure, and scenic waterfront living by Modon Properties.`}
-        specs={data.articleOverview}
-        highlights={data.articleHighlights}
-        stylesList={data.architecturalStyles}
-      />
+      {/* 8. Detailed Project Article, Specs & Vision (Only for projects other than Masyaf Plots) */}
+      {data.slug !== 'masyaf-plots' && (
+        <ProjectArticle
+          name={data.name}
+          leadTitle={`${data.name}, Hudayriyat Island – Prestigious Coastal Living`}
+          leadText={`Discover ${data.name}, an exclusive development offering spacious customized layouts, world-class infrastructure, and scenic waterfront living by Modon Properties.`}
+          specs={data.articleOverview}
+          highlights={data.articleHighlights}
+          stylesList={data.architecturalStyles}
+        />
+      )}
 
       {/* 9. Payment Plan with List & Grid Toggles */}
       <ProjectPaymentPlan
