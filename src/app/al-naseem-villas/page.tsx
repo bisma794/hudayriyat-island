@@ -47,11 +47,11 @@ export default function AlNaseemVillasPage() {
       {/* Gallery with Carousel Slider, Tabs & Lightbox */}
       <NaseemGallery />
 
+      {/* Blog Article Section */}
+      <NaseemArticle />
+
       {/* Floor Plans Interactive Section (4, 5, 6 BR Villas) */}
       <NaseemFloorPlans onOpenBrochure={() => setBrochureModalOpen(true)} />
-
-      {/* Detailed Project Article & Specifications */}
-      <NaseemArticle />
 
       {/* Payment Plan with List/Grid Toggle */}
       <NaseemPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
