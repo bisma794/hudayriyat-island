@@ -80,13 +80,15 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
       {/* Masyaf Blog Article Section (Positioned between Gallery and Floor Plan) */}
       {data.slug === 'masyaf-plots' && <MasyafBlogArticle />}
 
-      {/* 7. Floor & Plot Plans Interactive Section */}
-      <ProjectFloorPlans
-        name={data.name}
-        subtitle={data.floorPlansSubtitle}
-        plans={data.floorPlans}
-        onOpenBrochure={() => setBrochureModalOpen(true)}
-      />
+      {/* 7. Floor & Plot Plans Interactive Section (Excluded for Masyaf Plots per user request) */}
+      {data.slug !== 'masyaf-plots' && (
+        <ProjectFloorPlans
+          name={data.name}
+          subtitle={data.floorPlansSubtitle}
+          plans={data.floorPlans}
+          onOpenBrochure={() => setBrochureModalOpen(true)}
+        />
+      )}
 
       {/* 8. Detailed Project Article, Specs & Vision (Only for projects other than Masyaf Plots) */}
       {data.slug !== 'masyaf-plots' && (
