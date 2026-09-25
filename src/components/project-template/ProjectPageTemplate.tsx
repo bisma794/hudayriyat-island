@@ -12,6 +12,7 @@ import ProjectFloorPlans from './ProjectFloorPlans';
 import ProjectArticle from './ProjectArticle';
 import MasyafBlogArticle from '@/components/masyaf-plots/MasyafBlogArticle';
 import MasyafLocation from '@/components/masyaf-plots/MasyafLocation';
+import NawayefBlogArticle from '@/components/nawayef-village/NawayefBlogArticle';
 import ProjectPaymentPlan from './ProjectPaymentPlan';
 import ProjectPaymentMethods from './ProjectPaymentMethods';
 import ProjectMasterPlan from './ProjectMasterPlan';
@@ -82,6 +83,9 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
       {/* Masyaf Blog Article Section (Positioned between Gallery and Floor Plan) */}
       {data.slug === 'masyaf-plots' && <MasyafBlogArticle />}
 
+      {/* Nawayef Village Blog Article Section (Positioned after Gallery per user request) */}
+      {data.slug === 'nawayef-village' && <NawayefBlogArticle />}
+
       {/* 7. Floor & Plot Plans Interactive Section (Excluded for Masyaf Plots per user request) */}
       {data.slug !== 'masyaf-plots' && (
         <ProjectFloorPlans
@@ -92,8 +96,8 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         />
       )}
 
-      {/* 8. Detailed Project Article, Specs & Vision (Only for projects other than Masyaf Plots) */}
-      {data.slug !== 'masyaf-plots' && (
+      {/* 8. Detailed Project Article, Specs & Vision (Only for projects other than Masyaf Plots and Nawayef Village) */}
+      {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && (
         <ProjectArticle
           name={data.name}
           leadTitle={`${data.name}, Hudayriyat Island – Prestigious Coastal Living`}
