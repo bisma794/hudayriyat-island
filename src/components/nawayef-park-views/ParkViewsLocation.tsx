@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import styles from "./ParkViewsLocation.module.css";
 
@@ -46,24 +45,6 @@ const categories = [
       { name: "Al Seef Village Mall", time: "Approximately 26 mins" },
       { name: "Abu Dhabi Mall", time: "Approximately 26 mins" },
     ],
-  },
-];
-
-const nearbyDestinations = [
-  {
-    name: "Downtown Abu Dhabi",
-    time: "20 Minutes",
-    image: "/images/nawayef-park-views/asset_53.jpg",
-  },
-  {
-    name: "Louvre Abu Dhabi",
-    time: "33 Minutes",
-    image: "/images/nawayef-park-views/asset_54.jpg",
-  },
-  {
-    name: "Zayed International Airport",
-    time: "34 Minutes",
-    image: "/images/nawayef-park-views/asset_55.jpg",
   },
 ];
 
@@ -138,32 +119,6 @@ export default function ParkViewsLocation() {
               );
             })}
           </div>
-        </div>
-
-        {/* Nearby Destinations */}
-        <div className={styles.nearbyHeader}>
-          <h3 className={styles.nearbyTitle}>Nawayef Park Views Nearby</h3>
-          <p className={styles.nearbyDesc}>
-            <strong>Nawayef Park Views </strong>offers prime connectivity across Abu Dhabi, placing top landmarks, cultural attractions, and the airport just minutes away for effortless commuting and exploration.
-          </p>
-        </div>
-
-        <div className={styles.nearbyGrid}>
-          {nearbyDestinations.map((dest, idx) => (
-            <div key={idx} className={styles.destinationCard}>
-              <Image
-                src={dest.image}
-                alt={dest.name}
-                fill
-                className={styles.destImage}
-              />
-              <div className={styles.destOverlay} />
-              <div className={styles.destContent}>
-                <h4 className={styles.destName}>{dest.name}</h4>
-                <div className={styles.destTime}>{dest.time}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
