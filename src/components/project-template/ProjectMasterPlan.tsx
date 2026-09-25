@@ -34,8 +34,10 @@ export default function ProjectMasterPlan({
             <Image
               src={planImage}
               alt={`${name} Master Plan on Hudayriyat Island, Abu Dhabi`}
-              fill
+              width={1600}
+              height={900}
               className={styles.masterImg}
+              priority
             />
           </div>
           <div className={styles.zoomHint}>
