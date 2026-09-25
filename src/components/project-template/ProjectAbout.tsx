@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from './ProjectAbout.module.css';
 
@@ -9,6 +9,8 @@ interface ProjectAboutProps {
   title: string;
   description: string;
   mediaPlaceholder?: string;
+  videoUrl?: string;
+  poster?: string;
   onOpenBrochure?: () => void;
   slug?: string;
 }
@@ -18,9 +20,25 @@ export default function ProjectAbout({
   title,
   description,
   mediaPlaceholder = '/images/placeholder.svg',
+  videoUrl,
+  poster,
   onOpenBrochure,
   slug,
 }: ProjectAboutProps) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
   // If Masyaf Plots: render the clean aesthetic editorial text section with the brown backdrop behind it
   if (slug === 'masyaf-plots') {
     return (
@@ -100,20 +118,54 @@ export default function ProjectAbout({
               <div className={styles.brownBackdrop} />
 
               <div className={styles.mediaContainer}>
-                <Image
-                  src={mediaPlaceholder}
-                  alt={`${name} showcase`}
-                  fill
-                  className={styles.mediaImg}
-                />
-                <div className={styles.mediaOverlay}>
-                  <div className={styles.playIconPlaceholder}>
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
-                      <polygon points="5 3 19 12 5 21 5 3" />
-                    </svg>
+                {videoUrl ? (
+                  <div className={styles.videoPlayerWrap} onClick={handlePlay}>
+                    <video
+                      ref={videoRef}
+                      src={videoUrl}
+                      poster={poster || mediaPlaceholder}
+                      playsInline
+                      controls={isPlaying}
+                      onPlay={() => setIsPlaying(true)}
+                      onPause={() => setIsPlaying(false)}
+                      className={styles.videoElement}
+                    />
+                    {!isPlaying && (
+                      <button
+                        type="button"
+                        className={styles.playButton}
+                        aria-label={`Play ${name} video`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePlay();
+                        }}
+                      >
+                        <div className={styles.playIconContainer}>
+                          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon points="6 3 20 12 6 21 6 3" />
+                          </svg>
+                        </div>
+                      </button>
+                    )}
                   </div>
-                  <span className={styles.overlayText}>{name} Video Showcase Placeholder</span>
-                </div>
+                ) : (
+                  <>
+                    <Image
+                      src={mediaPlaceholder}
+                      alt={`${name} showcase`}
+                      fill
+                      className={styles.mediaImg}
+                    />
+                    <div className={styles.mediaOverlay}>
+                      <div className={styles.playIconPlaceholder}>
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="5 3 19 12 5 21 5 3" />
+                        </svg>
+                      </div>
+                      <span className={styles.overlayText}>{name} Video Showcase Placeholder</span>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

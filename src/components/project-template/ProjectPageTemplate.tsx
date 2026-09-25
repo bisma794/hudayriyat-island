@@ -60,6 +60,8 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         title={data.aboutTitle}
         description={data.aboutDescription}
         mediaPlaceholder={data.aboutImage || (data.heroSlides && data.heroSlides[0])}
+        videoUrl={data.aboutVideoUrl}
+        poster={data.aboutPoster}
         onOpenBrochure={() => setBrochureModalOpen(true)}
       />
 
