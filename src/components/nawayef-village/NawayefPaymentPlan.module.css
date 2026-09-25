@@ -1,0 +1,265 @@
+.paymentSection {
+  padding: 60px 0 70px;
+  background-color: #ffffff;
+  border-top: 1px solid #ede7df;
+}
+
+.planContainer {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.title {
+  font-size: clamp(1.9rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 15.5px;
+  color: #4a4a4a;
+  line-height: 1.75;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.subtitle strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Top Right Toggle View Icons */
+.viewToggleRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.toggleIconsGroup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.iconBtn {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 6px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #856d52;
+  opacity: 0.65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.iconBtn:hover {
+  opacity: 1;
+  color: #856d52;
+}
+
+.iconActive {
+  border-color: #856d52;
+  background: #ffffff;
+  color: #856d52;
+  opacity: 1;
+  box-shadow: 0 1px 5px rgba(133, 109, 82, 0.18);
+}
+
+/* Centered Community Payment Plan Badge */
+.badgeWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 35px;
+}
+
+.badgeBtn {
+  display: inline-block;
+  padding: 10px 28px;
+  border: 1.5px solid #856d52;
+  border-radius: 6px;
+  color: #856d52;
+  font-size: 15.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* List Table View */
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.planTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.planTable th {
+  padding: 14px 10px;
+  font-size: 15.5px;
+  border-bottom: 1px solid #ebe5dd;
+}
+
+.installmentHeader {
+  color: #856d52;
+  font-weight: 700;
+  width: 35%;
+}
+
+.percentageHeader {
+  color: #1a1a1a;
+  font-weight: 700;
+  width: 25%;
+}
+
+.milestoneHeader {
+  color: #1a1a1a;
+  font-weight: 700;
+  width: 40%;
+}
+
+.planTable td {
+  padding: 18px 10px;
+  font-size: 15px;
+  border-bottom: 1px solid #f2eee8;
+  color: #333333;
+}
+
+.planTable tbody tr:hover td {
+  background-color: #faf8f5;
+}
+
+.installmentCol {
+  font-weight: 500;
+  color: #222222;
+}
+
+.percentageCol {
+  color: #222222;
+  font-weight: 600;
+}
+
+.milestoneCol {
+  color: #4a4a4a;
+}
+
+/* Grid Card View */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gridCard {
+  background: #fdfcfb;
+  border: 1px solid #ebe5dd;
+  border-radius: 10px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.gridCard:hover {
+  transform: translateY(-3px);
+  border-color: #856d52;
+  box-shadow: 0 8px 24px rgba(133, 109, 82, 0.12);
+}
+
+.gridPercent {
+  font-size: 32px;
+  font-weight: 800;
+  color: #856d52;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.gridTitle {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.gridMilestone {
+  font-size: 13px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+/* CTA Download Button */
+.ctaRow {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.brochureBtn {
+  background-color: #856d52;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(133, 109, 82, 0.25);
+}
+
+.brochureBtn:hover {
+  background-color: #725b42;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(133, 109, 82, 0.35);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .paymentSection {
+    padding: 40px 0 50px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .installmentHeader {
+    width: 45%;
+  }
+
+  .percentageHeader {
+    width: 25%;
+  }
+
+  .milestoneHeader {
+    width: 30%;
+  }
+
+  .planTable td, .planTable th {
+    padding: 12px 6px;
+    font-size: 13.5px;
+  }
+}

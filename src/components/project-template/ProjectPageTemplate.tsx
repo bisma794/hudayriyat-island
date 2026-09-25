@@ -13,6 +13,7 @@ import ProjectArticle from './ProjectArticle';
 import MasyafBlogArticle from '@/components/masyaf-plots/MasyafBlogArticle';
 import MasyafLocation from '@/components/masyaf-plots/MasyafLocation';
 import NawayefBlogArticle from '@/components/nawayef-village/NawayefBlogArticle';
+import NawayefPaymentPlan from '@/components/nawayef-village/NawayefPaymentPlan';
 import ProjectPaymentPlan from './ProjectPaymentPlan';
 import ProjectPaymentMethods from './ProjectPaymentMethods';
 import ProjectMasterPlan from './ProjectMasterPlan';
@@ -86,6 +87,11 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
       {/* Nawayef Village Blog Article Section (Positioned after Gallery per user request) */}
       {data.slug === 'nawayef-village' && <NawayefBlogArticle />}
 
+      {/* Nawayef Village Payment Plan (In continuity with the article per user request) */}
+      {data.slug === 'nawayef-village' && (
+        <NawayefPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
+      )}
+
       {/* 7. Floor & Plot Plans Interactive Section (Excluded for Masyaf Plots per user request) */}
       {data.slug !== 'masyaf-plots' && (
         <ProjectFloorPlans
@@ -108,8 +114,8 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         />
       )}
 
-      {/* 9. Payment Plan with List & Grid Toggles (Excluded for Masyaf Plots per user request) */}
-      {data.slug !== 'masyaf-plots' && (
+      {/* 9. Payment Plan with List & Grid Toggles (Excluded for Masyaf Plots and Nawayef Village) */}
+      {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && (
         <ProjectPaymentPlan
           name={data.name}
           subtitle={data.paymentPlanSubtitle}
