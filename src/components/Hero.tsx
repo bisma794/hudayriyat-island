@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Check } from "lucide-react";
 import styles from "./Hero.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 const slides = [
   {
@@ -22,7 +24,6 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
-  const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -43,14 +44,17 @@ export default function Hero() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isCaptchaChecked) {
-      alert("Please confirm you are not a robot.");
-      return;
-    }
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Island",
+      developer: "Modon Properties",
+      activity_description: "Homepage Hero Call Back Request",
+    });
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setIsCaptchaChecked(false);
       setFormData({ name: "", email: "", phone: "" });
     }, 4500);
   };
@@ -149,73 +153,13 @@ export default function Hero() {
                     </div>
 
                     <div className={styles.formGroup}>
-                      <div className={styles.phoneWrapper}>
-                        <span className={styles.phonePrefix} title="Select Country Code">
-                          🇵🇰 ▾
-                        </span>
-                        <input
-                          type="tel"
-                          required
-                          aria-label="Phone Number"
-                          placeholder="Phone"
-                          className={styles.phoneInput}
-                          value={formData.phone}
-                          onChange={(e) =>
-                            setFormData({ ...formData, phone: e.target.value })
-                          }
-                        />
-                      </div>
-                    </div>
-
-                    {/* reCAPTCHA Checkbox Box */}
-                    <div className={styles.recaptchaBox}>
-                      <div
-                        className={styles.recaptchaLeft}
-                        onClick={() => setIsCaptchaChecked((prev) => !prev)}
-                      >
-                        <div
-                          className={`${styles.recaptchaCheckbox} ${
-                            isCaptchaChecked
-                              ? styles.recaptchaCheckboxChecked
-                              : ""
-                          }`}
-                        >
-                          {isCaptchaChecked && (
-                            <Check size={16} color="#856d52" strokeWidth={3} />
-                          )}
-                        </div>
-                        <span className={styles.recaptchaText}>
-                          I'm not a robot
-                        </span>
-                      </div>
-
-                      <div className={styles.recaptchaBrand}>
-                        <svg
-                          width="30"
-                          height="30"
-                          viewBox="0 0 48 48"
-                          fill="none"
-                          className={styles.recaptchaLogo}
-                        >
-                          <path
-                            d="M24 4C12.95 4 4 12.95 4 24C4 28.52 5.51 32.7 8.04 36.03L12.35 31.72C10.89 29.5 10 26.86 10 24C10 16.27 16.27 10 24 10C28.47 10 32.42 12.09 35 15.35L29 21.35H44V6.35L38.7 11.65C34.98 7.02 29.84 4 24 4Z"
-                            fill="#1A73E8"
-                          />
-                          <path
-                            d="M24 38C19.53 38 15.58 35.91 13 32.65L19 26.65H4V41.65L9.3 36.35C13.02 40.98 18.16 44 24 44C35.05 44 44 35.05 44 24C44 19.48 42.49 15.3 39.96 11.97L35.65 16.28C37.11 18.5 38 21.14 38 24C38 31.73 31.73 38 24 38Z"
-                            fill="#4285F4"
-                          />
-                        </svg>
-                        <span
-                          style={{
-                            fontSize: "8px",
-                            fontWeight: 700,
-                            color: "#555",
-                          }}
-                        >
-                          reCAPTCHA
-                        </span>
-                      </div>
+                      <PhoneInput
+                        defaultCountry="ae"
+                        value={formData.phone}
+                        onChange={(phone) =>
+                          setFormData({ ...formData, phone })
+                        }
+                      />
                     </div>
 
                     <button type="submit" className={styles.submitBtn}>

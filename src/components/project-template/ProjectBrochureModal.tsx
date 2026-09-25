@@ -1,9 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from 'next/image';
 import { X, Download } from 'lucide-react';
 import styles from './ProjectBrochureModal.module.css';
+import { sendLeadToWebhook } from '@/lib/sendLead';
 
 interface ProjectBrochureModalProps {
   name: string;
@@ -27,6 +30,15 @@ export default function ProjectBrochureModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: name || 'Hudayriyat Island Project',
+      developer: 'Modon Properties',
+      community: name || 'Hudayriyat Island',
+      activity_description: `${name} Brochure Download Request`,
+    });
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -95,16 +107,7 @@ export default function ProjectBrochureModal({
               </div>
 
               <div className={styles.formGroup}>
-                <input
-                  type="tel"
-                  className={styles.inputField}
-                  placeholder="PHONE"
-                  required
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                />
+                <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
               </div>
 
               <button type="submit" className={styles.submitBtn}>

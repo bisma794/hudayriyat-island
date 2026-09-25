@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import { Check } from "lucide-react";
 import styles from "./WadeemContact.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 export default function WadeemContact() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
@@ -13,6 +16,16 @@ export default function WadeemContact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Wadeem Gardens",
+      developer: "Modon Properties",
+      community: "Wadeem Gardens",
+      property_type: "Villa",
+      activity_description: "Wadeem Gardens Contact Form Call Back Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -85,16 +98,7 @@ export default function WadeemContact() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
-                      required
-                      className={styles.inputField}
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button

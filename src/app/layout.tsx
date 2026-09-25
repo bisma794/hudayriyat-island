@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Ubuntu } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const ubuntu = Ubuntu({
@@ -49,21 +50,22 @@ export const metadata: Metadata = {
   publisher: "Hudayriyat Island",
   applicationName: "Hudayriyat Island",
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
     languages: {
-      "en-US": "/",
-      "ar-AE": "/?lang=ar",
-      "ru-RU": "/?lang=ru",
-      "x-default": "/",
+      "en-US": siteUrl,
+      "ar-AE": `${siteUrl}/?lang=ar`,
+      "ru-RU": `${siteUrl}/?lang=ru`,
+      "x-default": siteUrl,
     },
   },
   icons: {
     icon: [
-      { url: "/images/logo.png", type: "image/png" },
-      { url: "/icon.png", type: "image/png" },
+      { url: "/hudayriyat logo-01.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/hudayriyat-logo-01.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    shortcut: "/hudayriyat logo-01.svg",
+    apple: "/hudayriyat logo-01.svg",
   },
   openGraph: {
     title: "Hudayriyat Island – Luxury Villas & Waterfront Living in Abu Dhabi",
@@ -72,7 +74,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Hudayriyat Island",
     locale: "en_US",
-    alternateLocale: ["ar_AE", "ru_RU"],
+    alternateLocale: ["ar_AE"],
     type: "website",
     images: [
       {
@@ -92,17 +94,24 @@ export const metadata: Metadata = {
     creator: "@ModonProperties",
   },
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
+    index: true,
+    follow: true,
     googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-      "max-video-preview": -1,
-      "max-image-preview": "none",
+      index: true,
+      follow: true,
       "max-snippet": -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
     },
+  },
+  verification: {
+    google: "kQ31FvlXoJip2fYZ2GusO9zNoyDaUlDpWVFe3rLNF2I",
+  },
+  other: {
+    "geo.region": "AE-AZ",
+    "geo.placename": "Abu Dhabi, UAE",
+    "mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-capable": "yes",
   },
   category: "Real Estate",
 };
@@ -124,7 +133,7 @@ const jsonLdData = {
       "@id": `${siteUrl}/#organization`,
       "name": "Hudayriyat Island - Modon Properties",
       "url": siteUrl,
-      "logo": `${siteUrl}/images/logo.png`,
+      "logo": `${siteUrl}/hudayriyat logo-01.svg`,
       "image": `${siteUrl}/images/hero/slide-1.jpg`,
       "description":
         "Hudayriyat Island offers a range of sophisticated residential communities in Abu Dhabi, each designed to provide an exclusive and high-end lifestyle.",
@@ -229,11 +238,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${ubuntu.variable} ${ubuntu.className}`} suppressHydrationWarning>
       <head>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <link rel="icon" type="image/png" href="/images/logo.png" />
-        <link rel="shortcut icon" href="/images/logo.png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+        <meta name="googlebot" content="index, follow" />
+        <meta name="google-site-verification" content="kQ31FvlXoJip2fYZ2GusO9zNoyDaUlDpWVFe3rLNF2I" />
+        <meta name="geo.region" content="AE-AZ" />
+        <meta name="geo.placename" content="Abu Dhabi, UAE" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="icon" type="image/svg+xml" href="/hudayriyat logo-01.svg" />
+        <link rel="shortcut icon" href="/hudayriyat logo-01.svg" />
+        <link rel="apple-touch-icon" href="/hudayriyat logo-01.svg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -245,7 +259,21 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
       </head>
-      <body className={`${ubuntu.variable} ${ubuntu.className}`} suppressHydrationWarning>{children}</body>
+      <body className={`${ubuntu.variable} ${ubuntu.className}`} suppressHydrationWarning>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6QRTSSZ5J5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6QRTSSZ5J5');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }

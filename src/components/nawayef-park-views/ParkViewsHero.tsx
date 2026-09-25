@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import styles from "./ParkViewsHero.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 interface ParkViewsHeroProps {
   onOpenBrochureModal?: () => void;
@@ -33,7 +36,7 @@ export default function ParkViewsHero({ onOpenBrochureModal }: ParkViewsHeroProp
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -52,11 +55,18 @@ export default function ParkViewsHero({ onOpenBrochureModal }: ParkViewsHeroProp
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isCaptchaChecked) {
-      alert("Please confirm you are not a robot.");
-      return;
-    }
+    
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Nawayef Park Views",
+      developer: "Modon Properties",
+      community: "Nawayef Park Views",
+      property_type: "Villa",
+      activity_description: "Nawayef Park Views Hero Call Back Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -174,34 +184,7 @@ export default function ParkViewsHero({ onOpenBrochureModal }: ParkViewsHeroProp
                   </div>
 
                   <div className={styles.inputGroup}>
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
-                      required
-                      className={styles.inputField}
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
-                  </div>
-
-                  {/* Recaptcha */}
-                  <div className={styles.recaptchaBox}>
-                    <div className={styles.recaptchaLeft}>
-                      <input
-                        type="checkbox"
-                        id="hero-recaptcha"
-                        checked={isCaptchaChecked}
-                        onChange={(e) => setIsCaptchaChecked(e.target.checked)}
-                        required
-                      />
-                      <label htmlFor="hero-recaptcha">I&apos;m not a robot</label>
-                    </div>
-                    <div className={styles.recaptchaRight}>
-                      <span className={styles.recapBrand}>reCAPTCHA</span>
-                      <span className={styles.recapTerms}>Privacy - Terms</span>
-                    </div>
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button

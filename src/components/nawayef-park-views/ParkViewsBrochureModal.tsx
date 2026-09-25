@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import { X, Check } from "lucide-react";
 import styles from "./ParkViewsBrochureModal.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 interface ParkViewsBrochureModalProps {
   isOpen: boolean;
@@ -19,7 +22,7 @@ export default function ParkViewsBrochureModal({
   pdfUrl = "/images/nawayef-park-views/asset_58.pdf",
 }: ParkViewsBrochureModalProps) {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
-  const [isCaptchaChecked, setIsCaptchaChecked] = useState(false);
+  
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -27,11 +30,18 @@ export default function ParkViewsBrochureModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!isCaptchaChecked) {
-      alert("Please confirm you are not a robot.");
-      return;
-    }
+    
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Nawayef Park Views",
+      developer: "Modon Properties",
+      community: "Nawayef Park Views",
+      property_type: "Villa",
+      activity_description: "Nawayef Park Views Brochure Download Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setIsSubmitted(true);
@@ -106,33 +116,7 @@ export default function ParkViewsBrochureModal({
                   setFormData({ ...formData, email: e.target.value })
                 }
               />
-              <input
-                type="tel"
-                placeholder="PHONE"
-                required
-                className={styles.inputField}
-                value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
-              />
-
-              <div className={styles.recaptchaBox}>
-                <div className={styles.recaptchaLeft}>
-                  <input
-                    type="checkbox"
-                    id="modal-recaptcha"
-                    checked={isCaptchaChecked}
-                    onChange={(e) => setIsCaptchaChecked(e.target.checked)}
-                    required
-                  />
-                  <label htmlFor="modal-recaptcha">I&apos;m not a robot</label>
-                </div>
-                <div className={styles.recaptchaRight}>
-                  <span className={styles.recapBrand}>reCAPTCHA</span>
-                  <span className={styles.recapTerms}>Privacy - Terms</span>
-                </div>
-              </div>
+              <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
 
               <button
                 type="submit"

@@ -1,8 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from 'next/image';
 import styles from './VillasContact.module.css';
+import { sendLeadToWebhook } from '@/lib/sendLead';
 
 export default function VillasContact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -14,6 +17,16 @@ export default function VillasContact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: 'Bashayer Villas',
+      developer: 'Modon Properties',
+      community: 'Bashayer Villas',
+      property_type: 'Villa',
+      activity_description: 'Bashayer Villas Contact Form Call Back Request',
+    });
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -86,16 +99,7 @@ export default function VillasContact() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      className={styles.inputField}
-                      placeholder="Phone Number"
-                      required
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button type="submit" className={styles.submitBtn}>

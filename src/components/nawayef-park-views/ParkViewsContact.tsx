@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import styles from "./ParkViewsContact.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 export default function ParkViewsContact() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
@@ -10,6 +13,16 @@ export default function ParkViewsContact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Nawayef Park Views",
+      developer: "Modon Properties",
+      community: "Nawayef Park Views",
+      property_type: "Villa",
+      activity_description: "Nawayef Park Views Contact Form Call Back Request",
+    });
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -89,17 +102,7 @@ export default function ParkViewsContact() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      required
-                      aria-label="Phone Number"
-                      placeholder="Phone Number"
-                      className={styles.inputField}
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button type="submit" className={styles.submitBtn}>

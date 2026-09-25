@@ -1,8 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from 'next/image';
 import styles from './ProjectContact.module.css';
+import { sendLeadToWebhook } from '@/lib/sendLead';
 
 interface ProjectContactProps {
   name: string;
@@ -18,6 +21,15 @@ export default function ProjectContact({ name }: ProjectContactProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: name || 'Hudayriyat Island Project',
+      developer: 'Modon Properties',
+      community: name || 'Hudayriyat Island',
+      activity_description: `${name} Contact Form Call Back Request`,
+    });
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -90,16 +102,7 @@ export default function ProjectContact({ name }: ProjectContactProps) {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      className={styles.inputField}
-                      placeholder="Phone Number"
-                      required
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button type="submit" className={styles.submitBtn}>

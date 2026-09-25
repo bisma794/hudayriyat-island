@@ -10,10 +10,10 @@ const wadeem_plots_data: ProjectData = {
   "heroSubtitle": "Premium 4 to 6 BR Villa Plots in a Wellness Centric Waterfront Destination",
   "freeholdTag": "✦ Freehold Ownership For All Nationalities • Modon Properties",
   "heroSlides": [
-    "/images/wadeem-plots/hero-slider-1.jpg",
-    "/images/wadeem-plots/hero-slider-2.jpg",
-    "/images/wadeem-plots/hero-slider-3.jpg",
-    "/images/wadeem-plots/hero-slider-4.jpg"
+    "/images/wadeem-plots/asset_2.jpg",
+    "/images/wadeem-plots/asset_5.jpg",
+    "/images/wadeem-plots/asset_6.jpg",
+    "/images/wadeem-plots/asset_7.jpg"
   ],
   "highlights": [
     {
@@ -49,7 +49,7 @@ const wadeem_plots_data: ProjectData = {
   ],
   "aboutTitle": "About Wadeem Plots",
   "aboutDescription": "Wadeem Plotes by Modon is a prestigious waterfront residential community located on the vibrant Hudayriyat Island in Abu Dhabi. This upscale development offers a limited collection of spacious 4 to 6-bedroom villa plots , perfect for those seeking to design and build a bespoke home in a peaceful, nature-inspired environment. Residents benefit from flexible plot sizes , custom architectural freedom, and easy connectivity to Downtown Abu Dhabi , making it an ideal choice for families and investors alike.\n\nWadeem Plots by Modon – Custom 4 to 6 Bedroom Villa Plots in a Gated Hudayriyat Island Community Wadeem Plots by Modon is a high-end gated villa plot community located on Hudayriyat Island, Abu Dhabi, offering discerning buyers the rare opportunity to design and build a custom dream home in a serene, wellness-driven, and master-planned environment. With spacious 4 to 6-bedroom villa plots , nature-inspired design, and exceptional connectivity to Abu Dhabi’s core destinations, Wadeem is the perfect blend of tranquil island living and urban accessibility.\n\nWadeem offers a thoughtfully curated design language that promotes architectural freedom while maintaining a cohesive community identity:",
-  "aboutImage": "/images/wadeem-plots/hero-slider-1.jpg",
+  "aboutImage": "/images/wadeem-plots/asset_2.jpg",
   "amenitiesSubtitle": "Thoughtfully curated amenities designed to elevate coastal luxury living on Hudayriyat Island.",
   "amenities": [
     {

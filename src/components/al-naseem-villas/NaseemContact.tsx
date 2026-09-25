@@ -1,8 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from 'next/image';
 import styles from './NaseemContact.module.css';
+import { sendLeadToWebhook } from '@/lib/sendLead';
 
 export default function NaseemContact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -14,6 +17,16 @@ export default function NaseemContact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: 'Al Naseem Villas',
+      developer: 'Modon Properties',
+      community: 'Al Naseem Villas',
+      property_type: 'Villa',
+      activity_description: 'Al Naseem Villas Contact Form Call Back Request',
+    });
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
@@ -86,16 +99,7 @@ export default function NaseemContact() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      className={styles.inputField}
-                      placeholder="Phone Number"
-                      required
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button type="submit" className={styles.submitBtn}>

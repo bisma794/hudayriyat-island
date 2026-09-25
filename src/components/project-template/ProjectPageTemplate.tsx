@@ -15,6 +15,8 @@ import MasyafLocation from '@/components/masyaf-plots/MasyafLocation';
 import NawayefBlogArticle from '@/components/nawayef-village/NawayefBlogArticle';
 import NawayefPaymentPlan from '@/components/nawayef-village/NawayefPaymentPlan';
 import NawayefFloorPlans from '@/components/nawayef-village/NawayefFloorPlans';
+import WadeemPlotsArticle from '@/components/wadeem-plots/WadeemPlotsArticle';
+import WadeemPlotsPaymentPlan from '@/components/wadeem-plots/WadeemPlotsPaymentPlan';
 import ProjectPaymentPlan from './ProjectPaymentPlan';
 import ProjectPaymentMethods from './ProjectPaymentMethods';
 import ProjectMasterPlan from './ProjectMasterPlan';
@@ -93,10 +95,18 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         <NawayefPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
       )}
 
+      {/* Wadeem Plots Article Section (Positioned before Floor & Plot Plans per user request) */}
+      {data.slug === 'wadeem-plots' && <WadeemPlotsArticle />}
+
+      {/* Wadeem Plots Payment Plan (In continuity right after the article section) */}
+      {data.slug === 'wadeem-plots' && (
+        <WadeemPlotsPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
+      )}
+
       {/* 7. Floor & Plot Plans Interactive Section */}
       {data.slug === 'nawayef-village' ? (
         <NawayefFloorPlans onOpenBrochure={() => setBrochureModalOpen(true)} />
-      ) : data.slug !== 'masyaf-plots' ? (
+      ) : data.slug !== 'masyaf-plots' && data.slug !== 'wadeem-plots' ? (
         <ProjectFloorPlans
           name={data.name}
           subtitle={data.floorPlansSubtitle}
@@ -105,8 +115,8 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         />
       ) : null}
 
-      {/* 8. Detailed Project Article, Specs & Vision (Only for projects other than Masyaf Plots and Nawayef Village) */}
-      {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && (
+      {/* 8. Detailed Project Article, Specs & Vision (Excluded for Masyaf Plots, Nawayef Village, and Wadeem Plots) */}
+      {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && data.slug !== 'wadeem-plots' && (
         <ProjectArticle
           name={data.name}
           leadTitle={`${data.name}, Hudayriyat Island – Prestigious Coastal Living`}
@@ -117,8 +127,8 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         />
       )}
 
-      {/* 9. Payment Plan with List & Grid Toggles (Excluded for Masyaf Plots and Nawayef Village) */}
-      {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && (
+      {/* 9. Payment Plan with List & Grid Toggles (Excluded for Masyaf Plots, Nawayef Village, and Wadeem Plots) */}
+      {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && data.slug !== 'wadeem-plots' && (
         <ProjectPaymentPlan
           name={data.name}
           subtitle={data.paymentPlanSubtitle}

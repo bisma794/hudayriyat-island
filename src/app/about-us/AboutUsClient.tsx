@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import {
   Compass,
@@ -19,6 +21,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ListPropertyModal from "@/components/ListPropertyModal";
 import styles from "./AboutUs.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 export default function AboutUsClient() {
   const [listModalOpen, setListModalOpen] = useState(false);
@@ -29,6 +32,14 @@ export default function AboutUsClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Island",
+      developer: "Modon Properties",
+      activity_description: "About Us Page Form Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -270,16 +281,7 @@ export default function AboutUsClient() {
                     </div>
 
                     <div className={styles.inputGroup}>
-                      <input
-                        type="tel"
-                        placeholder="Phone Number"
-                        required
-                        className={styles.inputField}
-                        value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                      />
+                      <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                     </div>
 
                     <button

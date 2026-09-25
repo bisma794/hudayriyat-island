@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import {
   Phone,
   Mail,
@@ -17,6 +19,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ListPropertyModal from "@/components/ListPropertyModal";
 import styles from "./ContactUs.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 export default function ContactUsClient() {
   const [listModalOpen, setListModalOpen] = useState(false);
@@ -32,6 +35,15 @@ export default function ContactUsClient() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Island",
+      developer: "Modon Properties",
+      key_requirement: formData.message,
+      activity_description: "Contact Us Page Form Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -203,16 +215,7 @@ export default function ContactUsClient() {
                     </div>
 
                     <div className={styles.inputGroup}>
-                      <input
-                        type="tel"
-                        placeholder="Phone Number"
-                        required
-                        className={styles.inputField}
-                        value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                      />
+                      <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                     </div>
 
                     <div className={styles.inputGroup}>

@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import { Check } from "lucide-react";
 import styles from "./GolfContact.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 export default function GolfContact() {
   const [formData, setFormData] = useState({
@@ -17,6 +20,16 @@ export default function GolfContact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Golf Estates",
+      developer: "Modon Properties",
+      community: "Hudayriyat Golf Estates",
+      property_type: "Villa",
+      activity_description: "Golf Estates Contact Form Call Back Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -89,16 +102,7 @@ export default function GolfContact() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
-                      required
-                      className={styles.inputField}
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                    />
+                    <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                   </div>
 
                   <button

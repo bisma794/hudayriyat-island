@@ -1,8 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 import { X } from "lucide-react";
 import styles from "./ListPropertyModal.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 interface ListPropertyModalProps {
   isOpen: boolean;
@@ -26,6 +29,16 @@ export default function ListPropertyModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Island",
+      developer: "Modon Properties",
+      property_type: formData.propertyType,
+      key_requirement: formData.comment,
+      activity_description: "List Your Property Modal Form",
+    });
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -88,16 +101,7 @@ export default function ListPropertyModal({
 
             <div>
               <label className={styles.label}>Phone *</label>
-              <input
-                type="tel"
-                required
-                placeholder="+971 50 123 4567"
-                className={styles.inputField}
-                value={formData.phone}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone: e.target.value })
-                }
-              />
+              <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
             </div>
 
             <div>

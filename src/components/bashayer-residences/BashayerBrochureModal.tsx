@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import { X, Download } from "lucide-react";
 import styles from "./BashayerBrochureModal.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 interface BashayerBrochureModalProps {
   isOpen: boolean;
@@ -25,6 +28,15 @@ export default function BashayerBrochureModal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Bashayer Residences",
+      developer: "Modon Properties",
+      community: "Bashayer Residences",
+      activity_description: "Bashayer Residences Brochure Download Request",
+    });
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -94,16 +106,7 @@ export default function BashayerBrochureModal({
               </div>
 
               <div className={styles.formGroup}>
-                <input
-                  type="tel"
-                  className={styles.inputField}
-                  placeholder="PHONE"
-                  required
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                />
+                <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
               </div>
 
               <button type="submit" className={styles.submitBtn}>

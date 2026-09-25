@@ -1,0 +1,122 @@
+.sectionWrapper {
+  padding: 40px 0 80px;
+  background-color: #ffffff;
+}
+
+.cardContainer {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 48px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 15px;
+  color: #4a4a4a;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+
+.description strong {
+  color: #1a1a1a;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.activeTab {
+  background-color: #ffffff;
+  border: 2px solid #856d52;
+  color: #856d52;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(133, 109, 82, 0.1);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 36px;
+}
+
+.planTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.planTable th {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding: 16px 20px;
+  border-bottom: 2px solid #856d52;
+  background-color: #faf8f5;
+}
+
+.planTable td {
+  font-size: 15px;
+  color: #4a4a4a;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.planTable tr:last-child td {
+  border-bottom: 2px solid #856d52;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.ctaContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.downloadBtn {
+  background-color: #856d52;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(133, 109, 82, 0.25);
+}
+
+.downloadBtn:hover {
+  background-color: #725c43;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(133, 109, 82, 0.35);
+}
+
+@media (max-width: 768px) {
+  .cardContainer {
+    padding: 24px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .planTable th,
+  .planTable td {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}

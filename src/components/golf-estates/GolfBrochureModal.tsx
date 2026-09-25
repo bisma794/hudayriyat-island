@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
 import Image from "next/image";
 import { X, Check } from "lucide-react";
 import styles from "./GolfBrochureModal.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
 
 interface GolfBrochureModalProps {
   isOpen: boolean;
@@ -23,6 +26,16 @@ export default function GolfBrochureModal({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Golf Estates",
+      developer: "Modon Properties",
+      community: "Hudayriyat Golf Estates",
+      property_type: "Villa",
+      activity_description: "Golf Estates Brochure Download Request",
+    });
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -97,33 +110,7 @@ export default function GolfBrochureModal({
                 </div>
 
                 <div className={styles.inputGroup}>
-                  <input
-                    type="tel"
-                    placeholder="PHONE"
-                    required
-                    className={styles.inputField}
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                  />
-                </div>
-
-                <div className={styles.recaptchaBox}>
-                  <div className={styles.recaptchaLeft}>
-                    <input
-                      type="checkbox"
-                      id="golf-brochure-recaptcha"
-                      required
-                    />
-                    <label htmlFor="golf-brochure-recaptcha">
-                      I&apos;m not a robot
-                    </label>
-                  </div>
-                  <div className={styles.recaptchaRight}>
-                    <span className={styles.recapBrand}>reCAPTCHA</span>
-                    <span className={styles.recapTerms}>Privacy - Terms</span>
-                  </div>
+                  <PhoneInput defaultCountry="ae" value={formData.phone} onChange={(phone) => setFormData({ ...formData, phone })} />
                 </div>
 
                 <button

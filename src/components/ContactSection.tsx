@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./ContactSection.module.css";
+import { sendLeadToWebhook } from "@/lib/sendLead";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
@@ -10,6 +13,14 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    sendLeadToWebhook({
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      project: "Hudayriyat Island",
+      developer: "Modon Properties",
+      activity_description: "General Contact Section Call Back Request",
+    });
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
@@ -89,15 +100,11 @@ export default function ContactSection() {
                   </div>
 
                   <div className={styles.formGroup}>
-                    <input
-                      type="tel"
-                      required
-                      aria-label="Phone Number"
-                      placeholder="Phone Number"
-                      className={styles.inputField}
+                    <PhoneInput
+                      defaultCountry="ae"
                       value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
+                      onChange={(phone) =>
+                        setFormData({ ...formData, phone })
                       }
                     />
                   </div>
