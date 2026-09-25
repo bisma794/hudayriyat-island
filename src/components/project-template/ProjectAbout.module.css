@@ -163,3 +163,72 @@
     right: -20px;
   }
 }
+
+/* Editorial Card Layout for Masyaf Plots */
+.editorialWrapper {
+  position: relative;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+/* Solid Brown Background Block Behind It */
+.editorialBackdrop {
+  position: absolute;
+  top: -24px;
+  bottom: -24px;
+  left: 25%;
+  right: -50vw;
+  background-color: #856d52;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  z-index: 1;
+}
+
+.editorialCard {
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 50px 56px;
+  border: 1px solid #ebe5dd;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.1);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.editorialTitle {
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.editorialText {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #444444;
+}
+
+.editorialText strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.editorialCtaRow {
+  margin-top: 28px;
+}
+
+@media (max-width: 768px) {
+  .editorialCard {
+    padding: 32px 24px;
+  }
+
+  .editorialBackdrop {
+    top: -15px;
+    bottom: -15px;
+    left: 10%;
+    right: -15px;
+  }
+}

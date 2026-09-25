@@ -53,6 +53,7 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
 
       {/* 4. About & Media Showcase with solid brown half-backdrop */}
       <ProjectAbout
+        slug={data.slug}
         name={data.name}
         title={data.aboutTitle}
         description={data.aboutDescription}
