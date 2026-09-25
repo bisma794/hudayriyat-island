@@ -10,10 +10,9 @@ const masyaf_plots_data: ProjectData = {
   "heroSubtitle": "Modern Infrastructure and Scenic Views at Al Hidayriyyat",
   "freeholdTag": "Freehold For All Nationalities • 20240000384246",
   "heroSlides": [
-    "/images/masyaf-plots/hero-slider-1.jpg",
-    "/images/masyaf-plots/hero-slider-2.jpg",
-    "/images/masyaf-plots/hero-slider-3.jpg",
-    "/images/masyaf-plots/hero-slider-4.jpg"
+    "/images/masyaf-plots/asset_2.jpg",
+    "/images/masyaf-plots/asset_4.jpg",
+    "/images/masyaf-plots/asset_5.jpg"
   ],
   "highlights": [
     {
