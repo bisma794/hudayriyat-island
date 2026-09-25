@@ -1,40 +1,57 @@
 .locationSection {
-  padding: 85px 0;
-  background-color: #fcfbf9;
+  padding: 70px 0 60px;
+  background-color: #ffffff;
 }
 
 .header {
   text-align: center;
-  max-width: 850px;
-  margin: 0 auto 45px;
+  max-width: 950px;
+  margin: 0 auto 40px;
 }
 
 .title {
-  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
   font-weight: 700;
-  color: #1e1e1e;
+  color: #1a1a1a;
   margin-bottom: 15px;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
   font-size: 15px;
-  color: #666666;
+  color: #555555;
   line-height: 1.7;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  align-items: start;
+.subtitle strong {
+  color: #1a1a1a;
 }
 
+.subtitle em {
+  font-style: normal;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+/* 2-Column Grid: Map + Accordion */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Compact Map Container */
 .mapWrapper {
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   border: 1px solid #ebe5dd;
-  height: 480px;
+  height: 310px; /* Reduced compact size as requested */
+  width: 100%;
+  background: #f5f2ed;
 }
 
 .mapIframe {
@@ -44,68 +61,75 @@
   display: block;
 }
 
+/* Accordion Column */
 .accordionList {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .accordionItem {
-  background: #ffffff;
-  border: 1px solid #ebe5dd;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
+  border: 1px solid #9c714b;
+  background: #ffffff;
   transition: all 0.25s ease;
 }
 
-.accordionOpen {
-  border-color: #ae774e;
-  box-shadow: 0 6px 20px rgba(174, 119, 78, 0.12);
-}
-
+/* Solid Brown Accordion Bar (Matching Screenshot & Brown Theme) */
 .accordionBtn {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 24px;
-  background: none;
+  padding: 14px 20px;
+  background-color: #a0734e; /* Our signature luxury brown theme */
   border: none;
   cursor: pointer;
   text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.accordionBtn:hover {
+  background-color: #8c603d;
 }
 
 .accordionCategory {
-  font-size: 16px;
-  font-weight: 700;
-  color: #222222;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .chevron {
-  color: #ae774e;
+  color: #ffffff;
   flex-shrink: 0;
+  transition: transform 0.25s ease;
 }
 
+/* Accordion Body */
 .accordionBody {
-  padding: 0 24px 20px;
-  border-top: 1px solid #f5efe8;
+  padding: 16px 20px;
+  background-color: #faf8f5;
+  border-top: 1px solid #ede5dc;
 }
 
 .itemList {
   list-style: none;
-  padding: 14px 0 0;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .itemRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
   padding-bottom: 8px;
-  border-bottom: 1px dashed #eee8e0;
+  border-bottom: 1px solid #f0ebe4;
 }
 
 .itemRow:last-child {
@@ -114,23 +138,44 @@
 }
 
 .itemName {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333333;
-}
-
-.itemTime {
-  font-size: 13px;
-  color: #ae774e;
+  color: #222222;
   font-weight: 500;
 }
 
+.itemTime {
+  color: #a0734e;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+/* Responsive */
 @media (max-width: 991px) {
-  .grid {
+  .contentGrid {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .mapWrapper {
-    height: 380px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 576px) {
+  .locationSection {
+    padding: 50px 0 40px;
+  }
+
+  .accordionBtn {
+    padding: 12px 16px;
+  }
+
+  .accordionCategory {
+    font-size: 14.5px;
+  }
+
+  .mapWrapper {
+    height: 240px;
   }
 }
