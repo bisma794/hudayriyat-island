@@ -211,20 +211,20 @@ const masyaf_plots_data: ProjectData = {
   ],
   "faqs": [
     {
-      "q": "Clinic",
-      "a": "Al Qadi Medical Center - Dermatology & Skin Clinic - Approximately 15 Minutes Exeter medical center - Approximately 17 Minutes DNA Health & Wellness - Approximately 18 Minutes Louvre medical clinic - Approximately 21 Minutes"
+      "q": "Can foreigners and expatriates purchase residential plots in Masyaf?",
+      "a": "Yes, Masyaf Plots on Hudayriyat Island offer 100% freehold ownership for all nationalities."
     },
     {
-      "q": "School",
-      "a": "St Joseph&rsquo;s School - Approximately 17 Minutes Vision Private School - Approximately 20 Minutes The British School Al Khubairat - Approximately 18 Minutes International Community Schools - Approximately 19 Minutes Emirates Private School - Approximately 25 Minutes"
+      "q": "What type of properties can be built in Masyaf?",
+      "a": "Masyaf offers 199 exclusive residential villa plots allowing owners creative freedom to design and construct bespoke luxury villas according to Modon development master guidelines."
     },
     {
-      "q": "Restaurants",
-      "a": "Cello SOL Restaurant Abu Dhabi - Approximately 12 Minutes Al Shader Restaurant and Grill - Approximately 7 Minutes Nonna Stella Osteria Restaurant - Approximately 7 Minutes Aroy Dee Thai Restaurant - Approximately 22 Minutes"
+      "q": "Where is Masyaf located on Hudayriyat Island?",
+      "a": "Masyaf is situated in the prestigious Al Hidayriyyat district of Hudayriyat Island, Abu Dhabi, minutes away from world-class beaches, sports parks, and Downtown Abu Dhabi."
     },
     {
-      "q": "Mall",
-      "a": "Al Mushrif Co-operative Society Shopping Mall - Approximately 21 Minutes Mushrif Mall - Approximately 22 Minutes Al Seef Village Mall - Approximately 26 Minutes Abu Dhabi Mall - Approximately 26 Minutes"
+      "q": "Are Masyaf residential plots eligible for the UAE Golden Visa?",
+      "a": "Yes, qualifying plot purchases meeting the UAE real estate investment criteria (AED 2M+) are eligible for the 10-year UAE Golden Visa residency."
     }
   ]
 };

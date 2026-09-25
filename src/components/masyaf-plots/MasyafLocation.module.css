@@ -1,0 +1,176 @@
+.locationSection {
+  padding: 70px 0 65px;
+  background-color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto 40px;
+}
+
+.title {
+  font-size: clamp(1.9rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 15.5px;
+  color: #4a4a4a;
+  line-height: 1.75;
+}
+
+.subtitle strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* 2-Column Grid: Map (Compact) + Accordion */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Compact Map Container ("map ki image ko chota krdo") */
+.mapWrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ebe5dd;
+  height: 295px; /* Compact height as requested */
+  width: 100%;
+  background: #f5f2ed;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Accordion Column */
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordionItem {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #946f48;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+/* Solid Brown Accordion Bar (Matching User Theme) */
+.accordionBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background-color: #856d52; /* Signature luxury brown theme */
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.accordionBtn:hover {
+  background-color: #725b42;
+}
+
+.accordionCategory {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.2px;
+}
+
+.chevron {
+  color: #ffffff;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+/* Accordion Body */
+.accordionBody {
+  padding: 16px 20px;
+  background-color: #faf8f5;
+  border-top: 1px solid #ede5dc;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0ebe4;
+}
+
+.itemRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.itemName {
+  color: #222222;
+  font-weight: 500;
+}
+
+.itemTime {
+  color: #856d52;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 12px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .mapWrapper {
+    height: 270px;
+  }
+}
+
+@media (max-width: 576px) {
+  .locationSection {
+    padding: 50px 0 40px;
+  }
+
+  .accordionBtn {
+    padding: 12px 16px;
+  }
+
+  .accordionCategory {
+    font-size: 14.5px;
+  }
+
+  .mapWrapper {
+    height: 240px;
+  }
+}

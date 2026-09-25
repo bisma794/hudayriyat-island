@@ -11,6 +11,7 @@ import ProjectGallery from './ProjectGallery';
 import ProjectFloorPlans from './ProjectFloorPlans';
 import ProjectArticle from './ProjectArticle';
 import MasyafBlogArticle from '@/components/masyaf-plots/MasyafBlogArticle';
+import MasyafLocation from '@/components/masyaf-plots/MasyafLocation';
 import ProjectPaymentPlan from './ProjectPaymentPlan';
 import ProjectPaymentMethods from './ProjectPaymentMethods';
 import ProjectMasterPlan from './ProjectMasterPlan';
@@ -99,16 +100,20 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         />
       )}
 
-      {/* 9. Payment Plan with List & Grid Toggles */}
-      <ProjectPaymentPlan
-        name={data.name}
-        subtitle={data.paymentPlanSubtitle}
-        schedule={data.paymentPlan}
-        onOpenBrochure={() => setBrochureModalOpen(true)}
-      />
+      {/* 9. Payment Plan with List & Grid Toggles (Excluded for Masyaf Plots per user request) */}
+      {data.slug !== 'masyaf-plots' && (
+        <ProjectPaymentPlan
+          name={data.name}
+          subtitle={data.paymentPlanSubtitle}
+          schedule={data.paymentPlan}
+          onOpenBrochure={() => setBrochureModalOpen(true)}
+        />
+      )}
 
-      {/* 10. Accepted Payment Methods */}
-      <ProjectPaymentMethods name={data.name} />
+      {/* 10. Accepted Payment Methods (Excluded for Masyaf Plots) */}
+      {data.slug !== 'masyaf-plots' && (
+        <ProjectPaymentMethods name={data.name} />
+      )}
 
       {/* 11. Master Plan with Zoom Lightbox */}
       <ProjectMasterPlan
@@ -117,13 +122,17 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         planImage={data.masterPlanImage}
       />
 
-      {/* 12. Location & Attractions (Nearby and Similar Projects REMOVED per user request) */}
-      <ProjectLocation
-        name={data.name}
-        subtitle={data.locationSubtitle}
-        mapIframeUrl={data.mapIframeUrl}
-        categories={data.locationCategories}
-      />
+      {/* 12. Location & Attractions */}
+      {data.slug === 'masyaf-plots' ? (
+        <MasyafLocation />
+      ) : (
+        <ProjectLocation
+          name={data.name}
+          subtitle={data.locationSubtitle}
+          mapIframeUrl={data.mapIframeUrl}
+          categories={data.locationCategories}
+        />
+      )}
 
       {/* 13. Frequently Asked Questions */}
       <ProjectFaq
