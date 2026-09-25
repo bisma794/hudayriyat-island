@@ -115,6 +115,7 @@
   margin-bottom: 12px;
   line-height: 1.15;
   letter-spacing: -0.5px;
+  white-space: pre-line;
 }
 
 .subtitle {

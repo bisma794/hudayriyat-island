@@ -6,9 +6,9 @@ const nawayef_village_data: ProjectData = {
   "slug": "nawayef-village",
   "name": "Nawayef Village",
   "badge": "HUDAYRIYAT ISLAND • ABU DHABI",
-  "heroTitle": "Nawayef Village at Hudayriyat Island – Exclusive Hillside Villas with Scenic Views",
+  "heroTitle": "Nawayef Village\nby Modon",
   "heroSubtitle": "Modern 3 to 5 Bedroom Homes in the Heart of Hudayriyat",
-  "freeholdTag": "✦ Freehold Ownership For All Nationalities • Modon Properties",
+  "freeholdTag": "Freehold For All Nationalities",
   "heroSlides": [
     "/images/nawayef-village/asset_4.jpg",
     "/images/nawayef-village/asset_5.jpg",
