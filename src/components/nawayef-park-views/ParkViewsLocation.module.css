@@ -1,50 +1,61 @@
 .locationSection {
-  padding: 80px 0;
+  padding: 70px 0 60px;
   background-color: #ffffff;
 }
 
 .header {
   text-align: center;
-  max-width: 800px;
+  max-width: 950px;
   margin: 0 auto 40px;
 }
 
 .title {
-  font-size: 36px;
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
   font-weight: 700;
   color: #1a1a1a;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 15px;
+  color: #555555;
   line-height: 1.7;
-  color: #4a5568;
 }
 
+.subtitle strong {
+  color: #1a1a1a;
+}
+
+/* 2-Column Grid: Map + Accordion */
 .grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 36px;
-  align-items: flex-start;
-  margin-bottom: 60px;
+  align-items: start;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
+/* Compact Map Container */
 .mapWrapper {
-  width: 100%;
-  height: 480px;
-  border-radius: 14px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ebe5dd;
+  height: 310px;
+  width: 100%;
+  background: #f5f2ed;
 }
 
 .mapIframe {
   width: 100%;
   height: 100%;
-  border: 0;
+  border: none;
+  display: block;
 }
 
+/* Accordion Column */
 .accordion {
   display: flex;
   flex-direction: column;
@@ -52,39 +63,45 @@
 }
 
 .accordionItem {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
-  transition: border-color 0.2s;
+  border: 1px solid #9c714b;
+  background: #ffffff;
+  transition: all 0.25s ease;
 }
 
 .accordionItemOpen {
-  border-color: #c08364;
+  border-color: #8c603d;
 }
 
+/* Solid Brown Accordion Bar (Matching Screenshot) */
 .accordionHeader {
   width: 100%;
-  padding: 16px 20px;
-  background: none;
-  border: none;
-  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 16px;
-  font-weight: 600;
-  color: #1e293b;
+  padding: 14px 20px;
+  background-color: #a0734e;
+  border: none;
   cursor: pointer;
-  transition: color 0.2s;
+  text-align: left;
+  transition: background-color 0.2s ease;
 }
 
 .accordionHeader:hover {
-  color: #c08364;
+  background-color: #8c603d;
+}
+
+.accordionHeader span {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.2px;
 }
 
 .accordionIcon {
-  color: #c08364;
+  color: #ffffff;
+  flex-shrink: 0;
   transition: transform 0.25s ease;
 }
 
@@ -92,14 +109,16 @@
   transform: rotate(180deg);
 }
 
+/* Accordion Body */
 .accordionBody {
-  padding: 0 20px 16px;
-  border-top: 1px solid #edf2f7;
+  padding: 16px 20px;
+  background-color: #faf8f5;
+  border-top: 1px solid #ede5dc;
 }
 
 .placeList {
   list-style: none;
-  padding: 12px 0 0;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -107,21 +126,30 @@
 }
 
 .placeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
-  color: #4a5568;
-  line-height: 1.5;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0ebe4;
+}
+
+.placeItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .placeItem strong {
-  color: #1e293b;
+  font-weight: 600;
+  color: #2c241c;
 }
 
 @media (max-width: 991px) {
   .grid {
     grid-template-columns: 1fr;
   }
+
   .mapWrapper {
-    height: 360px;
+    height: 300px;
   }
 }
-

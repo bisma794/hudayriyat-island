@@ -91,9 +91,9 @@ export default function NawayefLocation() {
                 >
                   <span>{group.category}</span>
                   {openIndex === idx ? (
-                    <ChevronUp size={20} color="#856D52" />
+                    <ChevronUp size={20} className={styles.chevron} />
                   ) : (
-                    <ChevronDown size={20} color="#64748b" />
+                    <ChevronDown size={20} className={styles.chevron} />
                   )}
                 </button>
 

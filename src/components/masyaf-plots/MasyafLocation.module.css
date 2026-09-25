@@ -44,7 +44,7 @@
   overflow: hidden;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
   border: 1px solid #ebe5dd;
-  height: 295px; /* Compact height as requested */
+  height: 310px; /* Compact height as requested */
   width: 100%;
   background: #f5f2ed;
 }
@@ -66,7 +66,7 @@
 .accordionItem {
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid #946f48;
+  border: 1px solid #9c714b;
   background: #ffffff;
   transition: all 0.25s ease;
 }
@@ -78,7 +78,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  background-color: #856d52; /* Signature luxury brown theme */
+  background-color: #a0734e; /* Signature luxury brown theme */
   border: none;
   cursor: pointer;
   text-align: left;
@@ -86,7 +86,7 @@
 }
 
 .accordionBtn:hover {
-  background-color: #725b42;
+  background-color: #8c603d;
 }
 
 .accordionCategory {

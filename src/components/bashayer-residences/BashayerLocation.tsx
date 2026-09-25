@@ -107,11 +107,9 @@ export default function BashayerLocation() {
                     <span>{group.category}</span>
                     <ChevronDown
                       size={18}
-                      style={{
-                        transform: isOpen ? "rotate(180deg)" : "none",
-                        transition: "transform 0.25s ease",
-                        color: isOpen ? "#856d52" : "#64748b",
-                      }}
+                      className={`${styles.chevron} ${
+                        isOpen ? styles.chevronOpen : ""
+                      }`}
                     />
                   </button>
 
