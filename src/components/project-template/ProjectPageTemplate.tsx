@@ -14,6 +14,7 @@ import MasyafBlogArticle from '@/components/masyaf-plots/MasyafBlogArticle';
 import MasyafLocation from '@/components/masyaf-plots/MasyafLocation';
 import NawayefBlogArticle from '@/components/nawayef-village/NawayefBlogArticle';
 import NawayefPaymentPlan from '@/components/nawayef-village/NawayefPaymentPlan';
+import NawayefFloorPlans from '@/components/nawayef-village/NawayefFloorPlans';
 import ProjectPaymentPlan from './ProjectPaymentPlan';
 import ProjectPaymentMethods from './ProjectPaymentMethods';
 import ProjectMasterPlan from './ProjectMasterPlan';
@@ -92,15 +93,17 @@ export default function ProjectPageTemplate({ data }: ProjectPageTemplateProps) 
         <NawayefPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
       )}
 
-      {/* 7. Floor & Plot Plans Interactive Section (Excluded for Masyaf Plots per user request) */}
-      {data.slug !== 'masyaf-plots' && (
+      {/* 7. Floor & Plot Plans Interactive Section */}
+      {data.slug === 'nawayef-village' ? (
+        <NawayefFloorPlans onOpenBrochure={() => setBrochureModalOpen(true)} />
+      ) : data.slug !== 'masyaf-plots' ? (
         <ProjectFloorPlans
           name={data.name}
           subtitle={data.floorPlansSubtitle}
           plans={data.floorPlans}
           onOpenBrochure={() => setBrochureModalOpen(true)}
         />
-      )}
+      ) : null}
 
       {/* 8. Detailed Project Article, Specs & Vision (Only for projects other than Masyaf Plots and Nawayef Village) */}
       {data.slug !== 'masyaf-plots' && data.slug !== 'nawayef-village' && (
