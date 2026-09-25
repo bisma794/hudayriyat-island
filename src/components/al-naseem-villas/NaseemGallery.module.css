@@ -1,6 +1,8 @@
 .gallerySection {
   padding: 85px 0;
   background-color: #fcfbf9;
+  position: relative;
+  overflow: hidden;
 }
 
 .header {
@@ -14,6 +16,7 @@
   font-weight: 700;
   color: #1e1e1e;
   margin-bottom: 15px;
+  font-family: var(--font-heading, "Ubuntu", sans-serif);
 }
 
 .subtitle {
@@ -43,43 +46,74 @@
 }
 
 .tabBtn:hover {
-  border-color: #ae774e;
-  color: #ae774e;
+  border-color: #856d52;
+  color: #856d52;
 }
 
 .tabActive {
-  background: #ae774e;
-  border-color: #ae774e;
+  background: #856d52;
+  border-color: #856d52;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(174, 119, 78, 0.35);
+  box-shadow: 0 4px 15px rgba(133, 109, 82, 0.35);
 }
 
-.carouselContainer {
+.tabActive:hover {
+  background: #725c43;
+  color: #ffffff;
+}
+
+/* Slider Track Wrapper */
+.sliderContainer {
   position: relative;
-  max-width: 1050px;
-  margin: 0 auto 25px;
-  display: flex;
-  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
-.mainImageWrapper {
+.sliderViewport {
+  overflow: hidden;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.slideItem {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+/* 600 x 400 Card Size */
+.imageCard {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 12px;
+  aspect-ratio: 600 / 400;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
   cursor: pointer;
-  background: #222;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+  background: #1a1a1a;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.mainImg {
+.imageCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.image {
   object-fit: cover;
   transition: transform 0.6s ease;
 }
 
-.mainImageWrapper:hover .mainImg {
-  transform: scale(1.03);
+.imageCard:hover .image {
+  transform: scale(1.04);
 }
 
 .imageOverlay {
@@ -88,7 +122,7 @@
   left: 0;
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
-  padding: 40px 25px 20px;
+  padding: 30px 20px 16px;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -96,87 +130,69 @@
 }
 
 .imageCaption {
-  font-size: 15px;
+  font-size: 14.5px;
   font-weight: 500;
-  max-width: 80%;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  max-width: 75%;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .zoomPrompt {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  color: #e2d7cc;
-  background: rgba(0,0,0,0.5);
-  padding: 6px 12px;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(133, 109, 82, 0.85);
+  padding: 5px 12px;
   border-radius: 20px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(4px);
 }
 
+/* Controls */
 .navArrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  color: #222;
-  border: none;
+  background: #ffffff;
+  color: #222222;
+  border: 1px solid #e0d8cc;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
 }
 
 .navArrow:hover {
-  background: #ae774e;
+  background: #856d52;
   color: #ffffff;
+  border-color: #856d52;
+  transform: translateY(-50%) scale(1.08);
 }
 
 .prevArrow {
-  left: -22px;
+  left: 2px;
 }
 
 .nextArrow {
-  right: -22px;
+  right: 2px;
 }
 
-.thumbGrid {
-  max-width: 1050px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 12px;
-}
-
-.thumbItem {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  opacity: 0.65;
-  border: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.thumbItem:hover {
-  opacity: 0.95;
-}
-
-.thumbActive {
-  opacity: 1;
-  border-color: #ae774e;
-  box-shadow: 0 4px 12px rgba(174, 119, 78, 0.4);
-}
-
-.thumbImg {
-  object-fit: cover;
+.sliderIndicator {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14.5px;
+  color: #856d52;
+  font-weight: 600;
 }
 
 /* Lightbox Modal */
@@ -198,17 +214,19 @@
   position: absolute;
   top: 25px;
   right: 30px;
-  font-size: 28px;
   color: #fff;
   background: none;
   border: none;
   cursor: pointer;
   z-index: 2005;
   transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightboxClose:hover {
-  color: #ae774e;
+  color: #856d52;
 }
 
 .lightboxArrow {
@@ -218,20 +236,20 @@
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
   border: none;
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 2005;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .lightboxArrow:hover {
-  background: #ae774e;
+  background: #856d52;
+  transform: translateY(-50%) scale(1.08);
 }
 
 .lightboxPrev {
@@ -243,7 +261,7 @@
 }
 
 .lightboxContent {
-  max-width: 1000px;
+  max-width: 900px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -253,10 +271,11 @@
 .lightboxImageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 600 / 400;
   max-height: 80vh;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .lightboxImg {
@@ -266,21 +285,25 @@
 .lightboxCaption {
   color: #e5dcd3;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 14.5px;
   text-align: center;
 }
 
-@media (max-width: 991px) {
-  .thumbGrid {
-    grid-template-columns: repeat(4, 1fr);
+@media (max-width: 768px) {
+  .sliderContainer {
+    padding: 0 15px;
+  }
+
+  .slideItem {
+    padding: 0 6px;
   }
 
   .prevArrow {
-    left: 10px;
+    left: -5px;
   }
 
   .nextArrow {
-    right: 10px;
+    right: -5px;
   }
 
   .lightboxArrow {

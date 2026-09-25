@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import styles from './NaseemGallery.module.css';
 
 interface GalleryItem {
@@ -38,18 +39,38 @@ export default function NaseemGallery() {
   const [activeTab, setActiveTab] = useState<'all' | 'community' | 'interior' | 'exterior'>('all');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [itemsPerView, setItemsPerView] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setItemsPerView(1);
+      } else {
+        setItemsPerView(2);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const filteredItems = activeTab === 'all'
     ? galleryData
     : galleryData.filter((item) => item.category === activeTab);
 
+  const maxIndex = Math.max(0, filteredItems.length - itemsPerView);
+
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : filteredItems.length - 1));
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev < filteredItems.length - 1 ? prev + 1 : 0));
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
   };
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [activeTab]);
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -83,68 +104,85 @@ export default function NaseemGallery() {
 
           <div className={styles.tabNav}>
             <button
+              type="button"
               className={`${styles.tabBtn} ${activeTab === 'all' ? styles.tabActive : ''}`}
-              onClick={() => { setActiveTab('all'); setCurrentIndex(0); }}
+              onClick={() => setActiveTab('all')}
             >
               ALL
             </button>
             <button
+              type="button"
               className={`${styles.tabBtn} ${activeTab === 'exterior' ? styles.tabActive : ''}`}
-              onClick={() => { setActiveTab('exterior'); setCurrentIndex(0); }}
+              onClick={() => setActiveTab('exterior')}
             >
               Exterior
             </button>
             <button
+              type="button"
               className={`${styles.tabBtn} ${activeTab === 'interior' ? styles.tabActive : ''}`}
-              onClick={() => { setActiveTab('interior'); setCurrentIndex(0); }}
+              onClick={() => setActiveTab('interior')}
             >
               Interior
             </button>
             <button
+              type="button"
               className={`${styles.tabBtn} ${activeTab === 'community' ? styles.tabActive : ''}`}
-              onClick={() => { setActiveTab('community'); setCurrentIndex(0); }}
+              onClick={() => setActiveTab('community')}
             >
               Community
             </button>
           </div>
         </div>
 
-        {/* Main Feature Carousel */}
+        {/* Sliding Carousel (600x400 cards, no stacked thumbs below) */}
         {filteredItems.length > 0 && (
-          <div className={styles.carouselContainer}>
+          <div className={styles.sliderContainer}>
             <button
               type="button"
               className={`${styles.navArrow} ${styles.prevArrow}`}
               onClick={handlePrev}
               aria-label="Previous image"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
+              <ChevronLeft size={24} />
             </button>
 
-            <div
-              className={styles.mainImageWrapper}
-              onClick={() => openLightbox(currentIndex)}
-            >
-              <Image
-                src={filteredItems[currentIndex]?.src || galleryData[0].src}
-                alt={filteredItems[currentIndex]?.alt || 'Al Naseem Villas'}
-                fill
-                priority
-                className={styles.mainImg}
-              />
-              <div className={styles.imageOverlay}>
-                <span className={styles.imageCaption}>{filteredItems[currentIndex]?.alt}</span>
-                <span className={styles.zoomPrompt}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="11" cy="11" r="8" />
-                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                    <line x1="11" y1="8" x2="11" y2="14" />
-                    <line x1="8" y1="11" x2="14" y2="11" />
-                  </svg>
-                  Click to Zoom
-                </span>
+            <div className={styles.sliderViewport}>
+              <div
+                className={styles.sliderTrack}
+                style={{
+                  transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+                }}
+              >
+                {filteredItems.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className={styles.slideItem}
+                    style={{ flex: `0 0 ${100 / itemsPerView}%` }}
+                    onClick={() => openLightbox(index)}
+                  >
+                    <div className={styles.imageCard}>
+                      <Image
+                        src={item.src}
+                        alt={item.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className={styles.image}
+                      />
+                      <div className={styles.imageOverlay}>
+                        <span className={styles.imageCaption}>{item.alt}</span>
+                        <span className={styles.zoomPrompt}>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            <line x1="11" y1="8" x2="11" y2="14" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                          </svg>
+                          Zoom
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -154,29 +192,16 @@ export default function NaseemGallery() {
               onClick={handleNext}
               aria-label="Next image"
             >
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <polyline points="9 18 15 12 9 6" />
-              </svg>
+              <ChevronRight size={24} />
             </button>
           </div>
         )}
 
-        {/* Thumbnail Grid */}
-        <div className={styles.thumbGrid}>
-          {filteredItems.map((item, index) => (
-            <div
-              key={item.id}
-              className={`${styles.thumbItem} ${index === currentIndex ? styles.thumbActive : ''}`}
-              onClick={() => setCurrentIndex(index)}
-            >
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className={styles.thumbImg}
-              />
-            </div>
-          ))}
+        {/* Slider Indicator */}
+        <div className={styles.sliderIndicator}>
+          <span>
+            {Math.min(currentIndex + itemsPerView, filteredItems.length)} of {filteredItems.length} Photos
+          </span>
         </div>
       </div>
 
@@ -189,7 +214,7 @@ export default function NaseemGallery() {
             onClick={closeLightbox}
             aria-label="Close Lightbox"
           >
-            ✕
+            <X size={28} />
           </button>
 
           <button
@@ -198,7 +223,7 @@ export default function NaseemGallery() {
             onClick={(e) => { e.stopPropagation(); handleLightboxPrev(); }}
             aria-label="Previous Image"
           >
-            ❮
+            <ChevronLeft size={30} />
           </button>
 
           <div className={styles.lightboxContent} onClick={(e) => e.stopPropagation()}>
@@ -221,7 +246,7 @@ export default function NaseemGallery() {
             onClick={(e) => { e.stopPropagation(); handleLightboxNext(); }}
             aria-label="Next Image"
           >
-            ❯
+            <ChevronRight size={30} />
           </button>
         </div>
       )}
