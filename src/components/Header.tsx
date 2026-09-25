@@ -23,17 +23,9 @@ const communitiesList = [
   { name: "Nawayef Park Views", href: "/nawayef-park-views" },
 ];
 
-const languages = [
-  { code: "EN", name: "English", flag: "/images/en.png" },
-  { code: "AR", name: "Arabic", flag: "/images/ar.png" },
-  { code: "RU", name: "Russian", flag: "/images/ru.png" },
-];
-
 export default function Header({ onOpenListModal }: HeaderProps) {
   const [isSticky, setIsSticky] = useState(false);
   const [isCommOpen, setIsCommOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false);
-  const [selectedLang, setSelectedLang] = useState(languages[0]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileCommOpen, setMobileCommOpen] = useState(false);
 
@@ -139,55 +131,6 @@ export default function Header({ onOpenListModal }: HeaderProps) {
                 >
                   LIST YOUR PROPERTY
                 </button>
-              </li>
-
-              {/* Language Switcher */}
-              <li
-                className={styles.navItem}
-                onMouseEnter={() => setIsLangOpen(true)}
-                onMouseLeave={() => setIsLangOpen(false)}
-              >
-                <button
-                  type="button"
-                  className={styles.langTrigger}
-                  onClick={() => setIsLangOpen((prev) => !prev)}
-                >
-                  <Image
-                    src={selectedLang.flag}
-                    alt={selectedLang.name}
-                    width={18}
-                    height={12}
-                    className={styles.langFlag}
-                  />
-                  <span>{selectedLang.code}</span>
-                  <ChevronDown size={12} />
-                </button>
-                <div
-                  className={`${styles.langDropdown} ${
-                    isLangOpen ? styles.langOpen : ""
-                  }`}
-                >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      type="button"
-                      className={styles.langOption}
-                      onClick={() => {
-                        setSelectedLang(lang);
-                        setIsLangOpen(false);
-                      }}
-                    >
-                      <Image
-                        src={lang.flag}
-                        alt={lang.name}
-                        width={18}
-                        height={12}
-                        className={styles.langFlag}
-                      />
-                      <span>{lang.name}</span>
-                    </button>
-                  ))}
-                </div>
               </li>
             </ul>
           </nav>

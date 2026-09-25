@@ -1,16 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const ubuntu = Ubuntu({
   subsets: ["latin"],
-  variable: "--font-jakarta",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-ubuntu",
   display: "swap",
 });
 
@@ -97,13 +92,15 @@ export const metadata: Metadata = {
     creator: "@ModonProperties",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
+      noimageindex: true,
       "max-video-preview": -1,
-      "max-image-preview": "large",
+      "max-image-preview": "none",
       "max-snippet": -1,
     },
   },
@@ -232,6 +229,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="shortcut icon" href="/images/logo.png" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
@@ -240,7 +239,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
         />
       </head>
-      <body className={`${plusJakartaSans.variable} ${inter.variable}`} suppressHydrationWarning>{children}</body>
+      <body className={ubuntu.variable} suppressHydrationWarning>{children}</body>
     </html>
   );
 }
