@@ -10,9 +10,9 @@ interface PaymentItem {
 }
 
 const paymentSchedule: PaymentItem[] = [
-  { installment: 'Down Payment', percentage: '10%', milestone: 'On Booking' },
-  { installment: 'During Construction', percentage: '30%', milestone: 'Construction Milestones' },
-  { installment: 'On Handover', percentage: '60%', milestone: '100% Completion (Q4 2026)' },
+  { installment: 'Down Payment', percentage: '10%', milestone: '' },
+  { installment: 'On Construction', percentage: '30%', milestone: '' },
+  { installment: 'On Handover', percentage: '60%', milestone: '' },
 ];
 
 interface NaseemPaymentPlanProps {
@@ -25,90 +25,98 @@ export default function NaseemPaymentPlan({ onOpenBrochure }: NaseemPaymentPlanP
   return (
     <section className={styles.paymentSection} id="payment_plan">
       <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Al Naseem Community Payment Plan</h2>
-          <p className={styles.subtitle}>
-            Attractive 10/30/60 Milestone Payment Schedule by Modon Properties
-          </p>
-        </div>
-
-        <div className={styles.viewToggleRow}>
-          <div className={styles.toggleBtnGroup}>
-            <button
-              className={`${styles.toggleBtn} ${viewMode === 'list' ? styles.toggleActive : ''}`}
-              onClick={() => setViewMode('list')}
-              aria-label="List view"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="8" y1="6" x2="21" y2="6" />
-                <line x1="8" y1="12" x2="21" y2="12" />
-                <line x1="8" y1="18" x2="21" y2="18" />
-                <line x1="3" y1="6" x2="3.01" y2="6" />
-                <line x1="3" y1="12" x2="3.01" y2="12" />
-                <line x1="3" y1="18" x2="3.01" y2="18" />
-              </svg>
-              <span>List View</span>
-            </button>
-            <button
-              className={`${styles.toggleBtn} ${viewMode === 'grid' ? styles.toggleActive : ''}`}
-              onClick={() => setViewMode('grid')}
-              aria-label="Grid view"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="3" y="3" width="7" height="7" />
-                <rect x="14" y="3" width="7" height="7" />
-                <rect x="14" y="14" width="7" height="7" />
-                <rect x="3" y="14" width="7" height="7" />
-              </svg>
-              <span>Grid View</span>
-            </button>
+        <div className={styles.planContainer}>
+          {/* Top Right Toggle View Icons */}
+          <div className={styles.viewToggleRow}>
+            <div className={styles.toggleIconsGroup}>
+              <button
+                type="button"
+                className={`${styles.iconBtn} ${viewMode === 'list' ? styles.iconActive : ''}`}
+                onClick={() => setViewMode('list')}
+                aria-label="List View"
+                title="List View"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <line x1="8" y1="6" x2="21" y2="6" />
+                  <line x1="8" y1="12" x2="21" y2="12" />
+                  <line x1="8" y1="18" x2="21" y2="18" />
+                  <line x1="3" y1="6" x2="3.01" y2="6" />
+                  <line x1="3" y1="12" x2="3.01" y2="12" />
+                  <line x1="3" y1="18" x2="3.01" y2="18" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                className={`${styles.iconBtn} ${viewMode === 'grid' ? styles.iconActive : ''}`}
+                onClick={() => setViewMode('grid')}
+                aria-label="Grid View"
+                title="Grid View"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <rect x="3" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="3" width="7" height="7" rx="1" />
+                  <rect x="14" y="14" width="7" height="7" rx="1" />
+                  <rect x="3" y="14" width="7" height="7" rx="1" />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
 
-        {viewMode === 'list' ? (
-          <div className={styles.tableCard}>
-            <table className={styles.planTable}>
-              <thead>
-                <tr>
-                  <th>Installment</th>
-                  <th>Percentage</th>
-                  <th>Milestone Schedule</th>
-                </tr>
-              </thead>
-              <tbody>
-                {paymentSchedule.map((item, idx) => (
-                  <tr key={idx}>
-                    <td style={{ fontWeight: 600 }}>{item.installment}</td>
-                    <td className={styles.percentageCol}>{item.percentage}</td>
-                    <td>{item.milestone}</td>
+          {/* Centered Community Payment Plan Badge */}
+          <div className={styles.badgeWrapper}>
+            <div className={styles.badgeBtn}>
+              Al Naseem Community Payment Plan
+            </div>
+          </div>
+
+          {/* List or Grid View */}
+          {viewMode === 'list' ? (
+            <div className={styles.tableWrapper}>
+              <table className={styles.planTable}>
+                <thead>
+                  <tr>
+                    <th className={styles.installmentHeader}>Installment</th>
+                    <th className={styles.percentageHeader}>Percentage</th>
+                    <th className={styles.milestoneHeader}>Milestone</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <div className={styles.gridContainer}>
-            {paymentSchedule.map((item, idx) => (
-              <div key={idx} className={styles.gridCard}>
-                <h3 className={styles.percentNum}>{item.percentage}</h3>
-                <div className={styles.installmentTitle}>{item.installment}</div>
-                <p className={styles.milestoneDate}>{item.milestone}</p>
-              </div>
-            ))}
-          </div>
-        )}
+                </thead>
+                <tbody>
+                  {paymentSchedule.map((item, idx) => (
+                    <tr key={idx}>
+                      <td className={styles.installmentCol}>{item.installment}</td>
+                      <td className={styles.percentageCol}>{item.percentage}</td>
+                      <td className={styles.milestoneCol}>{item.milestone}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className={styles.gridContainer}>
+              {paymentSchedule.map((item, idx) => (
+                <div key={idx} className={styles.gridCard}>
+                  <div className={styles.gridPercent}>{item.percentage}</div>
+                  <div className={styles.gridTitle}>{item.installment}</div>
+                  {item.milestone && (
+                    <div className={styles.gridMilestone}>{item.milestone}</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
-        {onOpenBrochure && (
-          <div className={styles.actionRow}>
-            <button
-              type="button"
-              className={styles.inquireBtn}
-              onClick={onOpenBrochure}
-            >
-              Request Full Payment Schedule Breakdown
-            </button>
-          </div>
-        )}
+          {onOpenBrochure && (
+            <div className={styles.ctaRow}>
+              <button
+                type="button"
+                className={styles.brochureBtn}
+                onClick={onOpenBrochure}
+              >
+                Download Payment Plan Brochure
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

@@ -50,11 +50,11 @@ export default function AlNaseemVillasPage() {
       {/* Blog Article Section */}
       <NaseemArticle />
 
+      {/* Payment Plan with List/Grid Toggle (Matching User Screenshot) */}
+      <NaseemPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
+
       {/* Floor Plans Interactive Section (4, 5, 6 BR Villas) */}
       <NaseemFloorPlans onOpenBrochure={() => setBrochureModalOpen(true)} />
-
-      {/* Payment Plan with List/Grid Toggle */}
-      <NaseemPaymentPlan onOpenBrochure={() => setBrochureModalOpen(true)} />
 
       {/* Accepted Payment Methods */}
       <NaseemPaymentMethods />
