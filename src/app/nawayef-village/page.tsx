@@ -10,10 +10,10 @@ const nawayef_village_data: ProjectData = {
   "heroSubtitle": "Modern 3 to 5 Bedroom Homes in the Heart of Hudayriyat",
   "freeholdTag": "✦ Freehold Ownership For All Nationalities • Modon Properties",
   "heroSlides": [
-    "/images/nawayef-village/hero-slider-1.jpg",
-    "/images/nawayef-village/hero-slider-2.jpg",
-    "/images/nawayef-village/hero-slider-3.jpg",
-    "/images/nawayef-village/hero-slider-4.jpg"
+    "/images/nawayef-village/asset_4.jpg",
+    "/images/nawayef-village/asset_5.jpg",
+    "/images/nawayef-village/asset_6.jpg",
+    "/images/nawayef-village/asset_7.jpg"
   ],
   "highlights": [
     {
