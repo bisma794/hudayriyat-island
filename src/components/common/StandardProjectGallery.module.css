@@ -1,0 +1,305 @@
+.gallerySection {
+  padding: 70px 0 50px;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 36px;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 22px;
+  letter-spacing: -0.01em;
+}
+
+/* Minimal Underline Tabs: ALL | Interior | Exterior */
+.tabNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 6px 4px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.tabBtn:hover {
+  color: #b37748;
+}
+
+.tabActive {
+  color: #b37748;
+  font-weight: 600;
+  border-bottom: 2px solid #b37748;
+}
+
+/* Carousel Container with Peek on both sides */
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.viewport {
+  width: 100%;
+  overflow: visible;
+  display: flex;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+/* 600 x 400 Card Design */
+.card {
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f4ede5;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+}
+
+.cardImg {
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.card:hover .cardImg {
+  transform: scale(1.03);
+}
+
+/* Floating Navigation Arrows */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+.prevBtn {
+  left: 20px;
+}
+
+.nextBtn {
+  right: 20px;
+}
+
+.navBtn:hover {
+  background: #ffffff;
+  color: #b37748;
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dots Pagination Row */
+.dotsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  padding: 0;
+  border: 1.5px solid #cbb8a7;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.dot:hover {
+  border-color: #b37748;
+}
+
+.dotActive {
+  background-color: #b37748;
+  border-color: #b37748;
+  transform: scale(1.15);
+}
+
+/* Fullscreen Lightbox Modal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(12, 10, 8, 0.94);
+  backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 100001;
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 100001;
+}
+
+.lightboxPrev {
+  left: 24px;
+}
+
+.lightboxNext {
+  right: 24px;
+}
+
+.lightboxNav:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lightboxContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 88vh;
+}
+
+.lightboxImageContainer {
+  position: relative;
+  width: min(85vw, 1100px);
+  height: min(75vh, 730px);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightboxImg {
+  object-fit: contain;
+}
+
+.lightboxCaption {
+  color: #e5ded5;
+  font-size: 14px;
+  margin-top: 14px;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .gallerySection {
+    padding: 50px 0 35px;
+  }
+
+  .navBtn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .prevBtn {
+    left: 8px;
+  }
+
+  .nextBtn {
+    right: 8px;
+  }
+
+  .tabNav {
+    gap: 20px;
+  }
+
+  .lightboxNav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightboxPrev {
+    left: 10px;
+  }
+
+  .lightboxNext {
+    right: 10px;
+  }
+}
