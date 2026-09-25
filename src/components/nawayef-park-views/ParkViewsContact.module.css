@@ -1,0 +1,161 @@
+.contactSection {
+  padding: 80px 0;
+  background: #d6ae99;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.formCard {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 36px 30px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d5dbe2;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1e293b;
+  outline: none;
+  background: #fafbfc;
+  transition: all 0.2s;
+}
+
+.inputField:focus {
+  border-color: #c08364;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(192, 131, 100, 0.15);
+}
+
+.recaptchaBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #d3d3d3;
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 10px 12px;
+  margin-top: 4px;
+}
+
+.recaptchaLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.recaptchaLeft input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #c08364;
+}
+
+.recaptchaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recapBrand {
+  font-size: 10px;
+  color: #555555;
+  font-weight: 600;
+}
+
+.recapTerms {
+  font-size: 8px;
+  color: #777777;
+}
+
+.submitBtn {
+  background: #c08364;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 6px;
+}
+
+.submitBtn:hover {
+  background: #a86c4f;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(192, 131, 100, 0.35);
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: #e6f4ea;
+  color: #137333;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.imageCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactImg {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .imageCol {
+    display: none;
+  }
+}

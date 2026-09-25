@@ -1,0 +1,70 @@
+.landmarksSection {
+  background-color: #ffffff;
+  padding: 70px 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.landmarksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.cardImg {
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 18px 20px;
+  text-align: center;
+}
+
+.landmarkTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 4px 0;
+}
+
+.landmarkTime {
+  font-size: 14px;
+  font-weight: 600;
+  color: #856d52;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .landmarksGrid {
+    grid-template-columns: 1fr;
+  }
+}

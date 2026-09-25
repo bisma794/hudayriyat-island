@@ -1,0 +1,322 @@
+.heroSection {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 130px 0 70px;
+}
+
+.sliderWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.slideItem {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  overflow: hidden;
+}
+
+.slideActive {
+  opacity: 1;
+}
+
+.slideImage {
+  object-fit: cover;
+  transform: scale(1);
+  transform-origin: center center;
+}
+
+.slideActive .slideImage {
+  animation: kenBurnsEffect 8s ease-out forwards;
+}
+
+@keyframes kenBurnsEffect {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.18);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.55) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 2;
+}
+
+.prevBtn,
+.nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  border: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.25s ease;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background: #856d52;
+}
+
+.prevBtn {
+  left: 20px;
+}
+
+.nextBtn {
+  right: 20px;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin-bottom: 28px;
+  max-width: 580px;
+}
+
+.btnRow {
+  margin-bottom: 24px;
+}
+
+.brochureBtn {
+  background-color: #856d52;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.brochureBtn:hover {
+  background-color: #725c43;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(133, 109, 82, 0.4);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+}
+
+.freeholdTag {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Right Column (Request Card) */
+.rightCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.requestCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 34px 28px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.formTitleSmall {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.formTitleLarge {
+  font-size: 26px;
+  font-weight: 800;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.callForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+  padding: 13px 15px;
+  font-size: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: #856d52;
+}
+
+/* Recaptcha */
+.recaptchaBox {
+  background: #f9f9f9;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+.recaptchaLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.recaptchaRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recapBrand {
+  font-size: 10px;
+  font-weight: 700;
+  color: #555555;
+}
+
+.recapTerms {
+  font-size: 8px;
+  color: #888888;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #856d52;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 4px;
+}
+
+.submitBtn:hover {
+  background: #725c43;
+  transform: translateY(-1px);
+}
+
+.successMessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: #eef7ec;
+  border: 1px solid #c3e6cb;
+  color: #1e6b27;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .rightCol {
+    justify-content: center;
+  }
+
+  .requestCard {
+    max-width: 100%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    display: none;
+  }
+}

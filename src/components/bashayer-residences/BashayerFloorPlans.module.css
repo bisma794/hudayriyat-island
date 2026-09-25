@@ -1,0 +1,272 @@
+.floorPlansSection {
+  background-color: #f7f5f2;
+  padding: 80px 0;
+}
+
+.header {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 16px;
+  font-family: var(--font-heading, "Plus Jakarta Sans", sans-serif);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #444444;
+  line-height: 1.8;
+  text-align: left;
+  max-width: 100%;
+  margin: 0 0 28px 0;
+}
+
+.tabsWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 6px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.tabBtn {
+  background: none;
+  border: none;
+  padding: 11px 22px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #555555;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tabActive {
+  background: #856d52;
+  color: #ffffff;
+}
+
+.planCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  margin-top: 30px;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.specsCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.planName {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 6px 0;
+  font-family: var(--font-heading, "Plus Jakarta Sans", sans-serif);
+}
+
+.planTagline {
+  font-size: 15px;
+  font-weight: 600;
+  color: #856d52;
+  margin: 0 0 16px 0;
+}
+
+.planDesc {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+  background: #fbfaf9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #f0eee9;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.specIcon {
+  color: #856d52;
+}
+
+.specLabel {
+  display: block;
+  font-size: 12px;
+  color: #888888;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.specVal {
+  font-size: 15px;
+  color: #222222;
+  font-weight: 700;
+}
+
+.actionRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #856d52;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.downloadBtn:hover {
+  background: #725c43;
+  transform: translateY(-1px);
+}
+
+.zoomBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #dcdcdc;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.zoomBtn:hover {
+  background: #f4f0eb;
+  border-color: #856d52;
+  color: #856d52;
+}
+
+/* Image */
+.imageCol {
+  cursor: pointer;
+  position: relative;
+  background: #fcfbf9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.planImage {
+  object-fit: contain;
+}
+
+.zoomHint {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Lightbox */
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.lightboxImg {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+@media (max-width: 991px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+}

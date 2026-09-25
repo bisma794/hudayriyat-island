@@ -1,0 +1,93 @@
+.highlightsSection {
+  padding: 45px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  z-index: 10;
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.highlightCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 5px;
+}
+
+/* Brown Accent circle backdrop */
+.iconWrapper {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accentCircle {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #856D52;
+  opacity: 0.18;
+  top: 4px;
+  left: 4px;
+  z-index: 1;
+}
+
+.svgIcon {
+  position: relative;
+  z-index: 2;
+  color: #856D52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlightInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.highlightLabel {
+  font-size: 13px;
+  color: #777777;
+  font-weight: 500;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+
+.highlightValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+@media (max-width: 1200px) {
+  .highlightsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

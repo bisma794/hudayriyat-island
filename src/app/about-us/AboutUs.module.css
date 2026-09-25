@@ -1,0 +1,443 @@
+.mainWrapper {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: inherit;
+}
+
+/* Hero Banner */
+.heroSection {
+  background: linear-gradient(135deg, #181512 0%, #2b231c 50%, #15120f 100%);
+  padding: 150px 0 70px;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(133, 109, 82, 0.2);
+  border: 1px solid rgba(133, 109, 82, 0.5);
+  color: #d8c8b8;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.heroTitle {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+/* Intro & Single Image Section */
+.introSection {
+  padding: 70px 0 50px;
+}
+
+.introText {
+  max-width: 860px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.leadText {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2520;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.bodyText {
+  font-size: 16.5px;
+  color: #666666;
+  line-height: 1.7;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 480px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(133, 109, 82, 0.2);
+}
+
+.featuredImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageContainer:hover .featuredImage {
+  transform: scale(1.02);
+}
+
+/* Section Header Shared */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #856d52;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+/* Core Services */
+.servicesSection {
+  padding: 70px 0;
+  background-color: #faf8f5;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  background: #ffffff;
+  border: 1px solid #ebe5dd;
+  border-radius: 12px;
+  padding: 36px 28px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(133, 109, 82, 0.12);
+  border-color: #856d52;
+}
+
+.iconBox {
+  width: 56px;
+  height: 56px;
+  background: rgba(133, 109, 82, 0.1);
+  color: #856d52;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Pillars (Mission, Vision, Values) */
+.pillarsSection {
+  padding: 70px 0;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pillarCard {
+  background: #ffffff;
+  border-left: 3px solid #856d52;
+  border-radius: 0 10px 10px 0;
+  padding: 30px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background-color: #fcfbfa;
+}
+
+.pillarHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.pillarIcon {
+  color: #856d52;
+}
+
+.pillarTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #222222;
+}
+
+.pillarText {
+  font-size: 14.5px;
+  color: #555555;
+  line-height: 1.65;
+}
+
+/* Why Choose Us */
+.whyUsSection {
+  padding: 70px 0;
+  background-color: #faf8f5;
+}
+
+.whyUsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.whyUsCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px 26px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #ebe5dd;
+}
+
+.whyUsIconBox {
+  width: 48px;
+  height: 48px;
+  background: #856d52;
+  color: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.whyUsTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.whyUsDesc {
+  font-size: 14.5px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* CTA & Contact Form */
+.ctaSection {
+  padding: 85px 0;
+  background: #ffffff;
+}
+
+.ctaGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ctaTextCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaHeading {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.ctaBody {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* Form Card */
+.formCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formCard {
+  background: #ffffff;
+  border: 1px solid #e0d8cf;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 440px;
+}
+
+.formTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: #777777;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.inputField {
+  width: 100%;
+  padding: 13px 15px;
+  font-size: 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: #333333;
+  box-sizing: border-box;
+}
+
+.inputField:focus {
+  border-color: #856d52;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #856d52;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 4px;
+}
+
+.submitBtn:hover {
+  background: #725c43;
+  transform: translateY(-1px);
+}
+
+.termsNote {
+  font-size: 12px;
+  color: #888888;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.successMsg {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  background: #eef7ec;
+  border: 1px solid #c3e6cb;
+  color: #166534;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .imageContainer {
+    height: 320px;
+  }
+
+  .servicesGrid,
+  .pillarsGrid,
+  .whyUsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ctaGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .formCol {
+    justify-content: center;
+  }
+
+  .formCard {
+    max-width: 100%;
+  }
+}

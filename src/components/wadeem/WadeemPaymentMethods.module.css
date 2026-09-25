@@ -1,0 +1,78 @@
+.paymentSection {
+  padding: 60px 0 80px;
+  background-color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #666666;
+  margin: 0;
+}
+
+.paymentGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.paymentCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 32px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.paymentCard:hover {
+  border-color: #856d52;
+  box-shadow: 0 6px 20px rgba(133, 109, 82, 0.12);
+  transform: translateY(-2px);
+}
+
+.iconWrapper {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+}
+
+.paymentIcon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.paymentName {
+  font-size: 19px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .paymentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}

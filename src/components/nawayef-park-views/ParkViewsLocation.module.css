@@ -1,0 +1,221 @@
+.locationSection {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 36px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.mapWrapper {
+  width: 100%;
+  height: 480px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordionItem {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.accordionItemOpen {
+  border-color: #c08364;
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 16px 20px;
+  background: none;
+  border: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.accordionHeader:hover {
+  color: #c08364;
+}
+
+.accordionIcon {
+  color: #c08364;
+  transition: transform 0.25s ease;
+}
+
+.accordionIconRotated {
+  transform: rotate(180deg);
+}
+
+.accordionBody {
+  padding: 0 20px 16px;
+  border-top: 1px solid #edf2f7;
+}
+
+.placeList {
+  list-style: none;
+  padding: 12px 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.placeItem {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.placeItem strong {
+  color: #1e293b;
+}
+
+/* Nearby Section */
+.nearbyHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 36px;
+}
+
+.nearbyTitle {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.nearbyDesc {
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.nearbyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.destinationCard {
+  position: relative;
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+}
+
+.destinationCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.destImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.destinationCard:hover .destImage {
+  transform: scale(1.08);
+}
+
+.destOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(15, 23, 42, 0.2) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.destContent {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+}
+
+.destName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.destTime {
+  font-size: 14px;
+  font-weight: 600;
+  color: #c08364;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .mapWrapper {
+    height: 360px;
+  }
+  .nearbyGrid {
+    grid-template-columns: 1fr;
+  }
+}

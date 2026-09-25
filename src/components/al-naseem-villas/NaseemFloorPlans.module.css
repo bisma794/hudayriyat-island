@@ -1,0 +1,310 @@
+.floorPlansSection {
+  padding: 85px 0;
+  background-color: #faf8f5;
+}
+
+.header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.tabNav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  background: #ffffff;
+  border: 1px solid #dfd8ce;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabBtn:hover {
+  border-color: #ae774e;
+  color: #ae774e;
+}
+
+.tabActive {
+  background: #ae774e;
+  border-color: #ae774e;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(174, 119, 78, 0.3);
+}
+
+.planCard {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #ebe5dd;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+}
+
+.imageCol {
+  background: #fdfdfd;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #f0ebe4;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planImg {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover .planImg {
+  transform: scale(1.02);
+}
+
+.zoomBtn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(26, 22, 18, 0.85);
+  color: #fff;
+  border: 1px solid rgba(174, 119, 78, 0.5);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: all 0.2s ease;
+}
+
+.zoomBtn:hover {
+  background: #ae774e;
+}
+
+.infoCol {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.planTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.planDesc {
+  font-size: 14.5px;
+  color: #666666;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.specsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #faf8f5;
+  border-radius: 6px;
+  border-left: 3px solid #ae774e;
+}
+
+.specIcon {
+  color: #ae774e;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.specDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.specLabel {
+  font-size: 14px;
+  color: #555555;
+  font-weight: 500;
+}
+
+.specVal {
+  font-size: 15px;
+  color: #111111;
+  font-weight: 700;
+}
+
+.btnRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #ae774e 0%, #856D52 100%);
+  color: #ffffff;
+  padding: 11px 20px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background: linear-gradient(135deg, #be855b 0%, #947b5d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(174, 119, 78, 0.35);
+}
+
+.inquireBtn {
+  background: transparent;
+  border: 1px solid #ae774e;
+  color: #ae774e;
+  padding: 11px 20px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inquireBtn:hover {
+  background: rgba(174, 119, 78, 0.1);
+}
+
+/* Modal Lightbox */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(12, 10, 8, 0.92);
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.modalContent {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 950px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f0ebe4;
+  border: none;
+  color: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #ae774e;
+  color: #fff;
+}
+
+.modalImageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 75vh;
+  overflow: auto;
+}
+
+.modalImg {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.modalCaption {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 12px;
+}
+
+@media (max-width: 991px) {
+  .planCard {
+    grid-template-columns: 1fr;
+  }
+
+  .imageCol {
+    border-right: none;
+    border-bottom: 1px solid #f0ebe4;
+  }
+
+  .infoCol {
+    padding: 30px 20px;
+  }
+}

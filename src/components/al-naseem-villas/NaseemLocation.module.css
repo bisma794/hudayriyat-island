@@ -1,0 +1,136 @@
+.locationSection {
+  padding: 85px 0;
+  background-color: #fcfbf9;
+}
+
+.header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 45px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #666666;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.mapWrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ebe5dd;
+  height: 480px;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.accordionItem {
+  background: #ffffff;
+  border: 1px solid #ebe5dd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.accordionOpen {
+  border-color: #ae774e;
+  box-shadow: 0 6px 20px rgba(174, 119, 78, 0.12);
+}
+
+.accordionBtn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordionCategory {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.chevron {
+  color: #ae774e;
+  flex-shrink: 0;
+}
+
+.accordionBody {
+  padding: 0 24px 20px;
+  border-top: 1px solid #f5efe8;
+}
+
+.itemList {
+  list-style: none;
+  padding: 14px 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed #eee8e0;
+}
+
+.itemRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.itemName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.itemTime {
+  font-size: 13px;
+  color: #ae774e;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapWrapper {
+    height: 380px;
+  }
+}

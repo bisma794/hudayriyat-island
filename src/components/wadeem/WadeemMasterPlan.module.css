@@ -1,0 +1,102 @@
+.masterSection {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222222;
+}
+
+.planCard {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.planCard:hover {
+  transform: translateY(-4px);
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+.planImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.zoomBadge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(4px);
+}
+
+/* Full Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 2010;
+}
+
+.modalContent {
+  max-width: 95vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullImg {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+}

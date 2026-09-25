@@ -1,0 +1,864 @@
+{
+  "masyaf-plots": {
+    "slug": "masyaf-plots",
+    "name": "Masyaf Plots",
+    "hero": {
+      "title": "Masyaf by Hudayriyat Developments",
+      "subtitle": "Modern Infrastructure and Scenic Views at Al Hidayriyyat",
+      "price": "Launch Price: On Request",
+      "handover": "Delivery Date: Contact For Details",
+      "slides": [
+        "/images/masyaf-plots/asset_1.png",
+        "/images/masyaf-plots/asset_2.jpg",
+        "/images/masyaf-plots/asset_3.png",
+        "/images/masyaf-plots/asset_4.jpg"
+      ]
+    },
+    "highlights": [],
+    "about": {
+      "title": "About Masyaf Plots",
+      "description": [
+        "Masyaf Plots offers an unparalleled lifestyle surrounded by the pristine beauty of Hudayriyat Island. Developed by Modon Properties, this community blends masterfully planned architecture with world-class amenities.",
+        "Experience refined coastal living with easy access to high-end leisure destinations, pristine beaches, and Abu Dhabi's vibrant metropolitan centers."
+      ],
+      "videoUrl": "",
+      "poster": ""
+    },
+    "amenities": [],
+    "gallery": [
+      {
+        "src": "/images/masyaf-plots/asset_22.jpg",
+        "alt": "Masyaf Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/masyaf-plots/asset_23.jpg",
+        "alt": "Masyaf Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/masyaf-plots/asset_24.jpg",
+        "alt": "Masyaf Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/masyaf-plots/asset_25.jpg",
+        "alt": "Masyaf Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/masyaf-plots/asset_26.jpg",
+        "alt": "Masyaf Plots photo",
+        "category": "all"
+      }
+    ],
+    "floorPlans": [],
+    "paymentMilestones": [],
+    "faqs": [
+      {
+        "question": "Clinic",
+        "answer": "Al Qadi Medical Center - Dermatology & Skin Clinic - Approximately 15 Minutes Exeter medical center - Approximately 17 Minutes DNA Health & Wellness - Approximately 18 Minutes Louvre medical clinic - Approximately 21 Minutes"
+      },
+      {
+        "question": "School",
+        "answer": "St Joseph&rsquo;s School - Approximately 17 Minutes Vision Private School - Approximately 20 Minutes The British School Al Khubairat - Approximately 18 Minutes International Community Schools - Approximately 19 Minutes Emirates Private School - Approximately 25 Minutes"
+      },
+      {
+        "question": "Restaurants",
+        "answer": "Cello SOL Restaurant Abu Dhabi - Approximately 12 Minutes Al Shader Restaurant and Grill - Approximately 7 Minutes Nonna Stella Osteria Restaurant - Approximately 7 Minutes Aroy Dee Thai Restaurant - Approximately 22 Minutes"
+      },
+      {
+        "question": "Mall",
+        "answer": "Al Mushrif Co-operative Society Shopping Mall - Approximately 21 Minutes Mushrif Mall - Approximately 22 Minutes Al Seef Village Mall - Approximately 26 Minutes Abu Dhabi Mall - Approximately 26 Minutes"
+      }
+    ],
+    "masterPlanImg": "/images/masyaf-plots/asset_31.jpg"
+  },
+  "nawayef-village": {
+    "slug": "nawayef-village",
+    "name": "Nawayef Village",
+    "hero": {
+      "title": "Nawayef Village by Modon",
+      "subtitle": "Modern 3 to 5 Bedroom Homes in the Heart of Hudayriyat",
+      "price": "Launch Price: On Request",
+      "handover": "Delivery Date: Contact For Details",
+      "slides": [
+        "/images/nawayef-village/asset_1.png",
+        "/images/nawayef-village/asset_2.jpg",
+        "/images/nawayef-village/asset_3.png",
+        "/images/nawayef-village/asset_4.jpg"
+      ]
+    },
+    "highlights": [],
+    "about": {
+      "title": "About Nawayef Village",
+      "description": [
+        "Nawayef Village offers an unparalleled lifestyle surrounded by the pristine beauty of Hudayriyat Island. Developed by Modon Properties, this community blends masterfully planned architecture with world-class amenities.",
+        "Experience refined coastal living with easy access to high-end leisure destinations, pristine beaches, and Abu Dhabi's vibrant metropolitan centers."
+      ],
+      "videoUrl": "",
+      "poster": ""
+    },
+    "amenities": [],
+    "gallery": [
+      {
+        "src": "/images/nawayef-village/asset_24.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_25.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_26.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_27.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_28.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_29.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_30.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_31.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_32.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_33.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_34.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_35.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_36.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_37.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_38.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_39.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_40.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_41.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_42.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_43.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-village/asset_44.jpg",
+        "alt": "Nawayef Village photo",
+        "category": "all"
+      }
+    ],
+    "floorPlans": [
+      {
+        "id": "plan-1",
+        "tabName": "Layout Plan 1",
+        "title": "Layout Plan 1 - Nawayef Village",
+        "type": "Layout Plan 1",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "1 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_49.png",
+        "description": "Detailed architectural master layout for Layout Plan 1 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-2",
+        "tabName": "Layout Plan 2",
+        "title": "Layout Plan 2 - Nawayef Village",
+        "type": "Layout Plan 2",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "2 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_50.png",
+        "description": "Detailed architectural master layout for Layout Plan 2 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-3",
+        "tabName": "Layout Plan 3",
+        "title": "Layout Plan 3 - Nawayef Village",
+        "type": "Layout Plan 3",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "3 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_51.png",
+        "description": "Detailed architectural master layout for Layout Plan 3 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-4",
+        "tabName": "Layout Plan 4",
+        "title": "Layout Plan 4 - Nawayef Village",
+        "type": "Layout Plan 4",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "4 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_49.png",
+        "description": "Detailed architectural master layout for Layout Plan 4 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-5",
+        "tabName": "Layout Plan 5",
+        "title": "Layout Plan 5 - Nawayef Village",
+        "type": "Layout Plan 5",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "5 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_49.png",
+        "description": "Detailed architectural master layout for Layout Plan 5 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-6",
+        "tabName": "Layout Plan 6",
+        "title": "Layout Plan 6 - Nawayef Village",
+        "type": "Layout Plan 6",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "6 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_50.png",
+        "description": "Detailed architectural master layout for Layout Plan 6 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-7",
+        "tabName": "Layout Plan 7",
+        "title": "Layout Plan 7 - Nawayef Village",
+        "type": "Layout Plan 7",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "7 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_50.png",
+        "description": "Detailed architectural master layout for Layout Plan 7 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-8",
+        "tabName": "Layout Plan 8",
+        "title": "Layout Plan 8 - Nawayef Village",
+        "type": "Layout Plan 8",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "8 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_51.png",
+        "description": "Detailed architectural master layout for Layout Plan 8 at Nawayef Village, Hudayriyat Island."
+      },
+      {
+        "id": "plan-9",
+        "tabName": "Layout Plan 9",
+        "title": "Layout Plan 9 - Nawayef Village",
+        "type": "Layout Plan 9",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "9 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-village/asset_51.png",
+        "description": "Detailed architectural master layout for Layout Plan 9 at Nawayef Village, Hudayriyat Island."
+      }
+    ],
+    "paymentMilestones": [
+      {
+        "percentage": "Down Payment",
+        "milestone": "10%",
+        "description": "Payable on the reservation date"
+      },
+      {
+        "percentage": "Commencement of enabling works",
+        "milestone": "5%",
+        "description": "30th November 2025"
+      },
+      {
+        "percentage": "Commencement of constructio",
+        "milestone": "5%",
+        "description": "30th May 2026"
+      },
+      {
+        "percentage": "Sub-structure 100% completion",
+        "milestone": "10%",
+        "description": "30th December 2026"
+      },
+      {
+        "percentage": "Superstructure 100% completion",
+        "milestone": "5%",
+        "description": "30th June 2027"
+      },
+      {
+        "percentage": "Façade substantial completion for the project",
+        "milestone": "5%",
+        "description": "30th December 2027"
+      },
+      {
+        "percentage": "Completion/BCC",
+        "milestone": "10%",
+        "description": "30th September 2028"
+      },
+      {
+        "percentage": "Upon handover",
+        "milestone": "50%",
+        "description": "Upon completion (January 2029)"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Hospitals & Clinics",
+        "answer": "Al Qadi Medical Center - Dermatology & Skin Clinic - Approximately 15 mins Exeter medical center - Approximately 17 mins DNA Health & Wellness - Approximately 18 mins Louvre medical clinic - Approximately 21 mins"
+      },
+      {
+        "question": "Schools",
+        "answer": "St Joseph&rsquo;s School - Approximately 17 mins Vision Private School - Approximately 20 mins The British School Al Khubairat - Approximately 18 mins International Community Schools - Approximately 19 mins Emirates Private School - Approximately 25 mins"
+      },
+      {
+        "question": "Restaurants",
+        "answer": "Cello SOL Restaurant Abu Dhabi - Approximately 12 mins Al Shader Restaurant and Grill - Approximately 7 mins Nonna Stella Osteria Restaurant - Approximately 7 mins Aroy Dee Thai Restaurant - Approximately 22 mins"
+      },
+      {
+        "question": "Shopping Destinations",
+        "answer": "Al Mushrif Co-operative Society Shopping Mall - Approximately 21 mins Mushrif Mall - Approximately 22 mins Al Seef Village Mall - Approximately 26 mins Abu Dhabi Mall - Approximately 26 mins"
+      }
+    ],
+    "masterPlanImg": "/images/nawayef-village/asset_52.jpg"
+  },
+  "wadeem-plots": {
+    "slug": "wadeem-plots",
+    "name": "Wadeem Plots",
+    "hero": {
+      "title": "Wadeem Plots By Modon",
+      "subtitle": "Premium 4 to 6 BR Villa Plots in a Wellness Centric Waterfront Destination",
+      "price": "Launch Price: On Request",
+      "handover": "Delivery Date: Contact For Details",
+      "slides": [
+        "/images/wadeem-plots/asset_1.png",
+        "/images/wadeem-plots/asset_2.jpg",
+        "/images/wadeem-plots/asset_3.png",
+        "/images/wadeem-plots/asset_4.jpg"
+      ]
+    },
+    "highlights": [],
+    "about": {
+      "title": "About Wadeem Plots",
+      "description": [
+        "Wadeem Plots offers an unparalleled lifestyle surrounded by the pristine beauty of Hudayriyat Island. Developed by Modon Properties, this community blends masterfully planned architecture with world-class amenities.",
+        "Experience refined coastal living with easy access to high-end leisure destinations, pristine beaches, and Abu Dhabi's vibrant metropolitan centers."
+      ],
+      "videoUrl": "",
+      "poster": ""
+    },
+    "amenities": [],
+    "gallery": [
+      {
+        "src": "/images/wadeem-plots/asset_24.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_25.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_26.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_27.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_28.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_29.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_30.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_31.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_32.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_33.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_34.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_35.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/wadeem-plots/asset_36.jpg",
+        "alt": "Wadeem Plots photo",
+        "category": "all"
+      }
+    ],
+    "floorPlans": [],
+    "paymentMilestones": [
+      {
+        "percentage": "Down Payment",
+        "milestone": "10%",
+        "description": "On Reservation"
+      },
+      {
+        "percentage": "1st Instalment",
+        "milestone": "12%",
+        "description": "30 January 2026"
+      },
+      {
+        "percentage": "2nd Instalment",
+        "milestone": "5%",
+        "description": "30 May 2026"
+      },
+      {
+        "percentage": "3rd Instalment",
+        "milestone": "5%",
+        "description": "30 September 2026"
+      },
+      {
+        "percentage": "4th Instalment",
+        "milestone": "12%",
+        "description": "30 January 2027"
+      },
+      {
+        "percentage": "5th Instalment",
+        "milestone": "5%",
+        "description": "30 May 2027"
+      },
+      {
+        "percentage": "6th Instalment",
+        "milestone": "5%",
+        "description": "30 September 2027"
+      },
+      {
+        "percentage": "7th Instalment",
+        "milestone": "5%",
+        "description": "30 January 2028"
+      },
+      {
+        "percentage": "8th Instalment",
+        "milestone": "5%",
+        "description": "30 May 2028"
+      },
+      {
+        "percentage": "Final Instalment",
+        "milestone": "50%",
+        "description": "Completion (November 2028)"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Restaurants",
+        "answer": "Salar Restaurant - Approximately 10 mins The Phuket Kitchen - Approximately 16 mins Sama AlMoheet Seafood & Grill Restaurant - Approximately 11 mins Sunset Life Restaurant and Cafe - Approximately 19 mins Aroy Dee Thai Restaurant - Approximately 9 mins Steak Chef Restaurant - Approximately 18 mins Al Shader Restaurant and Grill - Approximately 14 mins"
+      },
+      {
+        "question": "Shopping Destinations",
+        "answer": "Mushrif Mall - Approximately 10 mins Abu Dhabi Mall - Approximately 21 mins The Galleria Mall - Approximately 21 mins Reem Mall - Approximately 23 mins"
+      },
+      {
+        "question": "Hotels & Resorts",
+        "answer": "Radisson Blu Hotel & Resort - Approximately 21 mins Four Seasons Hotel - Approximately 23 mins Rosewood hotel - Approximately 21 mins The St. Regis Abu Dhabi - Approximately 18 mins Emirates Palace Mandarin Oriental - Approximately 16 mins Beach Rotana - Approximately 23 mins"
+      }
+    ],
+    "masterPlanImg": "/images/wadeem-plots/asset_41.jpg"
+  },
+  "nawayef-park-views": {
+    "slug": "nawayef-park-views",
+    "name": "Nawayef Park Views",
+    "hero": {
+      "title": "Nawayef Park Views",
+      "subtitle": "Parkside Serenity Meets Mediterranean Elegance on Hudayriyat Island.",
+      "price": "Launch Price: On Request",
+      "handover": "Delivery Date: Contact For Details",
+      "slides": [
+        "/images/nawayef-park-views/asset_1.png",
+        "/images/nawayef-park-views/asset_2.jpg",
+        "/images/nawayef-park-views/asset_3.png",
+        "/images/nawayef-park-views/asset_4.jpg"
+      ]
+    },
+    "highlights": [],
+    "about": {
+      "title": "About Nawayef Park Views",
+      "description": [
+        "Nawayef Park Views offers an unparalleled lifestyle surrounded by the pristine beauty of Hudayriyat Island. Developed by Modon Properties, this community blends masterfully planned architecture with world-class amenities.",
+        "Experience refined coastal living with easy access to high-end leisure destinations, pristine beaches, and Abu Dhabi's vibrant metropolitan centers."
+      ],
+      "videoUrl": "",
+      "poster": ""
+    },
+    "amenities": [],
+    "gallery": [
+      {
+        "src": "/images/nawayef-park-views/asset_24.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_25.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_26.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_27.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_28.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_29.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_30.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_31.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_32.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_33.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_34.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_35.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_36.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_37.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_38.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_39.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_40.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_41.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_42.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      },
+      {
+        "src": "/images/nawayef-park-views/asset_43.jpg",
+        "alt": "Nawayef Park Views photo",
+        "category": "all"
+      }
+    ],
+    "floorPlans": [
+      {
+        "id": "plan-1",
+        "tabName": "Layout Plan 1",
+        "title": "Layout Plan 1 - Nawayef Park Views",
+        "type": "Layout Plan 1",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "1 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_48.png",
+        "description": "Detailed architectural master layout for Layout Plan 1 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-2",
+        "tabName": "Layout Plan 2",
+        "title": "Layout Plan 2 - Nawayef Park Views",
+        "type": "Layout Plan 2",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "2 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_49.png",
+        "description": "Detailed architectural master layout for Layout Plan 2 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-3",
+        "tabName": "Layout Plan 3",
+        "title": "Layout Plan 3 - Nawayef Park Views",
+        "type": "Layout Plan 3",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "3 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_50.png",
+        "description": "Detailed architectural master layout for Layout Plan 3 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-4",
+        "tabName": "Layout Plan 4",
+        "title": "Layout Plan 4 - Nawayef Park Views",
+        "type": "Layout Plan 4",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "4 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_51.png",
+        "description": "Detailed architectural master layout for Layout Plan 4 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-5",
+        "tabName": "Layout Plan 5",
+        "title": "Layout Plan 5 - Nawayef Park Views",
+        "type": "Layout Plan 5",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "5 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_48.png",
+        "description": "Detailed architectural master layout for Layout Plan 5 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-6",
+        "tabName": "Layout Plan 6",
+        "title": "Layout Plan 6 - Nawayef Park Views",
+        "type": "Layout Plan 6",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "6 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_48.png",
+        "description": "Detailed architectural master layout for Layout Plan 6 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-7",
+        "tabName": "Layout Plan 7",
+        "title": "Layout Plan 7 - Nawayef Park Views",
+        "type": "Layout Plan 7",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "7 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_49.png",
+        "description": "Detailed architectural master layout for Layout Plan 7 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-8",
+        "tabName": "Layout Plan 8",
+        "title": "Layout Plan 8 - Nawayef Park Views",
+        "type": "Layout Plan 8",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "8 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_49.png",
+        "description": "Detailed architectural master layout for Layout Plan 8 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-9",
+        "tabName": "Layout Plan 9",
+        "title": "Layout Plan 9 - Nawayef Park Views",
+        "type": "Layout Plan 9",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "9 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_50.png",
+        "description": "Detailed architectural master layout for Layout Plan 9 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-10",
+        "tabName": "Layout Plan 10",
+        "title": "Layout Plan 10 - Nawayef Park Views",
+        "type": "Layout Plan 10",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "10 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_50.png",
+        "description": "Detailed architectural master layout for Layout Plan 10 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-11",
+        "tabName": "Layout Plan 11",
+        "title": "Layout Plan 11 - Nawayef Park Views",
+        "type": "Layout Plan 11",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "11 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_51.png",
+        "description": "Detailed architectural master layout for Layout Plan 11 at Nawayef Park Views, Hudayriyat Island."
+      },
+      {
+        "id": "plan-12",
+        "tabName": "Layout Plan 12",
+        "title": "Layout Plan 12 - Nawayef Park Views",
+        "type": "Layout Plan 12",
+        "size": "Spacious bespoke layout",
+        "bedrooms": "12 Bedrooms",
+        "bathrooms": "En-Suite Luxury",
+        "image": "/images/nawayef-park-views/asset_51.png",
+        "description": "Detailed architectural master layout for Layout Plan 12 at Nawayef Park Views, Hudayriyat Island."
+      }
+    ],
+    "paymentMilestones": [
+      {
+        "percentage": "Down Payment",
+        "milestone": "10%",
+        "description": ""
+      },
+      {
+        "percentage": "1st Installment",
+        "milestone": "5%",
+        "description": ""
+      },
+      {
+        "percentage": "2nd Installment",
+        "milestone": "10%",
+        "description": ""
+      },
+      {
+        "percentage": "3rd Installment",
+        "milestone": "5%",
+        "description": ""
+      },
+      {
+        "percentage": "4th Installment",
+        "milestone": "10%",
+        "description": ""
+      },
+      {
+        "percentage": "5th Installment",
+        "milestone": "5%",
+        "description": ""
+      },
+      {
+        "percentage": "6th Installment",
+        "milestone": "10%",
+        "description": ""
+      },
+      {
+        "percentage": "7th Installment",
+        "milestone": "5%",
+        "description": ""
+      },
+      {
+        "percentage": "Final Payment",
+        "milestone": "40%",
+        "description": ""
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Clinic",
+        "answer": "Al Qadi Medical Center - Dermatology & Skin Clinic - Approximately 15 mins Exeter Medical Center - Approximately 17 mins DNA Health & Wellness - Approximately 18 mins Louvre Medical Clinic - Approximately 21 mins"
+      },
+      {
+        "question": "School",
+        "answer": "St Joseph&rsquo;s School - Approximately 17 mins Vision Private School - Approximately 20 mins The British School Al Khubairat - Approximately 18 mins International Community Schools - Approximately 19 mins Emirates Private School - Approximately 25 mins"
+      },
+      {
+        "question": "Restaurants",
+        "answer": "Cello SOL Restaurant Abu Dhabi - Approximately 12 mins Al Shader Restaurant and Grill - Approximately 7 mins Nonna Stella Osteria Restaurant - Approximately 7 mins Aroy Dee Thai Restaurant - Approximately 22 mins"
+      },
+      {
+        "question": "Mall",
+        "answer": "Al Mushrif Co-operative Society Shopping Mall - Approximately 21 mins Mushrif Mall - Approximately 22 mins Al Seef Village Mall - Approximately 26 mins Abu Dhabi Mall - Approximately 26 mins"
+      }
+    ],
+    "masterPlanImg": "/images/nawayef-park-views/asset_52.png"
+  }
+}

@@ -1,0 +1,151 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 12, 9, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.modalCard {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  color: #333;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #ae774e;
+  color: #fff;
+}
+
+.imageCol {
+  position: relative;
+  min-height: 400px;
+  background-color: #241e19;
+}
+
+.modalImg {
+  object-fit: cover;
+}
+
+.formCol {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleSmall {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ae774e;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.titleLarge {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd6cc;
+  border-radius: 6px;
+  font-size: 13.5px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inputField:focus {
+  border-color: #ae774e;
+  box-shadow: 0 0 8px rgba(174, 119, 78, 0.2);
+}
+
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #ae774e 0%, #856D52 100%);
+  color: #ffffff;
+  border: none;
+  padding: 13px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, #be855b 0%, #947b5d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(174, 119, 78, 0.35);
+}
+
+.successMessage {
+  padding: 20px;
+  text-align: center;
+  color: #ae774e;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .modalCard {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .imageCol {
+    display: none;
+  }
+
+  .formCol {
+    padding: 30px 20px;
+  }
+}

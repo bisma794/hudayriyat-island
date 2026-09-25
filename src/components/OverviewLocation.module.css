@@ -1,0 +1,190 @@
+.overviewSection {
+  padding: 70px 0;
+  background-color: #ffffff;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.mainTitle {
+  font-size: 38px;
+  font-weight: 700;
+  color: #2b2d32;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  letter-spacing: -0.4px;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.paragraphs p {
+  font-size: 17.5px;
+  line-height: 1.7;
+  color: #4b5059;
+  margin: 0;
+}
+
+/* Right Column (Placeholder Image Box) */
+.rightCol {
+  width: 100%;
+  display: flex;
+}
+
+.imagePlaceholderCard {
+  width: 100%;
+  min-height: 480px;
+  height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  border: 2px dashed #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagePlaceholderCard:hover {
+  border-color: var(--color-primary, #856d52);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.placeholderInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.iconCircle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.placeholderLabel {
+  font-size: 17.5px;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 4px;
+}
+
+.placeholderBadge {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  background-color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Location Highlights Bar */
+.locationBar {
+  background-color: #f4f6fa;
+  border-radius: 20px;
+  padding: 26px 34px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.locationCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.locationTitle {
+  font-size: 17.5px;
+  font-weight: 700;
+  color: #2b2d32;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.locationSub {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .imagePlaceholderCard {
+    min-height: 380px;
+  }
+
+  .locationBar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 24px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .overviewSection {
+    padding: 48px 0;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .paragraphs {
+    gap: 14px;
+  }
+
+  .paragraphs p {
+    font-size: 14.5px;
+  }
+
+  .imagePlaceholderCard {
+    min-height: 300px;
+    border-radius: 18px;
+  }
+
+  .locationBar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 20px;
+  }
+}

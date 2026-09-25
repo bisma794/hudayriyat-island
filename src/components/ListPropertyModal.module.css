@@ -1,0 +1,167 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 2500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  padding: 32px 30px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 16px;
+}
+
+.modalTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #222222;
+  letter-spacing: 0.5px;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #777777;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.closeBtn:hover {
+  color: #000000;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fullWidth {
+  grid-column: span 2;
+}
+
+.label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 6px;
+}
+
+.inputField,
+.selectField,
+.textareaField {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+  background: #ffffff;
+}
+
+.inputField:focus,
+.selectField:focus,
+.textareaField:focus {
+  border-color: var(--color-primary);
+}
+
+.textareaField {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.fileNote {
+  font-size: 12px;
+  color: #777777;
+  margin-top: 4px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 13px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.successMessage {
+  padding: 16px;
+  background: #eef7ec;
+  border: 1px solid #c3e6cb;
+  color: #1e6b27;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .fullWidth {
+    grid-column: span 1;
+  }
+}

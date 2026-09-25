@@ -1,0 +1,210 @@
+.paymentSection {
+  background-color: #ffffff;
+  padding: 80px 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 15.5px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.summaryCard {
+  background: #fbfaf8;
+  border: 1px solid #eeebe3;
+  border-radius: 8px;
+  padding: 30px 24px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summaryCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.summaryBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #856d52;
+  background: #f0eae1;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.summaryPercent {
+  font-size: 36px;
+  font-weight: 800;
+  color: #856d52;
+  margin: 0 0 6px 0;
+}
+
+.summaryTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 4px 0;
+}
+
+.summaryText {
+  font-size: 13.5px;
+  color: #777777;
+  margin: 0;
+}
+
+.viewToggleWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.toggleButtons {
+  display: flex;
+  gap: 4px;
+  background: #f4f0eb;
+  padding: 3px;
+  border-radius: 4px;
+}
+
+.viewBtn {
+  background: none;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 3px;
+  color: #666666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewBtnActive {
+  background: #856d52;
+  color: #ffffff;
+}
+
+/* Table View */
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  text-align: left;
+}
+
+.table th {
+  background: #856d52;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 14px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.thPrimary {
+  width: 35%;
+}
+
+.table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14.5px;
+  color: #444444;
+}
+
+.tdInstallment {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.tdPercentage {
+  font-weight: 700;
+  color: #856d52;
+}
+
+.table tr:hover td {
+  background-color: #faf9f7;
+}
+
+/* Grid View */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.gridCard {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+}
+
+.gridPercent {
+  font-size: 26px;
+  font-weight: 800;
+  color: #856d52;
+  margin: 0 0 6px 0;
+}
+
+.gridInstallment {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 4px 0;
+}
+
+.gridMilestone {
+  font-size: 12.5px;
+  color: #777777;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gridWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .gridWrapper {
+    grid-template-columns: 1fr;
+  }
+}

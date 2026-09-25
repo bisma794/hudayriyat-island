@@ -1,0 +1,198 @@
+.investmentSection {
+  padding: 60px 0 70px;
+  background-color: #ffffff;
+}
+
+.investmentGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.leftCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTitle {
+  font-size: 36px;
+  font-weight: 800;
+  color: #212529;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
+}
+
+.locationBadge {
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 18px;
+  display: inline-block;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4f5359;
+  margin-bottom: 24px;
+}
+
+.highlightsHeading {
+  font-size: 18.5px;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 16px;
+}
+
+.highlightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkIconGrey {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #cfd4dc;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.itemText {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #24272c;
+  line-height: 1.45;
+}
+
+.btnWrapper {
+  margin-top: 6px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #856d52;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 13px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(133, 109, 82, 0.25);
+  cursor: pointer;
+}
+
+.actionBtn:hover {
+  background-color: #725c43;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(133, 109, 82, 0.35);
+}
+
+/* Right Column (Financing Card) */
+.rightCol {
+  width: 100%;
+}
+
+.financingCard {
+  background-color: #f6f8fb;
+  border-radius: 16px;
+  padding: 38px 34px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #edf1f6;
+}
+
+.financingTitle {
+  font-size: 30px;
+  font-weight: 800;
+  color: #212529;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.financingDesc {
+  font-size: 16.5px;
+  line-height: 1.68;
+  color: #52565e;
+  margin-bottom: 24px;
+}
+
+.financingList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.financingItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.checkIconGreen {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(133, 109, 82, 0.14);
+  color: #856d52;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cardBtnWrapper {
+  margin-top: 8px;
+}
+
+@media (max-width: 991px) {
+  .investmentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .financingCard {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .investmentSection {
+    padding: 45px 0 55px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .financingTitle {
+    font-size: 22px;
+  }
+
+  .actionBtn {
+    width: 100%;
+    text-align: center;
+  }
+}

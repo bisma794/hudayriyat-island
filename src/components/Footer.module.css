@@ -1,0 +1,159 @@
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 70px 0 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: inherit;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr 1fr 1.1fr;
+  gap: 48px;
+  margin-bottom: 50px;
+}
+
+/* Col 1: Brand */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoLink {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.logoImg {
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  height: auto;
+}
+
+.brandDescription {
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+/* Col Titles */
+.colTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 22px;
+  letter-spacing: 0.3px;
+}
+
+/* Links Lists */
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkItem {
+  color: #b0b0b0;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.linkItem:hover {
+  color: #856d52;
+  transform: translateX(3px);
+}
+
+/* Contact List */
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #b0b0b0;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover {
+  color: #856d52;
+}
+
+.contactItemStatic {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #b0b0b0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contactIcon {
+  color: #ffffff;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.disclaimerText {
+  color: #8a8a8a;
+  font-size: 12.5px;
+  line-height: 1.7;
+  max-width: 980px;
+  margin: 0;
+  text-align: center;
+}
+
+.disclaimerText strong {
+  color: #b0b0b0;
+}
+
+.copyrightText {
+  color: #666666;
+  font-size: 13px;
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer {
+    padding: 50px 0 25px;
+  }
+}

@@ -1,0 +1,383 @@
+.floorSection {
+  padding: 80px 0;
+  background-color: #f7f9fa;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 36px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+/* Tab Switcher */
+.tabNav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.tabBtn {
+  background: #ffffff;
+  border: 1px solid #d5dbe2;
+  color: #4a5568;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tabBtn:hover {
+  border-color: #c08364;
+  color: #c08364;
+}
+
+.tabActive {
+  background: #c08364;
+  border-color: #c08364;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(192, 131, 100, 0.35);
+}
+
+.tabActive:hover {
+  background: #a86c4f;
+  color: #ffffff;
+}
+
+/* Feature Showcase Card */
+.showcaseCard {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+}
+
+.imageCol {
+  position: relative;
+  background: #ffffff;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-right: 1px solid #edf2f7;
+}
+
+.planImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.planImage {
+  object-fit: contain;
+}
+
+.zoomBadge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.detailsCol {
+  padding: 40px;
+}
+
+.planTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 12px;
+}
+
+.planDesc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4a5568;
+  margin-bottom: 24px;
+}
+
+.specsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #edf2f7;
+  padding-top: 20px;
+}
+
+.specRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14.5px;
+  color: #4a5568;
+}
+
+.specLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2d3748;
+}
+
+.specIcon {
+  color: #c08364;
+}
+
+.specValue {
+  font-weight: 700;
+  color: #1a202c;
+}
+
+/* Search and Table List */
+.tableToolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.searchBox {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #ffffff;
+}
+
+.searchInput:focus {
+  border-color: #c08364;
+}
+
+.tableWrapper {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+.listTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.listTable th {
+  background-color: #f8fafc;
+  padding: 14px 20px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.listRow {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.listRow:hover {
+  background-color: #fcf9f7;
+}
+
+.listRow td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #edf2f7;
+  font-size: 14px;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.thumbImg {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.expandTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.expandIcon {
+  color: #64748b;
+  transition: transform 0.2s ease;
+}
+
+.expandIconRotated {
+  transform: rotate(180deg);
+}
+
+.detailRow td {
+  background-color: #fafbfc;
+  padding: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.detailCard {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.detailCardImg {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  padding: 8px;
+}
+
+.detailInfo h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a202c;
+}
+
+.detailDesc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 16px;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  font-size: 13.5px;
+  color: #4a5568;
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.downloadBtn {
+  background: #c08364;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.downloadBtn:hover {
+  background: #a86c4f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(192, 131, 100, 0.35);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 14, 20, 0.94);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightboxContent {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightboxImgWrapper {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -44px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .showcaseGrid {
+    grid-template-columns: 1fr;
+  }
+  .imageCol {
+    border-right: none;
+    border-bottom: 1px solid #edf2f7;
+  }
+  .planImageWrapper {
+    height: 300px;
+  }
+  .detailCard {
+    grid-template-columns: 1fr;
+  }
+  .detailGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

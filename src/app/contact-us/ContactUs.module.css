@@ -1,0 +1,381 @@
+.mainWrapper {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: inherit;
+}
+
+/* Hero Banner */
+.heroSection {
+  background: linear-gradient(135deg, #181512 0%, #2b231c 50%, #15120f 100%);
+  padding: 150px 0 70px;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(133, 109, 82, 0.2);
+  border: 1px solid rgba(133, 109, 82, 0.5);
+  color: #d8c8b8;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.heroTitle {
+  font-size: 52px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+}
+
+/* Channels Cards Section */
+.channelsSection {
+  padding: 60px 0 30px;
+  background-color: #faf8f5;
+  border-bottom: 1px solid #eee8e0;
+}
+
+.channelsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.channelCard,
+.channelCardStatic {
+  background: #ffffff;
+  border: 1px solid #ebe5dd;
+  border-radius: 12px;
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.channelCard:hover {
+  transform: translateY(-4px);
+  border-color: #856d52;
+  box-shadow: 0 10px 25px rgba(133, 109, 82, 0.12);
+}
+
+.iconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(133, 109, 82, 0.1);
+  color: #856d52;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.channelCard:hover .iconCircle {
+  background: #856d52;
+  color: #ffffff;
+}
+
+.channelTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.channelInfo {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 14px;
+}
+
+.channelAction {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #856d52;
+  margin-top: auto;
+}
+
+.channelBadge {
+  font-size: 12px;
+  font-weight: 600;
+  color: #856d52;
+  background: rgba(133, 109, 82, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: auto;
+}
+
+/* Main Content & Form Grid */
+.contentSection {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Left Info Column */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #856d52;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.infoHeading {
+  font-size: 34px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.infoTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.leadPara {
+  font-size: 17px;
+  font-weight: 600;
+  color: #2b241e;
+  line-height: 1.6;
+}
+
+.bodyPara {
+  font-size: 15.5px;
+  color: #555555;
+  line-height: 1.7;
+}
+
+.highlightPara {
+  font-size: 16px;
+  font-weight: 700;
+  color: #856d52;
+  line-height: 1.5;
+  border-left: 3px solid #856d52;
+  padding-left: 14px;
+  margin-top: 6px;
+}
+
+/* Feature Badges */
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: #fdfcfb;
+  border: 1px solid #ebe5dd;
+  border-radius: 12px;
+  padding: 24px 22px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.featureIcon {
+  color: #856d52;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.featureTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 3px;
+}
+
+.featureDesc {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Form Card */
+.formCol {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formCard {
+  background: #ffffff;
+  border: 1.5px solid #856d52;
+  border-radius: 12px;
+  padding: 36px 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 440px;
+}
+
+.formTitle {
+  font-size: 26px;
+  font-weight: 800;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.formSubtitle {
+  font-size: 14px;
+  color: #777777;
+  text-align: center;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+.inputField,
+.textareaField {
+  width: 100%;
+  padding: 13px 15px;
+  font-size: 14.5px;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: #333333;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.inputField:focus,
+.textareaField:focus {
+  border-color: #856d52;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #856d52;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 4px;
+}
+
+.submitBtn:hover {
+  background: #725c43;
+  transform: translateY(-1px);
+}
+
+.termsNote {
+  font-size: 12px;
+  color: #888888;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.successMsg {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+  background: #eef7ec;
+  border: 1px solid #c3e6cb;
+  color: #166534;
+  border-radius: 6px;
+}
+
+.successHeading {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.successText {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .channelsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .formCol {
+    justify-content: center;
+  }
+
+  .formCard {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .channelsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

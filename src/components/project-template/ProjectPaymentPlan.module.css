@@ -1,0 +1,174 @@
+.paymentSection {
+  padding: 85px 0;
+  background-color: #ffffff;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 35px;
+}
+
+.title {
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #666666;
+}
+
+.viewToggleRow {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.toggleBtnGroup {
+  display: flex;
+  background: #faf8f5;
+  border: 1px solid #ebe5dd;
+  border-radius: 8px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggleBtn:hover {
+  color: #ae774e;
+}
+
+.toggleActive {
+  background: #ae774e;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(174, 119, 78, 0.3);
+}
+
+.tableCard {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #ede7df;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.planTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.planTable th {
+  background-color: #faf8f5;
+  color: #222222;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #ede7df;
+}
+
+.planTable td {
+  padding: 16px 24px;
+  font-size: 14.5px;
+  color: #444444;
+  border-bottom: 1px solid #f3eee9;
+}
+
+.planTable tr:last-child td {
+  border-bottom: none;
+}
+
+.percentageCol {
+  color: #ae774e;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.gridContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gridCard {
+  background: #faf8f5;
+  border: 1px solid #ebe5dd;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.gridCard:hover {
+  border-color: #ae774e;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(174, 119, 78, 0.15);
+}
+
+.percentNum {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ae774e;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.installmentTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 6px;
+}
+
+.milestoneDate {
+  font-size: 13.5px;
+  color: #777777;
+}
+
+.actionRow {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.inquireBtn {
+  background: linear-gradient(135deg, #ae774e 0%, #856D52 100%);
+  color: #ffffff;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(174, 119, 78, 0.25);
+}
+
+.inquireBtn:hover {
+  background: linear-gradient(135deg, #be855b 0%, #947b5d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(174, 119, 78, 0.35);
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+}
