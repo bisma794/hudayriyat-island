@@ -21,13 +21,16 @@ export default function NaseemMasterPlan() {
         <div
           className={styles.imageCard}
           onClick={() => setIsZoomOpen(true)}
+          title="Click to view full master plan"
         >
           <div className={styles.imageWrapper}>
             <Image
               src="/images/al-naseem-villas/master-plan.webp"
               alt="Master Plan of Al Naseem Villas on Hudayriyat Island – Luxury Waterfront Villa Community with Lush Landscapes, Road Network, and Key Amenities"
-              fill
+              width={1600}
+              height={582}
               className={styles.masterImg}
+              priority
             />
           </div>
           <div className={styles.zoomHint}>
@@ -56,8 +59,8 @@ export default function NaseemMasterPlan() {
             <Image
               src="/images/al-naseem-villas/master-plan.webp"
               alt="Al Naseem Villas Master Plan Full View"
-              width={1400}
-              height={900}
+              width={1600}
+              height={582}
               className={styles.lightboxImg}
             />
           </div>

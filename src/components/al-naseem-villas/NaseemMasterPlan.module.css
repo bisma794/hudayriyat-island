@@ -1,5 +1,5 @@
 .masterSection {
-  padding: 85px 0;
+  padding: 70px 0 50px;
   background-color: #ffffff;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .title {
-  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
   font-weight: 700;
   color: #1e1e1e;
   margin-bottom: 12px;
@@ -22,32 +22,29 @@
   line-height: 1.7;
 }
 
+/* Map Card: Zero corner radius, zero shade background, just the clean map */
 .imageCard {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border: 1px solid #ebe5dd;
+  border-radius: 0;
+  overflow: visible;
+  border: none;
+  box-shadow: none;
+  background: transparent;
   cursor: pointer;
-  background: #fff;
-  transition: all 0.3s ease;
-}
-
-.imageCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(174, 119, 78, 0.15);
-  border-color: #ae774e;
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  background: #f7f5f2;
+  background: transparent;
 }
 
 .masterImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
   object-fit: contain;
 }
 
@@ -56,14 +53,20 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px;
-  background: #faf8f5;
+  padding: 14px 0 0;
+  background: transparent;
   color: #ae774e;
   font-size: 13.5px;
   font-weight: 600;
-  border-top: 1px solid #ede7df;
+  border: none;
+  transition: color 0.2s ease;
 }
 
+.imageCard:hover .zoomHint {
+  color: #725c43;
+}
+
+/* Lightbox Modal */
 .lightboxOverlay {
   position: fixed;
   top: 0;
@@ -95,7 +98,7 @@
 }
 
 .lightboxContent {
-  max-width: 1300px;
+  max-width: 1400px;
   width: 100%;
   max-height: 90vh;
   display: flex;
@@ -108,5 +111,4 @@
   height: auto;
   max-height: 85vh;
   object-fit: contain;
-  border-radius: 6px;
 }
