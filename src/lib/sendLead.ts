@@ -6,8 +6,14 @@ export interface LeadPayload {
   developer?: string;
   community?: string;
   property_type?: string;
+  propertyType?: string;
+  type?: string;
   key_requirement?: string;
+  keyRequirement?: string;
+  comment?: string;
+  comments?: string;
   activity_description?: string;
+  [key: string]: any;
 }
 
 export async function sendLeadToWebhook(
@@ -30,6 +36,15 @@ export async function sendLeadToWebhook(
     }
   }
 
+  const propertyType =
+    data.property_type || data.propertyType || data.type || "";
+  const keyRequirement =
+    data.key_requirement ||
+    data.keyRequirement ||
+    data.comment ||
+    data.comments ||
+    "";
+
   const payload = {
     name: data.name || "",
     phone: data.phone || "",
@@ -41,8 +56,13 @@ export async function sendLeadToWebhook(
     project: data.project || "Hudayriyat Island",
     developer: data.developer || "Modon Properties",
     community: data.community || data.project || "Hudayriyat Island",
-    property_type: data.property_type || "",
-    key_requirement: data.key_requirement || "",
+    property_type: propertyType,
+    propertyType: propertyType,
+    type: propertyType,
+    key_requirement: keyRequirement,
+    keyRequirement: keyRequirement,
+    comment: keyRequirement,
+    comments: keyRequirement,
     activity_description:
       data.activity_description || "Lead submitted from website form",
   };

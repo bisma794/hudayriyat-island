@@ -36,8 +36,13 @@ export default function ListPropertyModal({
       project: "Hudayriyat Island",
       developer: "Modon Properties",
       property_type: formData.propertyType,
+      type: formData.propertyType,
       key_requirement: formData.comment,
-      activity_description: "List Your Property Modal Form",
+      comments: formData.comment,
+      comment: formData.comment,
+      activity_description: `List Your Property: ${formData.propertyType}${
+        formData.comment ? ` - ${formData.comment}` : ""
+      }`,
     });
     setSubmitted(true);
     setTimeout(() => {

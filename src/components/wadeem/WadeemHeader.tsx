@@ -77,7 +77,7 @@ export default function WadeemHeader({ onOpenListModal }: WadeemHeaderProps) {
                   onClick={() => setIsCommOpen((prev) => !prev)}
                   style={{ background: "none", border: "none", cursor: "pointer" }}
                 >
-                  COMMUNITIES
+                  PROJECTS
                   <ChevronDown size={14} />
                 </button>
                 <div
@@ -182,7 +182,7 @@ export default function WadeemHeader({ onOpenListModal }: WadeemHeaderProps) {
               className={styles.mobileNavLink}
               onClick={() => setMobileCommOpen((prev) => !prev)}
             >
-              Communities
+              Projects
               <ChevronDown
                 size={16}
                 style={{

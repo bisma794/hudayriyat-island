@@ -1,0 +1,67 @@
+# ==============================================================================
+# .htaccess for cPanel Reverse Proxy + Next.js (Node.js / PM2)
+# ==============================================================================
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ----------------------------------------------------------------------------
+  # 1. FORCE HTTPS
+  # ----------------------------------------------------------------------------
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP:X-Forwarded-Proto} =http
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 2. REDIRECT WWW TO NON-WWW (DYNAMIC FOR .AE / .COM)
+  # ----------------------------------------------------------------------------
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 3. REDIRECT UNWANTED SUBDOMAINS (mail, admin, webmail, cpanel, etc.)
+  # ----------------------------------------------------------------------------
+  RewriteCond %{HTTP_HOST} ^(mail|admin|webmail|cpanel|webdisk|autodiscover|cpcontacts|cpcalendars)\.([^\.]+\.[^\.]+)$ [NC]
+  RewriteRule ^(.*)$ https://%2/$1 [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 4. WEBSOCKET SUPPORT FOR NEXT.JS
+  # ----------------------------------------------------------------------------
+  RewriteCond %{HTTP:Upgrade} =websocket [NC]
+  RewriteCond %{HTTP:Connection} upgrade [NC]
+  RewriteRule ^(.*)$ ws://127.0.0.1:3000/$1 [P,L]
+
+  # ----------------------------------------------------------------------------
+  # 5. REVERSE PROXY TO NEXT.JS NODE PROCESS (PORT 3000)
+  # ----------------------------------------------------------------------------
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
+</IfModule>
+
+<IfModule mod_proxy.c>
+  ProxyPreserveHost On
+  ProxyPassReverse / http://127.0.0.1:3000/
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 6. X-ROBOTS-TAG HEADER FOR SUBDOMAINS
+# ------------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  SetEnvIfNoCase Host "^(mail|admin|webmail|cpanel|webdisk|autodiscover|cpcontacts|cpcalendars)\." NOINDEX_SUBDOMAIN
+  Header set X-Robots-Tag "noindex, nofollow, noarchive" env=NOINDEX_SUBDOMAIN
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 7. SECURITY: BLOCK ACCESS TO SENSITIVE CONFIG FILES
+# ------------------------------------------------------------------------------
+<FilesMatch "^\.|\.(env|lock|ts|tsx|md)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

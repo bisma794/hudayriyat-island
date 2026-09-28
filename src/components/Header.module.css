@@ -285,3 +285,12 @@
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 14px 0;
+  }
+  .logoImg {
+    height: 42px;
+  }
+}

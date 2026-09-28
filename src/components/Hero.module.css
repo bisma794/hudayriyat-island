@@ -346,26 +346,50 @@
 }
 
 /* Responsive */
+/* Responsive */
 @media (max-width: 991px) {
   .hero {
     height: auto;
     min-height: 100vh;
-    padding: 110px 0 70px;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .overlay {
+    position: relative;
+    inset: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 105px;
+    padding-bottom: 50px;
   }
 
   .heroContent {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 35px;
-    padding-top: 10px;
+    gap: 22px;
+    padding-top: 0;
+  }
+
+  .leftCol {
+    padding-right: 0;
   }
 
   .heroTitle {
-    font-size: 42px;
+    font-size: 36px;
+    line-height: 1.15;
+    margin-bottom: 12px;
   }
 
   .heroSubtitle {
-    font-size: 19px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .freeholdText {
+    font-size: 15px;
   }
 
   .rightCol {
@@ -374,5 +398,47 @@
 
   .requestCard {
     max-width: 100%;
+    padding: 26px 20px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 576px) {
+  .overlay {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+
+  .heroContent {
+    gap: 18px;
+  }
+
+  .heroTitle {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .heroSubtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .freeholdText {
+    font-size: 14px;
+  }
+
+  .requestCard {
+    padding: 20px 16px;
+  }
+
+  .cardTitleSmall {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .cardTitleLarge {
+    font-size: 19px;
+    margin-bottom: 16px;
   }
 }

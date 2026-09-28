@@ -57,7 +57,7 @@ export default function ProjectHeader({ currentSlug, onOpenBrochure, onOpenListP
             </li>
             <li className={styles.dropdown}>
               <span className={styles.navLink} style={{ cursor: 'pointer' }}>
-                COMMUNITIES
+                PROJECTS
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M7 10l5 5 5-5z" />
                 </svg>
@@ -96,7 +96,7 @@ export default function ProjectHeader({ currentSlug, onOpenBrochure, onOpenListP
       {mobileOpen && (
         <div className={styles.mobileMenu}>
           <Link href="/" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>HOME</Link>
-          <div style={{ color: '#ae774e', fontWeight: 600, fontSize: '0.85rem', marginTop: '0.5rem', letterSpacing: '0.5px' }}>COMMUNITIES</div>
+          <div style={{ color: '#ae774e', fontWeight: 600, fontSize: '0.85rem', marginTop: '0.5rem', letterSpacing: '0.5px' }}>PROJECTS</div>
           {allCommunities.map((c) => (
             <Link
               key={c.slug}

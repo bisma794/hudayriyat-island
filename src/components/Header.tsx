@@ -78,7 +78,7 @@ export default function Header({ onOpenListModal }: HeaderProps) {
                   onClick={() => setIsCommOpen((prev) => !prev)}
                   style={{ background: "none", border: "none", cursor: "pointer" }}
                 >
-                  COMMUNITIES
+                  PROJECTS
                   <ChevronDown size={14} />
                 </button>
                 <div
@@ -186,7 +186,7 @@ export default function Header({ onOpenListModal }: HeaderProps) {
               className={styles.mobileNavLink}
               onClick={() => setMobileCommOpen((prev) => !prev)}
             >
-              Communities
+              Projects
               <ChevronDown
                 size={16}
                 style={{

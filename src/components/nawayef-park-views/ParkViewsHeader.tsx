@@ -74,7 +74,7 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
                   onClick={() => setIsCommOpen((prev) => !prev)}
                   style={{ background: "none", border: "none", cursor: "pointer" }}
                 >
-                  COMMUNITIES
+                  PROJECTS
                   <ChevronDown size={14} />
                 </button>
                 <div
@@ -174,7 +174,7 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
               style={{ width: "100%", background: "none", border: "none", cursor: "pointer" }}
               onClick={() => setMobileCommOpen((prev) => !prev)}
             >
-              <span>COMMUNITIES</span>
+              <span>PROJECTS</span>
               <ChevronDown
                 size={16}
                 style={{

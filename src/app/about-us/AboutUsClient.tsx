@@ -140,7 +140,7 @@ export default function AboutUsClient() {
             <div className={styles.pillarCard}>
               <div className={styles.pillarHeader}>
                 <Target size={24} className={styles.pillarIcon} />
-                <h3 className={styles.pillarTitle}>Our Mission</h3>
+                <h2 className={styles.pillarTitle}>Our Mission</h2>
               </div>
               <p className={styles.pillarText}>
                 To provide reliable property information, honest guidance, and helpful support to buyers and investors exploring opportunities on Hudayriyat Island and across Abu Dhabi.
@@ -150,7 +150,7 @@ export default function AboutUsClient() {
             <div className={styles.pillarCard}>
               <div className={styles.pillarHeader}>
                 <Eye size={24} className={styles.pillarIcon} />
-                <h3 className={styles.pillarTitle}>Our Vision</h3>
+                <h2 className={styles.pillarTitle}>Our Vision</h2>
               </div>
               <p className={styles.pillarText}>
                 To become a trusted source for property buyers and investors by providing accurate information, clear guidance, and consistent support throughout their property journey.
@@ -160,7 +160,7 @@ export default function AboutUsClient() {
             <div className={styles.pillarCard}>
               <div className={styles.pillarHeader}>
                 <ShieldCheck size={24} className={styles.pillarIcon} />
-                <h3 className={styles.pillarTitle}>Our Values</h3>
+                <h2 className={styles.pillarTitle}>Our Values</h2>
               </div>
               <p className={styles.pillarText}>
                 Accuracy, transparency, and responsible advice guide everything we do. We focus on providing clear property information and helping clients understand their options before making important decisions.
@@ -242,7 +242,7 @@ export default function AboutUsClient() {
             {/* Right Column: Contact Form */}
             <div className={styles.formCol}>
               <div className={styles.formCard}>
-                <h3 className={styles.formTitle}>Get in Touch</h3>
+                <h5 className={styles.formTitle}>Get in Touch</h5>
                 <p className={styles.formSubtitle}>
                   Enter your details and our team will contact you shortly.
                 </p>
