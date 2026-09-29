@@ -35,21 +35,21 @@ export default function NawayefContact() {
   };
 
   return (
-    <section className={styles.contactSection} id="contact">
+    <section className={styles.contactSection} id="contact" style={{ position: "relative", overflow: "hidden" }}>
       {/* Full Section Background Image with Overlay */}
-      <div className={styles.bgImageWrapper}>
+      <div className={styles.bgImageWrapper} style={{ position: "absolute", inset: 0, zIndex: 1 }}>
         <Image
           src="/images/form image.jpg"
           alt="Nawayef East Hills Luxury Living"
           fill
-          priority
           sizes="100vw"
           className={styles.bgImage}
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
-        <div className={styles.overlay} />
+        <div className={styles.overlay} style={{ position: "absolute", inset: 0 }} />
       </div>
 
-      <div className={`container ${styles.containerContent}`}>
+      <div className={`container ${styles.containerContent}`} style={{ position: "relative", zIndex: 2 }}>
         <div className={styles.contactGrid}>
           {/* Left Column: Heading & Tagline */}
           <div className={styles.textCol}>

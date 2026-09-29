@@ -64,17 +64,19 @@ export default function Hero() {
       id="hero"
       aria-label="Hudayriyat Island Hero and Callback Request"
       className={styles.hero}
+      style={{ position: "relative", width: "100%", overflow: "hidden" }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Background Carousel Slides with Ken Burns Zoom */}
-      <div className={styles.carousel}>
+      <div className={styles.carousel} style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
         {slides.map((slide, index) => (
           <div
             key={slide.id}
             className={`${styles.carouselSlide} ${
               index === currentSlide ? styles.carouselSlideActive : ""
             }`}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
           >
             <Image
               src={slide.image}
@@ -82,6 +84,7 @@ export default function Hero() {
               fill
               priority={index === 0}
               className={styles.slideImage}
+              style={{ objectFit: "cover" }}
               sizes="100vw"
             />
           </div>
@@ -89,7 +92,7 @@ export default function Hero() {
       </div>
 
       {/* Dark Overlay & Content */}
-      <div className={styles.overlay}>
+      <div className={styles.overlay} style={{ zIndex: 2 }}>
         <div className="container">
           <div className={styles.heroContent}>
             {/* Left Column: 2-line Heading, 2-line Content, 3rd Line Freehold */}

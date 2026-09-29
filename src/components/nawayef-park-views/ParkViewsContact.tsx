@@ -35,21 +35,22 @@ export default function ParkViewsContact() {
       id="contact"
       aria-label="Contact Us and Request Callback"
       className={styles.contactSection}
+      style={{ position: "relative", overflow: "hidden" }}
     >
       {/* Full Background Image */}
-      <div className={styles.bgImageWrapper}>
+      <div className={styles.bgImageWrapper} style={{ position: "absolute", inset: 0, zIndex: 1 }}>
         <Image
           src="/images/form image.jpg"
           alt="Hudayriyat Island Waterfront Destination"
           fill
-          priority
           sizes="100vw"
           className={styles.bgImage}
+          style={{ objectFit: "cover", objectPosition: "center" }}
         />
-        <div className={styles.overlay} />
+        <div className={styles.overlay} style={{ position: "absolute", inset: 0 }} />
       </div>
 
-      <div className={`container ${styles.containerContent}`}>
+      <div className={`container ${styles.containerContent}`} style={{ position: "relative", zIndex: 2 }}>
         <div className={styles.contactGrid}>
           {/* Left: Text Info */}
           <div className={styles.textCol}>

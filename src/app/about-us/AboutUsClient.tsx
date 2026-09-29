@@ -78,14 +78,14 @@ export default function AboutUsClient() {
           </div>
 
           {/* Single Container Image */}
-          <div className={styles.imageContainer}>
+          <div className={styles.imageContainer} style={{ position: "relative", width: "100%", minHeight: "380px", overflow: "hidden" }}>
             <Image
               src="/images/form image.jpg"
               alt="Hudayriyat Island Waterfront Luxury Architecture"
               fill
-              priority
               sizes="(max-width: 1200px) 100vw, 1200px"
               className={styles.featuredImage}
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
