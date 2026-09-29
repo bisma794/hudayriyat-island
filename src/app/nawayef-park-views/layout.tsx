@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Nawayef Park Views Abu Dhabi - Hudayriyat Island by Modon',
     description:
       'Discover Nawayef Park Views on Hudayriyat Island, Abu Dhabi. Premium residences overlooking verdant central parklands by Modon Properties.',
-    url: 'https://www.hudayriyat-island.com/nawayef-park-views',
+    url: 'https://hudayriyat-island.com/nawayef-park-views',
     siteName: 'Hudayriyat Island',
     images: [
       {

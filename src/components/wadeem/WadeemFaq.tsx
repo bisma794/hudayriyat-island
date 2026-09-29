@@ -39,6 +39,19 @@ const faqData = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a,
+    },
+  })),
+};
+
 export default function WadeemFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -47,42 +60,48 @@ export default function WadeemFaq() {
   };
 
   return (
-    <section id="faq" className={styles.faqSection}>
-      <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>FAQs</h2>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section id="faq" className={styles.faqSection}>
+        <div className="container">
+          <div className={styles.header}>
+            <h2 className={styles.title}>FAQs</h2>
+          </div>
 
-        <div className={styles.faqList}>
-          {faqData.map((item, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div
-                key={idx}
-                className={`${styles.faqItem} ${
-                  isOpen ? styles.faqItemOpen : ""
-                }`}
-              >
-                <button
-                  type="button"
-                  className={styles.questionBtn}
-                  onClick={() => toggleFaq(idx)}
+          <div className={styles.faqList}>
+            {faqData.map((item, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className={`${styles.faqItem} ${
+                    isOpen ? styles.faqItemOpen : ""
+                  }`}
                 >
-                  <span className={styles.questionText}>{item.q}</span>
-                  <span className={styles.iconCircle}>
-                    {isOpen ? <X size={16} /> : <Plus size={16} />}
-                  </span>
-                </button>
-                {isOpen && (
-                  <div className={styles.answerBox}>
-                    <p className={styles.answerText}>{item.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  <button
+                    type="button"
+                    className={styles.questionBtn}
+                    onClick={() => toggleFaq(idx)}
+                  >
+                    <span className={styles.questionText}>{item.q}</span>
+                    <span className={styles.iconCircle}>
+                      {isOpen ? <X size={16} /> : <Plus size={16} />}
+                    </span>
+                  </button>
+                  {isOpen && (
+                    <div className={styles.answerBox}>
+                      <p className={styles.answerText}>{item.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

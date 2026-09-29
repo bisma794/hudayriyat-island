@@ -50,12 +50,12 @@ export const metadata: Metadata = {
   publisher: "Hudayriyat Island",
   applicationName: "Hudayriyat Island",
   alternates: {
-    canonical: siteUrl,
+    canonical: "./",
     languages: {
-      "en-US": siteUrl,
-      "ar-AE": `${siteUrl}/?lang=ar`,
-      "ru-RU": `${siteUrl}/?lang=ru`,
-      "x-default": siteUrl,
+      "en-US": "./",
+      "ar-AE": "./?lang=ar",
+      "ru-RU": "./?lang=ru",
+      "x-default": "./",
     },
   },
   icons: {
@@ -148,84 +148,6 @@ const jsonLdData = {
         "latitude": 24.4539,
         "longitude": 54.3773,
       },
-    },
-    {
-      "@type": "FAQPage",
-      "@id": `${siteUrl}/#faq`,
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is Hudayriyat Island?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Hudayriyat Island is a premium coastal lifestyle destination in Abu Dhabi developed by Modon Properties. It features luxury villas, apartments, beachfront communities with world-class amenities, and freehold ownership for all nationalities.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Who is the developer of Hudayriyat Island?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Hudayriyat Island is developed by Modon Properties, a leading Abu Dhabi master developer known for large-scale lifestyle and residential destinations.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "What types of properties are available on Hudayriyat Island?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Hudayriyat Island offers villas, mansions, and apartments, giving buyers multiple options depending on their lifestyle and budget.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Are apartments available on Hudayriyat Island?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "While the island is primarily villa-focused, The Bashayer Residences include premium low-rise apartments with modern layouts and community amenities.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "What lifestyle does Hudayriyat Island offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "The island promotes a wellness-focused, resort-style lifestyle, combining beachfront living with outdoor activities, community spaces, and modern conveniences.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "What are the main communities on Hudayriyat Island?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Key communities include: Bashayer, Wadeem Villas, Masyaf Villas, Nawayef East & West, Al Naseem Villas, Hudayriyat Sahl, Hudayriyat Hills, Sunset Cliff Villas, Hudayriyat Quays, Nawayef Village & Park Views.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "How close is Hudayriyat Island to major Abu Dhabi landmarks?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Hudayriyat Island offers excellent connectivity: 15 minutes to Yas Island, 20 minutes to Abu Dhabi International Airport, 10 minutes to Corniche & WTC, 12 minutes to Al Bateen.",
-          },
-        },
-        {
-          "@type": "Question",
-          "name": "Is Hudayriyat Island suitable for investment?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text":
-              "Yes. Due to its prime location, luxury positioning, and freehold status, Hudayriyat Island is considered one of Abu Dhabi’s strongest long-term investment destinations.",
-          },
-        },
-      ],
     },
   ],
 };

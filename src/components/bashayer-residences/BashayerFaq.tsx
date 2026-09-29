@@ -43,6 +43,19 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a,
+    },
+  })),
+};
+
 export default function BashayerFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -51,38 +64,44 @@ export default function BashayerFaq() {
   };
 
   return (
-    <section className={styles.faqSection} id="faq">
-      <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Frequently Asked Questions</h2>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section className={styles.faqSection} id="faq">
+        <div className="container">
+          <div className={styles.header}>
+            <h2 className={styles.title}>Frequently Asked Questions</h2>
+          </div>
 
-        <div className={styles.faqContainer}>
-          {faqs.map((faq, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div key={idx} className={styles.faqItem}>
-                <button
-                  type="button"
-                  className={styles.questionBtn}
-                  onClick={() => toggle(idx)}
-                >
-                  <span>{faq.q}</span>
-                  <span className={styles.icon}>
-                    {isOpen ? <Minus size={20} /> : <Plus size={20} />}
-                  </span>
-                </button>
+          <div className={styles.faqContainer}>
+            {faqs.map((faq, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div key={idx} className={styles.faqItem}>
+                  <button
+                    type="button"
+                    className={styles.questionBtn}
+                    onClick={() => toggle(idx)}
+                  >
+                    <span>{faq.q}</span>
+                    <span className={styles.icon}>
+                      {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+                    </span>
+                  </button>
 
-                {isOpen && (
-                  <div className={styles.answerBox}>
-                    <p className={styles.answer}>{faq.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  {isOpen && (
+                    <div className={styles.answerBox}>
+                      <p className={styles.answer}>{faq.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

@@ -44,7 +44,7 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
           {/* Logo */}
           <Link href="/" className={styles.logoLink}>
             <Image
-              src="/images/logo.png"
+              src="/Hudayriyat Logo new-01.svg"
               alt="Hudayriyat Island"
               width={160}
               height={55}
@@ -108,12 +108,6 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
               </li>
 
               <li className={styles.navItem}>
-                <a href="#gallery" className={styles.navLink}>
-                  GALLERY
-                </a>
-              </li>
-
-              <li className={styles.navItem}>
                 <a href="#paymentplan" className={styles.navLink}>
                   PAYMENT PLAN
                 </a>
@@ -126,9 +120,9 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
               </li>
 
               <li className={styles.navItem}>
-                <a href="#contact" className={styles.navLink}>
-                  CONTACT
-                </a>
+                <Link href="/contact-us" className={styles.navLink}>
+                  CONTACT US
+                </Link>
               </li>
 
               {/* List Your Property CTA */}
@@ -216,14 +210,6 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
           </a>
 
           <a
-            href="#gallery"
-            className={styles.mobileNavLink}
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            GALLERY
-          </a>
-
-          <a
             href="#paymentplan"
             className={styles.mobileNavLink}
             onClick={() => setMobileMenuOpen(false)}
@@ -239,13 +225,13 @@ export default function ParkViewsHeader({ onOpenListModal }: ParkViewsHeaderProp
             FAQ
           </a>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact-us"
             className={styles.mobileNavLink}
             onClick={() => setMobileMenuOpen(false)}
           >
-            CONTACT
-          </a>
+            CONTACT US
+          </Link>
 
           <button
             type="button"

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const communities = [
@@ -39,7 +39,7 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logoLink}>
               <Image
-                src="/images/logo.png"
+                src="/Hudayriyat Logo new-01.svg"
                 alt="Hudayriyat Island Logo"
                 width={160}
                 height={55}
@@ -87,36 +87,10 @@ export default function Footer() {
             <h4 className={styles.colTitle}>Connect With Us</h4>
             <ul className={styles.contactList}>
               <li>
-                <a
-                  href="https://wa.me/971500000000"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.contactLink}
-                >
-                  <MessageCircle size={18} className={styles.contactIcon} />
-                  <span>Connect on WhatsApp</span>
-                </a>
-              </li>
-              <li>
-                <a href="tel:+971500000000" className={styles.contactLink}>
-                  <Phone size={18} className={styles.contactIcon} />
-                  <span>+971 50 000 0000</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@hudayriyat-island.com"
-                  className={styles.contactLink}
-                >
+                <Link href="/contact-us" className={styles.contactLink}>
                   <Mail size={18} className={styles.contactIcon} />
-                  <span>info@hudayriyat-island.com</span>
-                </a>
-              </li>
-              <li>
-                <div className={styles.contactItemStatic}>
-                  <MapPin size={18} className={styles.contactIcon} />
-                  <span>Hudayriyat Island, Abu Dhabi, UAE</span>
-                </div>
+                  <span>Contact Us</span>
+                </Link>
               </li>
             </ul>
           </div>

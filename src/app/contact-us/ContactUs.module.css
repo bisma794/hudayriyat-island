@@ -7,8 +7,12 @@
 
 /* Hero Banner */
 .heroSection {
-  background: linear-gradient(135deg, #181512 0%, #2b231c 50%, #15120f 100%);
-  padding: 150px 0 70px;
+  background: linear-gradient(
+      rgba(15, 12, 9, 0.72),
+      rgba(15, 12, 9, 0.85)
+    ),
+    url("/images/hero/slide-1.jpg") no-repeat center center / cover;
+  padding: 175px 0 95px;
   text-align: center;
   position: relative;
   color: #ffffff;

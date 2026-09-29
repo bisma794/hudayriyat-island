@@ -48,7 +48,7 @@ export default function BashayerHeader({ onOpenListModal }: BashayerHeaderProps)
           {/* Logo */}
           <Link href="/" className={styles.logoLink}>
             <Image
-              src="/images/logo.png"
+              src="/Hudayriyat Logo new-01.svg"
               alt="Hudayriyat Island"
               width={160}
               height={55}
@@ -112,12 +112,6 @@ export default function BashayerHeader({ onOpenListModal }: BashayerHeaderProps)
               </li>
 
               <li className={styles.navItem}>
-                <a href="#gallery" className={styles.navLink}>
-                  GALLERY
-                </a>
-              </li>
-
-              <li className={styles.navItem}>
                 <a href="#paymentplan" className={styles.navLink}>
                   PAYMENT PLAN
                 </a>
@@ -130,9 +124,9 @@ export default function BashayerHeader({ onOpenListModal }: BashayerHeaderProps)
               </li>
 
               <li className={styles.navItem}>
-                <a href="#contact" className={styles.navLink}>
-                  CONTACT
-                </a>
+                <Link href="/contact-us" className={styles.navLink}>
+                  CONTACT US
+                </Link>
               </li>
 
             </ul>
@@ -233,15 +227,6 @@ export default function BashayerHeader({ onOpenListModal }: BashayerHeaderProps)
           </li>
           <li>
             <a
-              href="#gallery"
-              className={styles.mobileNavLink}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a
               href="#paymentplan"
               className={styles.mobileNavLink}
               onClick={() => setMobileMenuOpen(false)}
@@ -259,13 +244,13 @@ export default function BashayerHeader({ onOpenListModal }: BashayerHeaderProps)
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              href="/contact-us"
               className={styles.mobileNavLink}
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
-            </a>
+              Contact Us
+            </Link>
           </li>
           <li style={{ marginTop: "12px" }}>
             <button

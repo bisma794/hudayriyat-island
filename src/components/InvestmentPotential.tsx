@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { Check } from "lucide-react";
 import styles from "./InvestmentPotential.module.css";
 
@@ -60,13 +59,17 @@ export default function InvestmentPotential() {
             </ul>
 
             <div className={styles.btnWrapper}>
-              <Link
+              <a
                 href="#contact"
                 className={styles.actionBtn}
                 aria-label="Contact a Property Investment Consultant"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }}
               >
                 Contact a Property Investment Consultant
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -93,13 +96,17 @@ export default function InvestmentPotential() {
               </ul>
 
               <div className={styles.cardBtnWrapper}>
-                <Link
+                <a
                   href="#contact"
                   className={styles.actionBtn}
                   aria-label="Contact a Mortgage Specialist"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                  }}
                 >
                   Contact a Mortgage Specialist
-                </Link>
+                </a>
               </div>
             </div>
           </div>

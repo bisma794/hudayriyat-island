@@ -46,9 +46,9 @@ export default function Header({ onOpenListModal }: HeaderProps) {
       <header className={`${styles.header} ${isSticky ? "sticky-header" : ""}`}>
         <div className={`container ${styles.headerContainer}`}>
           {/* Logo */}
-          <Link href="#hero" className={styles.logoLink}>
+          <Link href="/" className={styles.logoLink}>
             <Image
-              src="/images/logo.png"
+              src="/Hudayriyat Logo new-01.svg"
               alt="Hudayriyat Island - Modon"
               width={160}
               height={55}
@@ -61,9 +61,9 @@ export default function Header({ onOpenListModal }: HeaderProps) {
           <nav className={styles.nav}>
             <ul className={styles.navList}>
               <li className={styles.navItem}>
-                <a href="#hero" className={`${styles.navLink} ${styles.navLinkActive}`}>
+                <Link href="/" className={`${styles.navLink} ${styles.navLinkActive}`}>
                   HOME
-                </a>
+                </Link>
               </li>
 
               {/* Communities Dropdown */}
@@ -100,21 +100,15 @@ export default function Header({ onOpenListModal }: HeaderProps) {
               </li>
 
               <li className={styles.navItem}>
-                <a href="#communities" className={styles.navLink}>
-                  GALLERY
-                </a>
-              </li>
-
-              <li className={styles.navItem}>
                 <a href="#faq" className={styles.navLink}>
                   FAQ
                 </a>
               </li>
 
               <li className={styles.navItem}>
-                <a href="#contact" className={styles.navLink}>
-                  CONTACT
-                </a>
+                <Link href="/contact-us" className={styles.navLink}>
+                  CONTACT US
+                </Link>
               </li>
 
               {/* LIST YOUR PROPERTY CTA */}
@@ -172,13 +166,13 @@ export default function Header({ onOpenListModal }: HeaderProps) {
 
         <ul className={styles.mobileNavList}>
           <li>
-            <a
-              href="#hero"
+            <Link
+              href="/"
               className={styles.mobileNavLink}
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <button
@@ -214,15 +208,6 @@ export default function Header({ onOpenListModal }: HeaderProps) {
           </li>
           <li>
             <a
-              href="#communities"
-              className={styles.mobileNavLink}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Gallery
-            </a>
-          </li>
-          <li>
-            <a
               href="#faq"
               className={styles.mobileNavLink}
               onClick={() => setMobileMenuOpen(false)}
@@ -231,13 +216,13 @@ export default function Header({ onOpenListModal }: HeaderProps) {
             </a>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              href="/contact-us"
               className={styles.mobileNavLink}
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
-            </a>
+              Contact Us
+            </Link>
           </li>
           <li style={{ marginTop: "10px" }}>
             <button

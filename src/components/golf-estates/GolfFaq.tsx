@@ -35,6 +35,19 @@ const faqData = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqData.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.a,
+    },
+  })),
+};
+
 export default function GolfFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -43,45 +56,51 @@ export default function GolfFaq() {
   };
 
   return (
-    <section id="faq" className={styles.faqSection}>
-      <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Frequently Asked Questions</h2>
-          <p className={styles.subtitle}>
-            Find answers to common questions about purchasing a villa in Hudayriyat Golf Estates.
-          </p>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section id="faq" className={styles.faqSection}>
+        <div className="container">
+          <div className={styles.header}>
+            <h2 className={styles.title}>Frequently Asked Questions</h2>
+            <p className={styles.subtitle}>
+              Find answers to common questions about purchasing a villa in Hudayriyat Golf Estates.
+            </p>
+          </div>
 
-        <div className={styles.faqList}>
-          {faqData.map((item, idx) => {
-            const isOpen = openIndex === idx;
-            return (
-              <div key={idx} className={styles.faqCard}>
-                <button
-                  type="button"
-                  className={`${styles.faqQuestion} ${
-                    isOpen ? styles.questionActive : ""
-                  }`}
-                  onClick={() => toggleFaq(idx)}
-                >
-                  <span>{item.q}</span>
-                  <ChevronDown
-                    size={20}
-                    className={`${styles.chevron} ${
-                      isOpen ? styles.chevronOpen : ""
+          <div className={styles.faqList}>
+            {faqData.map((item, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div key={idx} className={styles.faqCard}>
+                  <button
+                    type="button"
+                    className={`${styles.faqQuestion} ${
+                      isOpen ? styles.questionActive : ""
                     }`}
-                  />
-                </button>
-                {isOpen && (
-                  <div className={styles.faqAnswer}>
-                    <p>{item.a}</p>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                    onClick={() => toggleFaq(idx)}
+                  >
+                    <span>{item.q}</span>
+                    <ChevronDown
+                      size={20}
+                      className={`${styles.chevron} ${
+                        isOpen ? styles.chevronOpen : ""
+                      }`}
+                    />
+                  </button>
+                  {isOpen && (
+                    <div className={styles.faqAnswer}>
+                      <p>{item.a}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

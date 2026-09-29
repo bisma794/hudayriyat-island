@@ -1,36 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hudayriyat Island – Luxury Real Estate Web Application
 
-## Getting Started
+A modern, high-performance, and visually stunning web application for **Hudayriyat Island** by **Modon Properties** in Abu Dhabi, UAE. Built with **Next.js 15**, **TypeScript**, and **Vanilla CSS**, featuring comprehensive SEO optimizations, dynamic community showcases, interactive maps, brochure downloads, lead CRM integration, and responsive design.
 
-First, run the development server:
+---
+
+## 🌟 Key Features
+
+- **Luxury Architectural Aesthetic**: Sleek dark/gold palette, glassmorphism, responsive navigation headers, and fluid micro-animations.
+- **Dedicated Community Landing Pages**:
+  - `Al Naseem Villas`
+  - `Bashayer Residences`
+  - `Bashayer Villas`
+  - `Hudayriyat Golf Estates`
+  - `Masyaf Plots`
+  - `Nawayef East Hills`
+  - `Nawayef Park Views`
+  - `Nawayef Village`
+  - `Wadeem Gardens`
+  - `Wadeem Plots`
+- **Dynamic Project Galleries**: Interactive high-resolution photo galleries with category filtering (Interior, Exterior, Community) and lightbox carousel controls.
+- **SEO & OpenGraph Metadata Suite**: Full OpenGraph tags (`og:title`, `og:description`, `og:url`), canonical URLs, Structured JSON-LD Data schemas, XML sitemap generation, and robots directives.
+- **Lead Capture & CRM Webhook Integration**: Automated lead transmission with form validation, instant phone input formatting, and thank-you confirmation redirection.
+- **Interactive Location Maps**: Embedded satellite location maps with collapsible regional distance accordions for nearby clinics, schools, restaurants, and shopping centers.
+- **Brochure & Floor Plan Modals**: Instant PDF brochure download requests and interactive unit floor plan showcases.
+- **Responsive Navigation Suite**: Unified header & mobile navigation drawer linking directly to project pages, floor plans, master plans, payment plans, FAQs, and a dedicated `/contact-us` page.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: Vanilla CSS Modules with custom design tokens
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Phone Formatting**: `react-international-phone`
+- **Deployment & Tooling**: Node.js, Vercel / PM2 configuration
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or higher
+- npm, yarn, or pnpm
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/bisma794/hudayriyat-island.git
+
+# Navigate to project directory
+cd hudayriyat-island
+
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start development server
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Building for Production
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# Run TypeScript typecheck
+npx tsc --noEmit
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Build production bundle
+npm run build
 
-## Deploy on Vercel
+# Start production server
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Page Architecture & Routes
+
+| Route | Description |
+| :--- | :--- |
+| `/` | Homepage showcasing Hudayriyat Island overview, communities grid, investment potential, and FAQs. |
+| `/about-us` | Company background and Abu Dhabi luxury real estate advisor profiles. |
+| `/al-naseem-villas` | Al Naseem Villas luxury waterfront community landing page. |
+| `/bashayer-residences` | Bashayer Residences apartments, townhomes, and penthouses. |
+| `/bashayer-villas` | Bashayer Villas standalone luxury homes. |
+| `/hudayriyat-golf-estates` | Golf Estates waterfront & golf course villa community. |
+| `/masyaf-plots` | Masyaf freehold residential villa plots by Modon. |
+| `/nawayef-east-hills` | Nawayef East Hills elevated coastal residences. |
+| `/nawayef-park-views` | Nawayef Park Views central parkland homes. |
+| `/nawayef-village` | Nawayef Village master-planned coastal community. |
+| `/wadeem-gardens` | Wadeem Gardens premium 4–6 bedroom villas. |
+| `/wadeem-plots` | Wadeem Plots freehold residential villa plots. |
+| `/contact-us` | Dedicated contact page with direct communication channels and lead form. |
+| `/privacy-policy` | Legal privacy policy guidelines. |
+| `/terms-and-conditions` | Web platform terms of use. |
+| `/thank-you` | Lead submission confirmation page. |
+
+---
+
+## 🔒 License
+
+Developed for Hudayriyat Island Abu Dhabi. All rights reserved.

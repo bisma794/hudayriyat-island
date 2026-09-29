@@ -115,7 +115,7 @@ export default function WadeemHero({ onOpenBrochureModal }: WadeemHeroProps) {
         <div className={styles.heroGrid}>
           {/* Left Column: Heading, Subtitle, Brochure CTA */}
           <div className={styles.leftCol}>
-            <h1 className={styles.title}>Wadeem Gardens</h1>
+            <h1 className={styles.title}>Wadeem Gardens at Hudayriyat Island</h1>
             <p className={styles.subtitle}>
               Gated villa clusters with spacious layouts and waterfront living.
             </p>

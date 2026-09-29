@@ -36,42 +36,61 @@ export default function ProjectFaq({ name, faqs }: ProjectFaqProps) {
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": defaultFaqs.map((item) => ({
+      "@type": "Question",
+      "name": item.q || item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a || item.answer,
+      },
+    })),
+  };
+
   return (
-    <section className={styles.faqSection} id="faq">
-      <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Frequently Asked Questions</h2>
-          <p className={styles.subtitle}>
-            Key inquiries and essential information regarding ownership at {name}
-          </p>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section className={styles.faqSection} id="faq">
+        <div className="container">
+          <div className={styles.header}>
+            <h2 className={styles.title}>Frequently Asked Questions</h2>
+            <p className={styles.subtitle}>
+              Key inquiries and essential information regarding ownership at {name}
+            </p>
+          </div>
 
-        <div className={styles.faqList}>
-          {defaultFaqs.map((item, idx) => (
-            <div
-              key={idx}
-              className={`${styles.faqCard} ${openIndex === idx ? styles.faqOpen : ''}`}
-            >
-              <button
-                type="button"
-                className={styles.questionBtn}
-                onClick={() => toggleFaq(idx)}
+          <div className={styles.faqList}>
+            {defaultFaqs.map((item, idx) => (
+              <div
+                key={idx}
+                className={`${styles.faqCard} ${openIndex === idx ? styles.faqOpen : ''}`}
               >
-                <span className={styles.questionText}>{item.q || item.question}</span>
-                <span className={styles.toggleIcon}>
-                  {openIndex === idx ? <Minus size={20} /> : <Plus size={20} />}
-                </span>
-              </button>
+                <button
+                  type="button"
+                  className={styles.questionBtn}
+                  onClick={() => toggleFaq(idx)}
+                >
+                  <span className={styles.questionText}>{item.q || item.question}</span>
+                  <span className={styles.toggleIcon}>
+                    {openIndex === idx ? <Minus size={20} /> : <Plus size={20} />}
+                  </span>
+                </button>
 
-              {openIndex === idx && (
-                <div className={styles.answerBody}>
-                  <p className={styles.answerText}>{item.a || item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+                {openIndex === idx && (
+                  <div className={styles.answerBody}>
+                    <p className={styles.answerText}>{item.a || item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

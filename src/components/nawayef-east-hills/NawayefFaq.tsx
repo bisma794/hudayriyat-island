@@ -62,6 +62,19 @@ const faqList: FaqItem[] = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqList.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer,
+    },
+  })),
+};
+
 export default function NawayefFaq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -70,35 +83,41 @@ export default function NawayefFaq() {
   };
 
   return (
-    <section className={styles.faqSection} id="faq">
-      <div className="container">
-        <div className={styles.header}>
-          <h2 className={styles.title}>Frequently Asked Questions</h2>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section className={styles.faqSection} id="faq">
+        <div className="container">
+          <div className={styles.header}>
+            <h2 className={styles.title}>Frequently Asked Questions</h2>
+          </div>
 
-        <div className={styles.faqContainer}>
-          {faqList.map((item, idx) => (
-            <div key={idx} className={styles.faqItem}>
-              <button
-                type="button"
-                className={styles.questionBtn}
-                onClick={() => toggleFaq(idx)}
-              >
-                <span>{item.question}</span>
-                <span className={styles.icon}>
-                  {openIndex === idx ? <Minus size={20} /> : <Plus size={20} />}
-                </span>
-              </button>
+          <div className={styles.faqContainer}>
+            {faqList.map((item, idx) => (
+              <div key={idx} className={styles.faqItem}>
+                <button
+                  type="button"
+                  className={styles.questionBtn}
+                  onClick={() => toggleFaq(idx)}
+                >
+                  <span>{item.question}</span>
+                  <span className={styles.icon}>
+                    {openIndex === idx ? <Minus size={20} /> : <Plus size={20} />}
+                  </span>
+                </button>
 
-              {openIndex === idx && (
-                <div className={styles.answerBox}>
-                  <p className={styles.answer}>{item.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+                {openIndex === idx && (
+                  <div className={styles.answerBox}>
+                    <p className={styles.answer}>{item.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

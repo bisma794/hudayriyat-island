@@ -18,8 +18,55 @@ import ListPropertyModal from "@/components/ListPropertyModal";
 export default function Home() {
   const [listModalOpen, setListModalOpen] = useState(false);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://hudayriyat-island.ae/#organization",
+        "name": "Hudayriyat Island",
+        "url": "https://hudayriyat-island.ae/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hudayriyat-island.ae/path-to-logo.png"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hudayriyat-island.ae/#website",
+        "url": "https://hudayriyat-island.ae/",
+        "name": "Hudayriyat Island",
+        "publisher": {
+          "@id": "https://hudayriyat-island.ae/#organization"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://hudayriyat-island.ae/#webpage",
+        "url": "https://hudayriyat-island.ae/",
+        "name": "Hudayriyat Island - Properties for Sale in Abu Dhabi",
+        "isPartOf": {
+          "@id": "https://hudayriyat-island.ae/#website"
+        },
+        "about": {
+          "@type": "Place",
+          "name": "Hudayriyat Island",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Abu Dhabi",
+            "addressCountry": "AE"
+          }
+        }
+      }
+    ]
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Sticky Header with non-redirecting Communities dropdown and language switch */}
       <Header onOpenListModal={() => setListModalOpen(true)} />
 

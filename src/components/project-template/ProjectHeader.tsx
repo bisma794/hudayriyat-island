@@ -41,7 +41,7 @@ export default function ProjectHeader({ currentSlug, onOpenBrochure, onOpenListP
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/images/logo.png"
+            src="/Hudayriyat Logo new-01.svg"
             alt="Hudayriyat Island"
             width={160}
             height={45}
@@ -77,10 +77,9 @@ export default function ProjectHeader({ currentSlug, onOpenBrochure, onOpenListP
             </li>
             <li><a href="#floor" className={styles.navLink}>FLOOR PLAN</a></li>
             <li><a href="#masterplan" className={styles.navLink}>MASTER PLAN</a></li>
-            <li><a href="#gallery" className={styles.navLink}>GALLERY</a></li>
             <li><a href="#payment_plan" className={styles.navLink}>PAYMENT PLAN</a></li>
             <li><a href="#faq" className={styles.navLink}>FAQ</a></li>
-            <li><a href="#contact" className={styles.navLink}>CONTACT</a></li>
+            <li><Link href="/contact-us" className={styles.navLink}>CONTACT US</Link></li>
           </ul>
 
           <button
@@ -109,10 +108,9 @@ export default function ProjectHeader({ currentSlug, onOpenBrochure, onOpenListP
           ))}
           <a href="#floor" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>FLOOR PLAN</a>
           <a href="#masterplan" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>MASTER PLAN</a>
-          <a href="#gallery" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>GALLERY</a>
           <a href="#payment_plan" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>PAYMENT PLAN</a>
           <a href="#faq" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>FAQ</a>
-          <a href="#contact" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>CONTACT</a>
+          <Link href="/contact-us" className={styles.mobileNavLink} onClick={() => setMobileOpen(false)}>CONTACT US</Link>
           <button
             type="button"
             className={styles.mobileBtnAction}

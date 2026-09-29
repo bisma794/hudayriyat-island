@@ -90,6 +90,7 @@ export interface ProjectData {
   locationSubtitle?: string;
   mapIframeUrl?: string;
   locationCategories: LocationCategory[];
+  attractions?: { title: string; time: string; image: string }[];
   faqs: FaqItem[];
 }
 

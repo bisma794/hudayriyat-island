@@ -96,39 +96,39 @@ const masyaf_plots_data: ProjectData = {
   "gallery": [
     {
       "id": 1,
-      "src": "/images/masyaf-plots/asset_22.jpg",
-      "alt": "Masyaf Plots photo 2",
-      "category": "all"
+      "src": "/images/masyaf-plots/card-gallery-1.jpg",
+      "alt": "Masyaf Plots Community Landscape & Park",
+      "category": "exterior"
     },
     {
       "id": 2,
-      "src": "/images/masyaf-plots/asset_23.jpg",
-      "alt": "Masyaf Plots photo 3",
-      "category": "all"
+      "src": "/images/masyaf-plots/card-gallery-2.jpg",
+      "alt": "Masyaf Plots Walkway & Greenery",
+      "category": "exterior"
     },
     {
       "id": 3,
-      "src": "/images/masyaf-plots/asset_24.jpg",
-      "alt": "Masyaf Plots photo 4",
-      "category": "all"
+      "src": "/images/masyaf-plots/card-gallery-3.jpg",
+      "alt": "Masyaf Plots Residential Environment",
+      "category": "exterior"
     },
     {
       "id": 4,
-      "src": "/images/masyaf-plots/asset_25.jpg",
-      "alt": "Masyaf Plots photo 5",
-      "category": "all"
+      "src": "/images/masyaf-plots/card-gallery-4.jpg",
+      "alt": "Masyaf Plots Coastal Villa Setting",
+      "category": "exterior"
     },
     {
       "id": 5,
-      "src": "/images/masyaf-plots/asset_26.jpg",
-      "alt": "Masyaf Plots photo 6",
-      "category": "all"
+      "src": "/images/masyaf-plots/card-gallery-5.jpg",
+      "alt": "Masyaf Plots Sunset View",
+      "category": "exterior"
     },
     {
       "id": 6,
-      "src": "/images/masyaf-plots/asset_31.jpg",
-      "alt": "Masyaf Plots photo 7",
-      "category": "all"
+      "src": "/images/masyaf-plots/card-gallery-6.webp",
+      "alt": "Masyaf Plots Aerial View",
+      "category": "exterior"
     }
   ],
   "floorPlansSubtitle": "Interactive floor layouts and spacious architectural configurations.",

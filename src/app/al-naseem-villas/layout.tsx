@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Al Naseem Luxury Villas Abu Dhabi - Hudayriyat Island',
     description:
       'Discover Al Naseem luxury villas Abu Dhabi with premium design and space. Explore Al Naseem Villas Hudayriyat Island for exclusive living.',
-    url: 'https://www.hudayriyat-island.com/al-naseem-villas',
+    url: 'https://hudayriyat-island.com/al-naseem-villas',
     siteName: 'Hudayriyat Island',
     images: [
       {

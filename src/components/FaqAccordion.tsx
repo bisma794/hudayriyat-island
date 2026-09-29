@@ -47,6 +47,19 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a,
+    },
+  })),
+};
+
 export default function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -55,11 +68,16 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section
-      id="faq"
-      aria-label="Frequently Asked Questions about Hudayriyat Island"
-      className={styles.faqSection}
-    >
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section
+        id="faq"
+        aria-label="Frequently Asked Questions about Hudayriyat Island"
+        className={styles.faqSection}
+      >
       <div className="container">
         <div className="section-header">
           <h2>Frequently Asked Questions</h2>
@@ -108,5 +126,6 @@ export default function FaqAccordion() {
         </div>
       </div>
     </section>
+    </>
   );
 }
