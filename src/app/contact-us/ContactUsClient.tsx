@@ -96,12 +96,12 @@ export default function ContactUsClient() {
               <span className={styles.channelAction}>Call an Advisor &rarr;</span>
             </a>
 
-            <a href="mailto:info@hudayriyat-island.com" className={styles.channelCard}>
+            <a href="mailto:info@hudayriyat-island.ae" className={styles.channelCard}>
               <div className={styles.iconCircle}>
                 <Mail size={24} />
               </div>
               <h3 className={styles.channelTitle}>Email Inquiries</h3>
-              <p className={styles.channelInfo}>info@hudayriyat-island.com</p>
+              <p className={styles.channelInfo}>info@hudayriyat-island.ae</p>
               <span className={styles.channelAction}>Send an Email &rarr;</span>
             </a>
 

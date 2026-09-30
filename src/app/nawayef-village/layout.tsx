@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Nawayef Village Abu Dhabi - Hudayriyat Island by Modon',
     description:
       'Explore Nawayef Village on Hudayriyat Island, Abu Dhabi. Master-planned luxury residences with elevated coastal living by Modon Properties.',
-    url: 'https://hudayriyat-island.com/nawayef-village',
+    url: 'https://hudayriyat-island.ae/nawayef-village',
     siteName: 'Hudayriyat Island',
     images: [
       {

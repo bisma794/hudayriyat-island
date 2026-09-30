@@ -102,7 +102,7 @@ export default function Footer() {
             <strong>Disclaimer:</strong> Its not official website. We inform that all property information provided on this website is for general guidance only and does not constitute a formal offer. Prices, availability, and property details may change at any time without prior notice. Images are for illustrative purposes and may not reflect actual properties. For the most accurate and up-to-date information, please contact us directly through the details provided on the website.
           </p>
           <p className={styles.copyrightText}>
-            &copy; {new Date().getFullYear()} hudayriyat-island.com All Rights Reserved.
+            &copy; {new Date().getFullYear()} hudayriyat-island.ae All Rights Reserved.
           </p>
         </div>
       </div>

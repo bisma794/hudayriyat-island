@@ -10,7 +10,7 @@ const ubuntu = Ubuntu({
   display: "swap",
 });
 
-const siteUrl = "https://hudayriyat-island.com";
+const siteUrl = "https://hudayriyat-island.ae";
 
 export const viewport: Viewport = {
   themeColor: "#856d52",

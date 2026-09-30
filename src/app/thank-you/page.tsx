@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Thank You | Hudayriyat Island Abu Dhabi",
     description:
       "Thank you for contacting Hudayriyat Island. Your request has been received and our luxury real estate specialist will reach out to you shortly.",
-    url: "https://hudayriyat-island.com/thank-you",
+    url: "https://hudayriyat-island.ae/thank-you",
     siteName: "Hudayriyat Island",
     locale: "en_US",
     type: "website",

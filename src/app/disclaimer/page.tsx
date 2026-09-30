@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Disclaimer | Hudayriyat Island Real Estate Information",
     description:
       "Read our disclaimer to understand the terms, limitations, and accuracy of property information, prices, and details shared on our website.",
-    url: "https://hudayriyat-island.com/disclaimer",
+    url: "https://hudayriyat-island.ae/disclaimer",
     siteName: "Hudayriyat Island",
     locale: "en_US",
     type: "website",

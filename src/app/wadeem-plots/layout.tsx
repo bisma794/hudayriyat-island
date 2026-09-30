@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Wadeem Plots Abu Dhabi - Hudayriyat Island by Modon',
     description:
       'Discover Wadeem Plots on Hudayriyat Island, Abu Dhabi. Exclusive freehold residential villa plots for custom architectural homes by Modon Properties.',
-    url: 'https://hudayriyat-island.com/wadeem-plots',
+    url: 'https://hudayriyat-island.ae/wadeem-plots',
     siteName: 'Hudayriyat Island',
     images: [
       {

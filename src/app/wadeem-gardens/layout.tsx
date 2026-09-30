@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Wadeem Gardens at Hudayriyat Island, Abu Dhabi - Modon',
     description:
       'Explore Wadeem Gardens at Hudayriyat Island, Abu Dhabi by Modon, featuring premium 4–6 bedroom villas in a waterfront community. Book now.',
-    url: 'https://hudayriyat-island.com/wadeem-gardens',
+    url: 'https://hudayriyat-island.ae/wadeem-gardens',
     siteName: 'Hudayriyat Island',
     locale: 'en_US',
     type: 'website',

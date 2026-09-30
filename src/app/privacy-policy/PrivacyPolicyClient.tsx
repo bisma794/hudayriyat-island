@@ -275,9 +275,9 @@ export default function PrivacyPolicyClient() {
                   <span>Go to Contact Page</span>
                   <ChevronRight size={18} />
                 </Link>
-                <a href="mailto:info@hudayriyat-island.com" className={styles.emailLink}>
+                <a href="mailto:info@hudayriyat-island.ae" className={styles.emailLink}>
                   <Mail size={18} />
-                  <span>info@hudayriyat-island.com</span>
+                  <span>info@hudayriyat-island.ae</span>
                 </a>
               </div>
             </div>

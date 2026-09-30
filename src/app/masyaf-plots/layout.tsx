@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Masyaf Plots Abu Dhabi - Hudayriyat Island by Modon',
     description:
       'Discover Masyaf exclusive residential plots on Hudayriyat Island, Abu Dhabi. 199 freehold villa plots for custom luxury living.',
-    url: 'https://hudayriyat-island.com/masyaf-plots',
+    url: 'https://hudayriyat-island.ae/masyaf-plots',
     siteName: 'Hudayriyat Island',
     images: [
       {
