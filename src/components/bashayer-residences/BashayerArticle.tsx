@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./BashayerArticle.module.css";
 
 export default function BashayerArticle() {
@@ -103,7 +104,14 @@ export default function BashayerArticle() {
 
           <h3 className={styles.subHeading}>Location &amp; Connectivity</h3>
           <p className={styles.paragraph}>
-            Bashayer Residences is located on Hudayriyat Island, Abu Dhabi. The island is becoming a major destination for waterfront living, sports, recreation, dining, and outdoor activities.
+            Bashayer Residences is located on Hudayriyat Island, Abu Dhabi, a
+            growing destination for waterfront living, sports, recreation,
+            dining, and outdoor activities. The development offers{" "}
+            <Link href="/">
+              <strong>Hudayriyat Island villas for sale</strong>
+            </Link>
+            , providing residents with a comfortable lifestyle in a
+            well-connected island community
           </p>
           <p className={styles.paragraph}>
             The development is positioned close to central Abu Dhabi while also providing access to major destinations across the emirate. Zayed International Airport is around 25 minutes away, Yas Island is around 30 minutes away, Abu Dhabi Global Market is around 25 minutes away, and Saadiyat Island is around 35 minutes away.

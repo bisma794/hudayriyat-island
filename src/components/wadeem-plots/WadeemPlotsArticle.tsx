@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './WadeemPlotsArticle.module.css';
 
 export default function WadeemPlotsArticle() {
@@ -12,7 +13,17 @@ export default function WadeemPlotsArticle() {
               Wadeem Plots by Modon &ndash; Custom 4 to 6 Bedroom Villa Plots in a Gated Hudayriyat Island Community
             </h2>
             <p className={styles.leadText}>
-              Wadeem Plots by Modon is a high-end gated villa plot community located on Hudayriyat Island, Abu Dhabi, offering discerning buyers the rare opportunity to design and build a custom dream home in a serene, wellness-driven, and master-planned environment. With spacious <strong>4 to 6-bedroom villa plots</strong>, nature-inspired design, and exceptional connectivity to Abu Dhabi’s core destinations, <strong>Wadeem</strong> is the perfect blend of tranquil island living and urban accessibility.
+              Wadeem Plots by Modon is a high-end gated villa plot community
+              located on{" "}
+              <Link href="/">
+                <strong>Hudayriyat Island in Abu Dhabi</strong>
+              </Link>
+              , offering discerning buyers the rare opportunity to design and
+              build a custom dream home in a serene, wellness-driven, and
+              master-planned environment. With spacious 4 to 6-bedroom villa
+              plots, nature-inspired design, and exceptional connectivity to
+              Abu Dhabi&apos;s core destinations, Wadeem is the perfect blend of
+              tranquil island living and urban accessibility.
             </p>
           </div>
 

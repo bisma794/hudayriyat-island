@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import styles from './VillasLocation.module.css';
 
@@ -76,14 +77,12 @@ export default function VillasLocation() {
         </div>
 
         <div className={styles.grid}>
-          <div className={styles.mapWrapper}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95813.49709552733!2d54.197054143359345!3d24.425125499999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6f35f2ff0d6f%3A0x4c12341b13da96f7!2sAl%20Hudayriat%20Island!5e1!3m2!1sen!2s!4v1785401377430!5m2!1sen!2s"
-              className={styles.mapIframe}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              title="Hudayriyat Island Map"
+          <div className={styles.mapWrapper} style={{ position: 'relative' }}>
+            <Image
+              src="/images/3_3.jpg"
+              alt="Bashayer Villas Location"
+              fill
+              style={{ objectFit: 'cover' }}
             />
           </div>
 

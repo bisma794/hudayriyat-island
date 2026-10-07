@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './NawayefBlogArticle.module.css';
 
 export default function NawayefBlogArticle() {
@@ -12,7 +13,18 @@ export default function NawayefBlogArticle() {
               Nawayef Village at Hudayriyat Island &ndash; Exclusive Hillside Villas with Scenic Views
             </h2>
             <p className={styles.leadText}>
-              Developed by <strong>Modon Properties</strong>, <strong>Nawayef Village</strong> is a distinguished gated residential community nestled between the East and West Hills of Hudayriyat Island, Abu Dhabi. As the first townhouse offering on the island, it introduces a new standard of modern family living in a serene natural setting. Designed with a contemporary aesthetic and Mediterranean influences, Nawayef Village presents a refined collection of <strong>3 to 5 bedroom townhouses</strong> and twin villas, combining luxury with functionality.
+              Developed by Modon Properties, Nawayef Village is a distinguished
+              gated residential community nestled between the East and West Hills
+              of Hudayriyat Island, Abu Dhabi. As the first townhouse offering on
+              the island, it introduces a new standard of modern family living in
+              a serene natural setting. Designed with a contemporary aesthetic and
+              Mediterranean influences, Nawayef Village presents a refined
+              collection of 3- to 5-bedroom townhouses and twin villas, making it
+              a sought-after option for those looking for{" "}
+              <Link href="/">
+                <strong>Hudayriyat Island townhouses</strong>
+              </Link>{" "}
+              that combine luxury with functionality
             </p>
           </div>
 

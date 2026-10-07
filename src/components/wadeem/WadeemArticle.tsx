@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./WadeemArticle.module.css";
 
 const keyProjectHighlights = [
@@ -51,8 +52,13 @@ export default function WadeemArticle() {
 
           <h3 className={styles.sectionHeading}>Property Details</h3>
           <p className={styles.paragraph}>
-            Wadeem Gardens offers a selection of spacious 4-, 5- and 6-bedroom
-            villas within three gated clusters. The 4-bedroom villas have unit
+            Wadeem Gardens on Hudayriyat Island offers a selection of spacious
+            4-, 5- and 6-bedroom villas within three gated clusters. These{" "}
+            <Link href="/">
+              <strong>Hudayriyat Island villas</strong>
+            </Link>{" "}
+            feature thoughtfully planned layouts and generous spaces designed
+            for comfortable family living. The 4-bedroom villas have unit
             sizes of 430 sqm and plot sizes of 532 sqm, with prices from AED 8.7
             million. The 5-bedroom villas offer 510 sqm of unit space on 630 sqm
             plots, with prices from AED 10.2 million. The 6-bedroom villas

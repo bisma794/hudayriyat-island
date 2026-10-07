@@ -33,6 +33,17 @@
   text-align: left;
 }
 
+.paragraph a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.paragraph a:hover {
+  color: var(--color-primary);
+}
+
 .highlightsList {
   list-style-type: disc;
   padding-left: 24px;

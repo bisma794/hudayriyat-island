@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { LocationCategory } from './ProjectTypes';
 import styles from './ProjectLocation.module.css';
@@ -69,14 +70,16 @@ export default function ProjectLocation({
         </div>
 
         <div className={styles.grid}>
-          <div className={styles.mapWrapper}>
-            <iframe
-              src={mapIframeUrl}
-              className={styles.mapIframe}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              title={`${name} Location Map`}
+          <div className={styles.mapWrapper} style={{ position: 'relative' }}>
+            <Image
+              src={
+                name.toLowerCase().includes('wadeem')
+                  ? '/images/3_3.jpg'
+                  : '/images/20231014_191447.webp'
+              }
+              alt={`${name} Location`}
+              fill
+              style={{ objectFit: 'cover' }}
             />
           </div>
 

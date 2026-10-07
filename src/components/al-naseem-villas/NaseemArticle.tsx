@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './NaseemArticle.module.css';
 
 export default function NaseemArticle() {
@@ -198,7 +199,15 @@ export default function NaseemArticle() {
               Al Naseem Luxury Villas Abu Dhabi – Hudayriyat Island
             </h3>
             <p className={styles.bodyText}>
-              Hudayriyat Island: Al Naseem Al Naseem is an elegant, residential community on Hudayriyat Island designed for those who love life to the fullest. This private villa community shows a modern coastal way of life, where architecture and comfort are perfectly matched with the environment. A peaceful and state-of-the-art lifestyle is what you need enjoy a family home beautiful designed so as Al Naseem.
+              <Link href="/">
+                <strong>Hudayriyat Island Abu Dhabi</strong>
+              </Link>{" "}
+              Al Naseem is an elegant, residential community on Hudayriyat Island
+              designed for those who love life to the fullest. This private villa
+              community shows a modern coastal way of life, where architecture and
+              comfort are perfectly matched with the environment. A peaceful and
+              state-of-the-art lifestyle is what you need enjoy a family home
+              beautiful designed so as Al Naseem.
             </p>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./ParkViewsArticle.module.css";
 
 const commuteTimes = [
@@ -21,7 +22,16 @@ export default function ParkViewsArticle() {
             Mediterranean-Inspired Luxury in the Heart of Hudayriyat Island
           </h1>
           <p className={styles.leadParagraph}>
-            <strong>Nawayef Park Views </strong>is the first freehold apartment community on Hudayriyat Island, Abu Dhabi, developed by Modon Properties. Nestled between the scenic Nawayef Hills, this low-rise residential enclave harmoniously blends Mediterranean and Portuguese-inspired architecture with the calm elegance of coastal living. Designed with a village-style ethos, it offers thoughtfully curated homes that prioritise community, wellness, and panoramic natural vistas.
+            Nawayef Park Views is the first freehold apartment community on{" "}
+            <Link href="/">
+              <strong>Hudayriyat Island in Abu Dhabi</strong>
+            </Link>
+            , developed by Modon Properties. Nestled between the scenic Nawayef
+            Hills, this low-rise residential enclave harmoniously blends
+            Mediterranean and Portuguese-inspired architecture with the calm
+            elegance of coastal living. Designed with a village-style ethos, it
+            offers thoughtfully curated homes that prioritise community,
+            wellness, and panoramic natural vistas.
           </p>
 
           <h3 className={styles.subTitle}>Project Highlights – Nawayef Park Views</h3>

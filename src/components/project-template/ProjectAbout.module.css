@@ -42,6 +42,25 @@
   margin-bottom: 24px;
 }
 
+.description p {
+  margin-bottom: 16px;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+.description a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.description a:hover {
+  color: var(--color-primary, #856d52);
+}
+
 .ctaButton {
   display: inline-flex;
   align-items: center;

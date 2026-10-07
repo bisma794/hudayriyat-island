@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./GolfArticle.module.css";
 
 const keyProjectHighlights = [
@@ -69,7 +70,12 @@ export default function GolfArticle() {
 
           <h3 className={styles.sectionHeading}>Location &amp; Connectivity</h3>
           <p className={styles.paragraph}>
-            Hudayriyat Golf Estates is located on Hudayriyat Island in Abu Dhabi. The island is home to residential communities, beaches, sports facilities, restaurants, cycling tracks, and leisure attractions.
+            Hudayriyat Golf Estates is located on{" "}
+            <Link href="/">
+              <strong>Hudayriyat Island in Abu Dhabi.</strong>
+            </Link>{" "}
+            The island is home to residential communities, beaches, sports
+            facilities, restaurants, cycling tracks, and leisure attractions.
           </p>
           <p className={styles.paragraph}>
             The development offers convenient access to key destinations across Abu Dhabi. Zayed International Airport, Abu Dhabi city centre, major business districts, schools, hospitals, and leisure destinations can be reached within a reasonable drive.

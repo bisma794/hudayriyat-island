@@ -26,6 +26,19 @@
   margin-bottom: 36px;
 }
 
+.leadParagraph a,
+.paragraph a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.leadParagraph a:hover,
+.paragraph a:hover {
+  color: var(--color-primary, #856d52);
+}
+
 .subTitle {
   font-size: 24px;
   font-weight: 700;

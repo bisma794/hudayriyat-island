@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './VillasArticle.module.css';
 
 export default function VillasArticle() {
@@ -11,7 +12,16 @@ export default function VillasArticle() {
           </h2>
 
           <p className={styles.leadText}>
-            Bashayer Villas represents the pinnacle of island living, masterfully planned by Modon Properties along the tranquil waterfront of Hudayriyat Island in Abu Dhabi. Blending modern architectural elegance with the gentle serenity of coastal nature, these expansive 4 and 5-bedroom villas are crafted for families seeking privacy, prestige, and seamless indoor-outdoor living.
+            Bashayer Villas represents the pinnacle of island living, masterfully
+            planned by Modon Properties along the tranquil waterfront of
+            Hudayriyat Island in Abu Dhabi. These{" "}
+            <Link href="/">
+              <strong>Hudayriyat Island waterfront villas</strong>
+            </Link>{" "}
+            blend modern architectural elegance with the gentle serenity of
+            coastal nature. The expansive 4- and 5-bedroom villas are crafted
+            for families seeking privacy, prestige, and seamless indoor-outdoor
+            living.
           </p>
 
           <h3 className={styles.subHeading}>Key Project Highlights</h3>

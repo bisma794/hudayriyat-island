@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import styles from './NaseemLocation.module.css';
 
@@ -66,15 +67,13 @@ export default function NaseemLocation() {
 
         {/* 2-Column Content: Map (Compact) + Brown Accordion */}
         <div className={styles.contentGrid}>
-          {/* Left Column: Compact Google Map */}
-          <div className={styles.mapWrapper}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.770507746915!2d54.3820618495175!3d24.408420939156112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e690030b3058b%3A0x56f192c21b63ee44!2sModon%20Al%20Naseem!5e1!3m2!1sen!2s!4v1751962626803!5m2!1sen!2s"
-              className={styles.mapIframe}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
-              title="Al Naseem Villas Location Map"
+          {/* Left Column: Location Image */}
+          <div className={styles.mapWrapper} style={{ position: 'relative' }}>
+            <Image
+              src="/images/Hudayriyat-Island---Marsana-East-Beach---Sign---Sunset-2.jpg"
+              alt="Al Naseem Villas Location"
+              fill
+              style={{ objectFit: 'cover' }}
             />
           </div>
 

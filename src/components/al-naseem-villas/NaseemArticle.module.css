@@ -109,6 +109,17 @@
   margin-bottom: 16px;
 }
 
+.bodyText a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.bodyText a:hover {
+  color: var(--color-primary, #ae774e);
+}
+
 .bodyText:last-child {
   margin-bottom: 0;
 }

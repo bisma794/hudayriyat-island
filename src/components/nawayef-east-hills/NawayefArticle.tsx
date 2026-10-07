@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './NawayefArticle.module.css';
 
 export default function NawayefArticle() {
@@ -103,7 +104,15 @@ export default function NawayefArticle() {
 
           <h3 className={styles.subHeading}>Location &amp; Connectivity</h3>
           <p className={styles.paragraph}>
-            Nawayef East Hills is located on Hudayriyat Island, Abu Dhabi, within the wider Nawayef masterplan. The development is positioned on elevated terrain reaching up to 60 metres and offers views towards the Abu Dhabi skyline and Arabian Gulf.
+            Nawayef East Hills is located on Hudayriyat Island, Abu Dhabi, within
+            the wider Nawayef masterplan. The development is positioned on
+            elevated terrain reaching up to 60 metres and offers views towards
+            the Abu Dhabi skyline and Arabian Gulf. These{" "}
+            <Link href="/">
+              <strong>Hudayriyat Island luxury villas</strong>
+            </Link>{" "}
+            provide residents with a premium setting surrounded by waterfront
+            views and the island&apos;s growing lifestyle attractions.
           </p>
           <p className={styles.paragraph}>
             The location provides access to the island&apos;s beaches, sports facilities, cycling routes, dining venues, hospitality destinations, and leisure attractions. Residents can also reach central Abu Dhabi and other major areas of the emirate through the island&apos;s road connections.

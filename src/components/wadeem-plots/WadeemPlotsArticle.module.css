@@ -29,6 +29,19 @@
   color: #4a4a4a;
 }
 
+.leadText a,
+.bodyText a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.leadText a:hover,
+.bodyText a:hover {
+  color: var(--color-primary, #856d52);
+}
+
 .leadText strong {
   color: #1a1a1a;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import styles from './MasyafBlogArticle.module.css';
 
 export default function MasyafBlogArticle() {
@@ -10,7 +11,15 @@ export default function MasyafBlogArticle() {
           <div className={styles.header}>
             <h2 className={styles.mainTitle}>Masyaf - Hudayriyat Island By Modon</h2>
             <p className={styles.leadText}>
-              <strong>Masyaf</strong> is a premium residential plot development by <strong>Hudayriyat Development LLC</strong>, located on the vibrant and scenic Hudayriyat Island in Abu Dhabi. Designed for those who value space, personalization, and a connection to nature, Masyaf offers 199 exclusive residential plots that empower homeowners to build their dream villas in a setting that combines tranquility with urban convenience.
+              Masyaf is a premium residential plot development by Hudayriyat
+              Development LLC, located on the vibrant and scenic{" "}
+              <Link href="/">
+                <strong>Hudayriyat Island in Abu Dhabi.</strong>
+              </Link>{" "}
+              Designed for those who value space, personalization, and a
+              connection to nature, Masyaf offers 199 exclusive residential
+              plots that empower homeowners to build their dream villas in a
+              setting that combines tranquility with urban convenience.
             </p>
           </div>
 
